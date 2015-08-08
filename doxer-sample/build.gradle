@@ -1,0 +1,187 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'maven'
+apply plugin: 'eclipse'
+apply plugin: 'spring-boot' // http://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-gradle-plugin.html
+apply plugin: 'pmd'
+apply plugin: 'jacoco'
+
+def defaultEncoding = 'UTF-8'
+[compileJava, compileTestJava, javadoc]*.options*.encoding = defaultEncoding
+
+version = '0.1'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+configurations {
+	providedRuntime
+
+	compile.exclude module: 'org.eclipse.datatools.connectivity.apache.derby.dbdefinition'
+	compile.exclude module: 'org.eclipse.datatools.connectivity.apache.derby'
+	compile.exclude module: 'org.eclipse.datatools.connectivity.console.profile'
+	compile.exclude module: 'org.eclipse.datatools.connectivity.db.generic'
+	compile.exclude module: 'org.eclipse.datatools.connectivity.dbdefinition.genericJDBC'
+	compile.exclude module: 'org.eclipse.datatools.connectivity.oda.consumer'
+	compile.exclude module: 'org.eclipse.datatools.connectivity.oda.design'
+	compile.exclude module: 'org.eclipse.datatools.connectivity.oda.flatfile'
+	compile.exclude module: 'org.eclipse.datatools.connectivity.oda.profile'
+	compile.exclude module: 'org.eclipse.datatools.connectivity.sqm.core'
+	compile.exclude module: 'org.eclipse.datatools.connectivity'
+	compile.exclude module: 'org.eclipse.datatools.modelbase.dbdefinition'
+	compile.exclude module: 'org.eclipse.datatools.modelbase.derby'
+	compile.exclude module: 'org.eclipse.datatools.modelbase.sql.query'
+	compile.exclude module: 'org.eclipse.datatools.modelbase.sql'
+	compile.exclude module: 'org.eclipse.datatools.enablement.hsqldb.dbdefinition'
+	compile.exclude module: 'org.eclipse.datatools.enablement.hsqldb'
+	compile.exclude module: 'org.eclipse.datatools.enablement.oracle.dbdefinition'
+	compile.exclude module: 'org.eclipse.datatools.enablement.oracle'
+	compile.exclude module: 'org.eclipse.datatools.enablement.ibm.db2.luw.dbdefinition'
+	compile.exclude module: 'org.eclipse.datatools.enablement.ibm.db2.luw'
+	compile.exclude module: 'org.eclipse.datatools.enablement.ibm.informix.dbdefinition'
+	compile.exclude module: 'org.eclipse.datatools.enablement.ibm.informix'
+	compile.exclude module: 'org.eclipse.datatools.enablement.msft.sqlserver.dbdefinition'
+	compile.exclude module: 'org.eclipse.datatools.enablement.msft.sqlserver'
+	compile.exclude module: 'org.eclipse.datatools.enablement.mysql.dbdefinition'
+	compile.exclude module: 'org.eclipse.datatools.enablement.mysql'
+	compile.exclude module: 'org.eclipse.datatools.enablement.oda.ws'
+	compile.exclude module: 'org.eclipse.datatools.enablement.oda.xml'
+	compile.exclude module: 'org.eclipse.datatools.enablement.postgresql.dbdefinition'
+	compile.exclude module: 'org.eclipse.datatools.enablement.postgresql'
+	compile.exclude module: 'org.eclipse.orbit.mongodb'
+
+}
+
+repositories {
+	mavenCentral()
+	jcenter()
+	maven { url 'http://repo.spring.io/release' }
+	maven { url 'http://repo.spring.io/snapshot' }
+	maven { url 'http://repo.spring.io/milestone' }
+	maven { url 'http://maven.seasar.org/maven2/' }
+	maven { url "file:${System.getProperty('user.home')}/.m2/repository" }
+}
+
+test {
+	systemProperties 'property': 'value'
+}
+
+buildscript {
+	repositories {
+		jcenter()
+		maven { url 'http://repo.spring.io/snapshot' }
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.0.BUILD-SNAPSHOT")
+	}
+}
+
+def SPRING_GROUPID = 'org.springframework'
+def SPRING_VERSION = '4.2.0.BUILD-SNAPSHOT'
+def SPRING_BOOT_GROUPID = 'org.springframework.boot'
+def SPRING_BOOT_VERSION = '1.3.0.BUILD-SNAPSHOT'
+
+dependencies {
+	// Settings providedCompile
+	providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
+
+	compile group: 'com.github.hatimiti', name: 'doxer', version: '0.1.0'
+
+	testCompile group: 'junit', name: 'junit', version: '4.12'
+	testCompile group: SPRING_GROUPID, name: 'spring-test', version: SPRING_VERSION
+	testCompile group: SPRING_BOOT_GROUPID, name: 'spring-boot-starter-test', version: SPRING_BOOT_VERSION
+	testCompile group: 'org.dbunit', name: 'dbunit', version: '2.5.1'
+
+	providedRuntime group: SPRING_BOOT_GROUPID, name: 'spring-boot-starter-tomcat', version: SPRING_BOOT_VERSION
+
+}
+
+jar {
+	manifest {
+		attributes 'Implementation-Title': 'Gradle Quickstart', 'Implementation-Version': version
+	}
+}
+
+war {
+	baseName = 'doxer-sample'
+	version = '0.1'
+}
+
+bootRepackage {
+//	enabled = false
+	mainClass = 'org.doxer.Application'
+}
+
+pmd { // コーディングチェック
+	toolVersion = '5.1.2'
+	ignoreFailures = true
+	sourceSets = [sourceSets.main]
+	reportsDir = file("$project.buildDir/reports/pmd")
+	ruleSets = [
+		'java-basic',
+		'java-strings',
+		'java-braces'
+	]
+}
+pmdMain {
+	excludes = [
+		'**/org/seasar/**/*.java',
+		'**/db/dbflute/allcommon/**/*.java',
+		'**/db/dbflute/bsbhv/**/*.java',
+		'**/db/dbflute/bsentity/**/*.java',
+		'**/db/dbflute/cbean/bs/**/*.java',
+		'**/db/dbflute/cbean/cq/bs/**/*.java',
+		'**/db/dbflute/cbean/cq/ciq/**/*.java',
+	]
+}
+
+jacoco { // コードカバレッジ測定
+	toolVersion = "0.7.5.201505241946"
+	reportsDir = file("$project.buildDir/reports/jacoco/")
+}
+
+jacocoTestReport {
+	reports {
+		csv.enabled true
+		html.destination "$project.buildDir/reports/jacoco/html/"
+	}
+}
+
+test {
+	systemProperty 'spring.profiles.active', 'ut'
+
+	jacoco {
+		append = false
+		destinationFile = file("$buildDir/reports/jacoco/test.exec")
+		classDumpFile = file("$buildDir/reports/jacoco/classpathdumps")
+	}
+}
+
+check << { // CPD: 重複コードチェック
+	File outDir = file("$project.buildDir/reports/pmd/")
+	outDir.mkdirs()
+	ant.taskdef(name: 'cpd', classname: 'net.sourceforge.pmd.cpd.CPDTask',
+		classpath: configurations.pmd.asPath)
+	ant.cpd(minimumTokenCount: '100', format: 'csv',
+		outputFile: new File(outDir, 'cpd.csv'))
+	{
+		fileset(dir: 'src/main/java') {
+			include(name: '**/*.java')
+			exclude(name: '**/db/dbflute/allcommon/**/*.java')
+			exclude(name: '**/db/dbflute/bsbhv/**/*.java')
+			exclude(name: '**/db/dbflute/bsentity/**/*.java')
+			exclude(name: '**/db/dbflute/cbean/bs/**/*.java')
+			exclude(name: '**/db/dbflute/cbean/cq/bs/**/*.java')
+			exclude(name: '**/db/dbflute/cbean/cq/ciq/**/*.java')
+		}
+	}
+}
+
+/**
+ * テストクラスのJavaDocを生成します．
+ * (試験仕様書として利用)
+ */
+task javadoctest(type: Javadoc) {
+	[javadoctest]*.options*.encoding = 'UTF-8'
+	docsDirName = "docs/test/";
+	source 'src/test/java'
+}
