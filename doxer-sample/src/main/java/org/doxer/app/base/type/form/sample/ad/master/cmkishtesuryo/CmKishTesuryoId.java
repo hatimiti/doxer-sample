@@ -1,6 +1,6 @@
 package org.doxer.app.base.type.form.sample.ad.master.cmkishtesuryo;
 
-import static com.github.hatimiti.flutist.common.domain.supports.InputAttribute.*;
+import static com.github.hatimiti.doxer.common.domain.supports.InputAttribute.*;
 
 import org.doxer.app.base.type.form.base.Id;
 import org.doxer.app.db.dbflute.bsentity.dbmeta.CmKishTesuryoDbm;
@@ -8,9 +8,9 @@ import org.doxer.app.db.dbflute.cbean.CmKishTesuryoCB;
 import org.doxer.app.db.dbflute.exbhv.CmKishTesuryoBhv;
 import org.doxer.xbase.validation.validator.ExistsFieldValidator;
 
-import com.github.hatimiti.flutist.common.domain.supports.InputAttribute;
-import com.github.hatimiti.flutist.common.message.AppMessagesContainer;
-import com.github.hatimiti.flutist.common.message.Owner;
+import com.github.hatimiti.doxer.common.domain.supports.InputAttribute;
+import com.github.hatimiti.doxer.common.message.AppMessagesContainer;
+import com.github.hatimiti.doxer.common.message.Owner;
 
 
 public class CmKishTesuryoId extends Id {

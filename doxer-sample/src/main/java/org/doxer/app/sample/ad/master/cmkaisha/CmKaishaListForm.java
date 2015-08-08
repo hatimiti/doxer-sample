@@ -1,6 +1,6 @@
 package org.doxer.app.sample.ad.master.cmkaisha;
 
-import static com.github.hatimiti.flutist.common.domain.supports.InputAttribute.*;
+import static com.github.hatimiti.doxer.common.domain.supports.InputAttribute.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -15,8 +15,8 @@ import org.doxer.xbase.form.BaseSortPageForm;
 import org.doxer.xbase.validation.validator.FormValidator;
 import org.springframework.stereotype.Component;
 
-import com.github.hatimiti.flutist.common.domain.supports.Condition;
-import com.github.hatimiti.flutist.common.message.AppMessagesContainer;
+import com.github.hatimiti.doxer.common.domain.supports.Condition;
+import com.github.hatimiti.doxer.common.message.AppMessagesContainer;
 
 @Data
 @EqualsAndHashCode(callSuper = true)

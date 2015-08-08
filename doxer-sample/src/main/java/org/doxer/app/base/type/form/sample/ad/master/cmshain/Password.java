@@ -1,16 +1,16 @@
 package org.doxer.app.base.type.form.sample.ad.master.cmshain;
 
-import static com.github.hatimiti.flutist.common.domain.supports.InputAttribute.*;
+import static com.github.hatimiti.doxer.common.domain.supports.InputAttribute.*;
 
 import org.doxer.app.db.dbflute.bsentity.dbmeta.CmShainDbm;
 import org.doxer.xbase.form.type.SingleFormType;
 
-import com.github.hatimiti.flutist.common.domain.supports.InputAttribute;
-import com.github.hatimiti.flutist.common.message.AppMessagesContainer;
-import com.github.hatimiti.flutist.common.message.Owner;
-import com.github.hatimiti.flutist.common.validation.validator.ContainsCharsFieldValidator;
-import com.github.hatimiti.flutist.common.validation.validator.HalfSizeFieldValidator;
-import com.github.hatimiti.flutist.common.validation.validator.RangeLengthFieldValidator;
+import com.github.hatimiti.doxer.common.domain.supports.InputAttribute;
+import com.github.hatimiti.doxer.common.message.AppMessagesContainer;
+import com.github.hatimiti.doxer.common.message.Owner;
+import com.github.hatimiti.doxer.common.validation.validator.ContainsCharsFieldValidator;
+import com.github.hatimiti.doxer.common.validation.validator.HalfSizeFieldValidator;
+import com.github.hatimiti.doxer.common.validation.validator.RangeLengthFieldValidator;
 
 public class Password extends SingleFormType {
 

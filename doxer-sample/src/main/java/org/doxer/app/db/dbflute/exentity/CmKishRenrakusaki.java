@@ -1,6 +1,6 @@
 package org.doxer.app.db.dbflute.exentity;
 
-import static com.github.hatimiti.flutist.common.util._Num.*;
+import static com.github.hatimiti.doxer.common.util._Num.*;
 
 import org.doxer.app.db.dbflute.bsentity.BsCmKishRenrakusaki;
 import org.doxer.app.sample.ad.master.cmkaisha.CmKishRenrakusakiForm;

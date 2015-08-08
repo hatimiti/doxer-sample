@@ -8,7 +8,7 @@ import org.doxer.xbase.util._Container;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 
-import com.github.hatimiti.flutist.common.domain.supports.Condition;
+import com.github.hatimiti.doxer.common.domain.supports.Condition;
 
 @Data
 @EqualsAndHashCode(callSuper = true)

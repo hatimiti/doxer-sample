@@ -13,7 +13,7 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
-import com.github.hatimiti.flutist.common.support.ConstantsAutoRegister;
+import com.github.hatimiti.doxer.common.support.ConstantsAutoRegister;
 
 
 /**

@@ -1,8 +1,8 @@
 package org.doxer.app.sample.ad.master.cmshain;
 
-import static com.github.hatimiti.flutist.common.message.AppMessageLevel.*;
-import static com.github.hatimiti.flutist.common.util.CharacterEncoding.*;
-import static com.github.hatimiti.flutist.common.util._Obj.*;
+import static com.github.hatimiti.doxer.common.message.AppMessageLevel.*;
+import static com.github.hatimiti.doxer.common.util.CharacterEncoding.*;
+import static com.github.hatimiti.doxer.common.util._Obj.*;
 import static org.doxer.xbase.aop.interceptor.supports.DoValidation.TransitionMethod.*;
 import static org.doxer.xbase.aop.interceptor.supports.TokenType.*;
 import static org.doxer.xbase.controller.DoxController.DoxModelAndView.*;
@@ -28,8 +28,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.github.hatimiti.flutist.common.annotation.Function;
-import com.github.hatimiti.flutist.common.message.AppMessage;
+import com.github.hatimiti.doxer.common.annotation.Function;
+import com.github.hatimiti.doxer.common.message.AppMessage;
 
 /**
  * sample

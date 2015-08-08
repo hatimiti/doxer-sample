@@ -1,6 +1,6 @@
 package org.doxer.app.sample.hello;
 
-import static com.github.hatimiti.flutist.common.domain.supports.InputAttribute.*;
+import static com.github.hatimiti.doxer.common.domain.supports.InputAttribute.*;
 
 import javax.annotation.Resource;
 

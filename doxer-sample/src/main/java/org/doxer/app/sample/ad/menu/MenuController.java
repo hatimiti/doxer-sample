@@ -6,7 +6,7 @@ import org.doxer.xbase.controller.DoxController;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.github.hatimiti.flutist.common.annotation.Function;
+import com.github.hatimiti.doxer.common.annotation.Function;
 
 /**
  * sample

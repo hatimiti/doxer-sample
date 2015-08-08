@@ -12,7 +12,7 @@ import org.doxer.xbase.form.AccessUser;
 import org.doxer.xbase.util._Container;
 import org.springframework.stereotype.Component;
 
-import com.github.hatimiti.flutist.common.annotation.Function;
+import com.github.hatimiti.doxer.common.annotation.Function;
 
 @Component
 public class SetCommonColumnInterceptor extends BaseMethodInterceptor {

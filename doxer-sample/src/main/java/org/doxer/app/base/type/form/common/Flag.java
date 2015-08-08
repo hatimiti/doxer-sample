@@ -1,10 +1,10 @@
 package org.doxer.app.base.type.form.common;
 
-import static com.github.hatimiti.flutist.common.domain.supports.InputAttribute.*;
+import static com.github.hatimiti.doxer.common.domain.supports.InputAttribute.*;
 
 import org.doxer.app.base.type.form.base.Kb;
 
-import com.github.hatimiti.flutist.common.domain.supports.InputAttribute;
+import com.github.hatimiti.doxer.common.domain.supports.InputAttribute;
 
 public class Flag extends Kb<org.doxer.app.db.dbflute.allcommon.CDef.Flag> {
 

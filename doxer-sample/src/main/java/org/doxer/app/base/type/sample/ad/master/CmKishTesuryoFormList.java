@@ -5,9 +5,9 @@ import java.util.Comparator;
 
 import org.doxer.app.sample.ad.master.cmkaisha.CmKishTesuryoForm;
 
-import com.github.hatimiti.flutist.common.domain.type.ArrayListType;
-import com.github.hatimiti.flutist.common.util._Date;
-import com.github.hatimiti.flutist.common.util._Obj;
+import com.github.hatimiti.doxer.common.domain.type.ArrayListType;
+import com.github.hatimiti.doxer.common.util._Date;
+import com.github.hatimiti.doxer.common.util._Obj;
 
 public class CmKishTesuryoFormList extends ArrayListType<CmKishTesuryoForm> {
 

@@ -1,6 +1,6 @@
 package org.doxer.app.sample.hello;
 
-import static com.github.hatimiti.flutist.common.domain.supports.InputAttribute.*;
+import static com.github.hatimiti.doxer.common.domain.supports.InputAttribute.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -13,11 +13,11 @@ import org.doxer.xbase.validation.validator.FormValidator;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.github.hatimiti.flutist.common.domain.supports.Condition;
-import com.github.hatimiti.flutist.common.message.AppMessagesContainer;
-import com.github.hatimiti.flutist.common.message.Owner;
-import com.github.hatimiti.flutist.common.validation.Vval;
-import com.github.hatimiti.flutist.common.validation.validator.RequiredFieldValidator;
+import com.github.hatimiti.doxer.common.domain.supports.Condition;
+import com.github.hatimiti.doxer.common.message.AppMessagesContainer;
+import com.github.hatimiti.doxer.common.message.Owner;
+import com.github.hatimiti.doxer.common.validation.Vval;
+import com.github.hatimiti.doxer.common.validation.validator.RequiredFieldValidator;
 
 @Data
 @EqualsAndHashCode(callSuper = true)

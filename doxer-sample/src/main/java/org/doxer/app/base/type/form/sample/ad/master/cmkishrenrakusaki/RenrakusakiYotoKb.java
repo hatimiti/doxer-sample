@@ -1,11 +1,11 @@
 package org.doxer.app.base.type.form.sample.ad.master.cmkishrenrakusaki;
 
-import static com.github.hatimiti.flutist.common.domain.supports.InputAttribute.*;
+import static com.github.hatimiti.doxer.common.domain.supports.InputAttribute.*;
 
 import org.doxer.app.base.type.form.base.Kb;
 import org.doxer.app.db.dbflute.bsentity.dbmeta.CmRenrakusakiYotoKbDbm;
 
-import com.github.hatimiti.flutist.common.domain.supports.InputAttribute;
+import com.github.hatimiti.doxer.common.domain.supports.InputAttribute;
 
 public class RenrakusakiYotoKb extends Kb<org.doxer.app.db.dbflute.allcommon.CDef.RenrakusakiYotoKb> {
 

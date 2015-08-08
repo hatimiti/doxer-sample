@@ -1,16 +1,16 @@
 package org.doxer.app.base.type.form.common;
 
-import static com.github.hatimiti.flutist.common.domain.supports.InputAttribute.*;
+import static com.github.hatimiti.doxer.common.domain.supports.InputAttribute.*;
 
 import java.util.Date;
 
 import org.doxer.xbase.form.type.SingleFormType;
 
-import com.github.hatimiti.flutist.common.domain.supports.InputAttribute;
-import com.github.hatimiti.flutist.common.message.AppMessagesContainer;
-import com.github.hatimiti.flutist.common.message.Owner;
-import com.github.hatimiti.flutist.common.util._Date;
-import com.github.hatimiti.flutist.common.validation.validator.DateFieldValidator;
+import com.github.hatimiti.doxer.common.domain.supports.InputAttribute;
+import com.github.hatimiti.doxer.common.message.AppMessagesContainer;
+import com.github.hatimiti.doxer.common.message.Owner;
+import com.github.hatimiti.doxer.common.util._Date;
+import com.github.hatimiti.doxer.common.validation.validator.DateFieldValidator;
 
 public class Dt extends SingleFormType {
 

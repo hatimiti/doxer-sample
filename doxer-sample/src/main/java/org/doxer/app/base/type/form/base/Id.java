@@ -2,13 +2,13 @@ package org.doxer.app.base.type.form.base;
 
 import org.doxer.xbase.form.type.SingleFormType;
 
-import com.github.hatimiti.flutist.common.domain.supports.InputAttribute;
-import com.github.hatimiti.flutist.common.message.AppMessagesContainer;
-import com.github.hatimiti.flutist.common.message.Owner;
-import com.github.hatimiti.flutist.common.util._Num;
-import com.github.hatimiti.flutist.common.util._Str;
-import com.github.hatimiti.flutist.common.validation.validator.LongFieldValidator;
-import com.github.hatimiti.flutist.common.validation.validator.MaxLengthFieldValidator;
+import com.github.hatimiti.doxer.common.domain.supports.InputAttribute;
+import com.github.hatimiti.doxer.common.message.AppMessagesContainer;
+import com.github.hatimiti.doxer.common.message.Owner;
+import com.github.hatimiti.doxer.common.util._Num;
+import com.github.hatimiti.doxer.common.util._Str;
+import com.github.hatimiti.doxer.common.validation.validator.LongFieldValidator;
+import com.github.hatimiti.doxer.common.validation.validator.MaxLengthFieldValidator;
 
 public abstract class Id extends SingleFormType {
 

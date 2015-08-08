@@ -1,11 +1,11 @@
 package org.doxer.app.base.type.form.sample.ad.master.cmkishtesuryo;
 
-import static com.github.hatimiti.flutist.common.domain.supports.InputAttribute.*;
+import static com.github.hatimiti.doxer.common.domain.supports.InputAttribute.*;
 
 import org.doxer.app.base.type.form.base.Kb;
 import org.doxer.app.db.dbflute.bsentity.dbmeta.CmTesuryoKbDbm;
 
-import com.github.hatimiti.flutist.common.domain.supports.InputAttribute;
+import com.github.hatimiti.doxer.common.domain.supports.InputAttribute;
 
 public class TesuryoKb extends Kb<org.doxer.app.db.dbflute.allcommon.CDef.TesuryoKb> {
 

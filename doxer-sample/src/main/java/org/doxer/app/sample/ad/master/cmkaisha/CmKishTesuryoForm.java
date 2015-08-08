@@ -1,7 +1,7 @@
 package org.doxer.app.sample.ad.master.cmkaisha;
 
-import static com.github.hatimiti.flutist.common.domain.supports.InputAttribute.*;
-import static com.github.hatimiti.flutist.common.util._Str.*;
+import static com.github.hatimiti.doxer.common.domain.supports.InputAttribute.*;
+import static com.github.hatimiti.doxer.common.util._Str.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -17,9 +17,9 @@ import org.doxer.app.db.dbflute.exentity.CmKishTesuryo;
 import org.doxer.xbase.form.BaseEntityForm;
 import org.springframework.stereotype.Component;
 
-import com.github.hatimiti.flutist.common.domain.supports.Condition;
-import com.github.hatimiti.flutist.common.message.AppMessagesContainer;
-import com.github.hatimiti.flutist.common.util._Str;
+import com.github.hatimiti.doxer.common.domain.supports.Condition;
+import com.github.hatimiti.doxer.common.message.AppMessagesContainer;
+import com.github.hatimiti.doxer.common.util._Str;
 
 @Data
 @NoArgsConstructor

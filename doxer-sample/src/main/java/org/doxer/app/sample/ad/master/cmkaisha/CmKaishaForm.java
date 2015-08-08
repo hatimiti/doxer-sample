@@ -1,8 +1,8 @@
 package org.doxer.app.sample.ad.master.cmkaisha;
 
-import static com.github.hatimiti.flutist.common.domain.supports.InputAttribute.*;
-import static com.github.hatimiti.flutist.common.message.AppMessageLevel.*;
-import static com.github.hatimiti.flutist.common.util._Obj.*;
+import static com.github.hatimiti.doxer.common.domain.supports.InputAttribute.*;
+import static com.github.hatimiti.doxer.common.message.AppMessageLevel.*;
+import static com.github.hatimiti.doxer.common.util._Obj.*;
 import static java.util.stream.IntStream.*;
 
 import java.util.List;
@@ -21,10 +21,10 @@ import org.doxer.xbase.form.BaseEntityForm;
 import org.doxer.xbase.validation.validator.FormValidator;
 import org.springframework.stereotype.Component;
 
-import com.github.hatimiti.flutist.common.domain.supports.Condition;
-import com.github.hatimiti.flutist.common.message.AppMessagesContainer;
-import com.github.hatimiti.flutist.common.message.OwnedMessages;
-import com.github.hatimiti.flutist.common.message.Owner;
+import com.github.hatimiti.doxer.common.domain.supports.Condition;
+import com.github.hatimiti.doxer.common.message.AppMessagesContainer;
+import com.github.hatimiti.doxer.common.message.OwnedMessages;
+import com.github.hatimiti.doxer.common.message.Owner;
 
 @Data
 @EqualsAndHashCode(callSuper = true)

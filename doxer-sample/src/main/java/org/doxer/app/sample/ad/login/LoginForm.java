@@ -1,6 +1,6 @@
 package org.doxer.app.sample.ad.login;
 
-import static com.github.hatimiti.flutist.common.domain.supports.InputAttribute.*;
+import static com.github.hatimiti.doxer.common.domain.supports.InputAttribute.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -10,8 +10,8 @@ import org.doxer.xbase.form.DoxForm;
 import org.doxer.xbase.validation.validator.FormValidator;
 import org.springframework.stereotype.Component;
 
-import com.github.hatimiti.flutist.common.domain.supports.Condition;
-import com.github.hatimiti.flutist.common.message.AppMessagesContainer;
+import com.github.hatimiti.doxer.common.domain.supports.Condition;
+import com.github.hatimiti.doxer.common.message.AppMessagesContainer;
 
 @Data
 @EqualsAndHashCode(callSuper = true)

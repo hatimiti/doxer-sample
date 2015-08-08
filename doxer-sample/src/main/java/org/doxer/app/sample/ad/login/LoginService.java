@@ -1,6 +1,6 @@
 package org.doxer.app.sample.ad.login;
 
-import static com.github.hatimiti.flutist.common.util._Str.*;
+import static com.github.hatimiti.doxer.common.util._Str.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;

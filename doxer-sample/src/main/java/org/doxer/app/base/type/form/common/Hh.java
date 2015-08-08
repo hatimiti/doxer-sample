@@ -1,16 +1,16 @@
 package org.doxer.app.base.type.form.common;
 
-import static com.github.hatimiti.flutist.common.domain.supports.InputAttribute.*;
+import static com.github.hatimiti.doxer.common.domain.supports.InputAttribute.*;
 
 import java.sql.Time;
 
 import org.doxer.xbase.form.type.SingleFormType;
 
-import com.github.hatimiti.flutist.common.domain.supports.InputAttribute;
-import com.github.hatimiti.flutist.common.message.AppMessagesContainer;
-import com.github.hatimiti.flutist.common.message.Owner;
-import com.github.hatimiti.flutist.common.util._Time;
-import com.github.hatimiti.flutist.common.validation.validator.RegexFieldValidator;
+import com.github.hatimiti.doxer.common.domain.supports.InputAttribute;
+import com.github.hatimiti.doxer.common.message.AppMessagesContainer;
+import com.github.hatimiti.doxer.common.message.Owner;
+import com.github.hatimiti.doxer.common.util._Time;
+import com.github.hatimiti.doxer.common.validation.validator.RegexFieldValidator;
 
 /**
  * 2桁(00-23)の時間(h)を表す型

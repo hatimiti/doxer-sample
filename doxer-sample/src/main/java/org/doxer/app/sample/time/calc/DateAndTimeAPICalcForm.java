@@ -10,13 +10,13 @@ import org.doxer.xbase.form.DoxForm;
 import org.doxer.xbase.validation.validator.FormValidator;
 import org.springframework.stereotype.Component;
 
-import com.github.hatimiti.flutist.common.domain.supports.Condition;
-import com.github.hatimiti.flutist.common.message.AppMessagesContainer;
-import com.github.hatimiti.flutist.common.message.Owner;
-import com.github.hatimiti.flutist.common.validation.Vval;
-import com.github.hatimiti.flutist.common.validation.validator.IntFieldValidator;
-import com.github.hatimiti.flutist.common.validation.validator.IntRangeFieldValidator;
-import com.github.hatimiti.flutist.common.validation.validator.RequiredFieldValidator;
+import com.github.hatimiti.doxer.common.domain.supports.Condition;
+import com.github.hatimiti.doxer.common.message.AppMessagesContainer;
+import com.github.hatimiti.doxer.common.message.Owner;
+import com.github.hatimiti.doxer.common.validation.Vval;
+import com.github.hatimiti.doxer.common.validation.validator.IntFieldValidator;
+import com.github.hatimiti.doxer.common.validation.validator.IntRangeFieldValidator;
+import com.github.hatimiti.doxer.common.validation.validator.RequiredFieldValidator;
 
 @Data
 @EqualsAndHashCode(callSuper = true)

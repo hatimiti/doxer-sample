@@ -1,7 +1,7 @@
 package org.doxer.app.base.type.form.sample.ad.master.cmkaisha;
 
-import static com.github.hatimiti.flutist.common.domain.supports.InputAttribute.*;
-import static com.github.hatimiti.flutist.common.util._Obj.*;
+import static com.github.hatimiti.doxer.common.domain.supports.InputAttribute.*;
+import static com.github.hatimiti.doxer.common.util._Obj.*;
 
 import org.doxer.app.base.type.form.base.Mei;
 import org.doxer.app.db.dbflute.bsentity.dbmeta.CmKaishaDbm;
@@ -9,8 +9,8 @@ import org.doxer.app.db.dbflute.cbean.CmKaishaCB;
 import org.doxer.app.db.dbflute.exbhv.CmKaishaBhv;
 import org.doxer.xbase.validation.validator.NotExistsFieldValidator;
 
-import com.github.hatimiti.flutist.common.domain.supports.InputAttribute;
-import com.github.hatimiti.flutist.common.message.AppMessagesContainer;
+import com.github.hatimiti.doxer.common.domain.supports.InputAttribute;
+import com.github.hatimiti.doxer.common.message.AppMessagesContainer;
 
 public class KaishaMei extends Mei {
 

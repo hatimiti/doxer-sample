@@ -1,6 +1,6 @@
 package org.doxer.app.sample.ad.master.cmshain;
 
-import static com.github.hatimiti.flutist.common.domain.supports.InputAttribute.*;
+import static com.github.hatimiti.doxer.common.domain.supports.InputAttribute.*;
 import lombok.ToString;
 
 import org.doxer.app.base.type.form.sample.ad.master.cmkaisha.CmKaishaId;
@@ -13,8 +13,8 @@ import org.doxer.app.base.type.form.sample.ad.master.cmshain.ShainSeiEn;
 import org.doxer.app.db.dbflute.exentity.CmShain;
 import org.doxer.xbase.form.DoxInputCsv;
 
-import com.github.hatimiti.flutist.common.message.AppMessagesContainer;
-import com.github.hatimiti.flutist.common.util._Num;
+import com.github.hatimiti.doxer.common.message.AppMessagesContainer;
+import com.github.hatimiti.doxer.common.util._Num;
 import com.orangesignal.csv.annotation.CsvColumn;
 import com.orangesignal.csv.annotation.CsvEntity;
 

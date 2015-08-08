@@ -1,14 +1,14 @@
 package org.doxer.app.base.type.form.common;
 
-import static com.github.hatimiti.flutist.common.domain.supports.InputAttribute.*;
+import static com.github.hatimiti.doxer.common.domain.supports.InputAttribute.*;
 
 import org.doxer.app.db.dbflute.bsentity.dbmeta.CmKishRenrakusakiDbm;
 import org.doxer.xbase.form.type.MultiFormType;
 
-import com.github.hatimiti.flutist.common.domain.supports.InputAttribute;
-import com.github.hatimiti.flutist.common.message.AppMessagesContainer;
-import com.github.hatimiti.flutist.common.message.Owner;
-import com.github.hatimiti.flutist.common.validation.validator.TelFieldValidator;
+import com.github.hatimiti.doxer.common.domain.supports.InputAttribute;
+import com.github.hatimiti.doxer.common.message.AppMessagesContainer;
+import com.github.hatimiti.doxer.common.message.Owner;
+import com.github.hatimiti.doxer.common.validation.validator.TelFieldValidator;
 
 public class TelNo extends MultiFormType {
 

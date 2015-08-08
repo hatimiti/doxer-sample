@@ -1,6 +1,6 @@
 package org.doxer.app.db.dbflute.exbhv;
 
-import static com.github.hatimiti.flutist.common.util._Obj.*;
+import static com.github.hatimiti.doxer.common.util._Obj.*;
 import static org.doxer.app.db.DBMetaManager.*;
 import static org.doxer.xbase.support.SortOrder.*;
 

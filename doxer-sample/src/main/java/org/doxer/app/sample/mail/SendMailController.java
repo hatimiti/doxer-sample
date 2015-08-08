@@ -1,6 +1,6 @@
 package org.doxer.app.sample.mail;
 
-import static com.github.hatimiti.flutist.common.message.AppMessageLevel.*;
+import static com.github.hatimiti.doxer.common.message.AppMessageLevel.*;
 import static org.doxer.app.sample.mail.SendMailController.*;
 import static org.doxer.xbase.controller.DoxController.DoxModelAndView.*;
 import static org.doxer.xbase.util._Container.*;
@@ -11,7 +11,7 @@ import org.doxer.xbase.mail.DoxMailSender;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.github.hatimiti.flutist.common.message.AppMessage;
+import com.github.hatimiti.doxer.common.message.AppMessage;
 
 @Controller
 @RequestMapping(BASE_URI)

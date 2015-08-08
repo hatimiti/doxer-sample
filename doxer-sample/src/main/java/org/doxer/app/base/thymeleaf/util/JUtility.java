@@ -1,6 +1,6 @@
 package org.doxer.app.base.thymeleaf.util;
 
-import static com.github.hatimiti.flutist.common.util._Ref.*;
+import static com.github.hatimiti.doxer.common.util._Ref.*;
 
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ import org.doxer.app.db.dbflute.exbhv.CmTesuryoKbBhv;
 import org.doxer.app.db.dbflute.exentity.CmKaisha;
 import org.doxer.xbase.util._Container;
 
-import com.github.hatimiti.flutist.common.util._Num;
+import com.github.hatimiti.doxer.common.util._Num;
 
 
 public class JUtility {

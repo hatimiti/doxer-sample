@@ -1,11 +1,11 @@
 package org.doxer.app.base.controller;
 
-import static com.github.hatimiti.flutist.common.message.AppMessageLevel.*;
+import static com.github.hatimiti.doxer.common.message.AppMessageLevel.*;
 
 import org.doxer.xbase.controller.DoxController;
 import org.doxer.xbase.util._Container;
 
-import com.github.hatimiti.flutist.common.message.AppMessage;
+import com.github.hatimiti.doxer.common.message.AppMessage;
 
 public abstract class BaseMasterController extends DoxController {
 

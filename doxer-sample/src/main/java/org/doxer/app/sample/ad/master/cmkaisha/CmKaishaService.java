@@ -1,6 +1,6 @@
 package org.doxer.app.sample.ad.master.cmkaisha;
 
-import static com.github.hatimiti.flutist.common.util._Obj.*;
+import static com.github.hatimiti.doxer.common.util._Obj.*;
 
 import java.util.List;
 

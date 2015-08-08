@@ -1,6 +1,6 @@
 package org.doxer.app.sample.time.calc;
 
-import static com.github.hatimiti.flutist.common.util._Num.*;
+import static com.github.hatimiti.doxer.common.util._Num.*;
 import static org.doxer.xbase.controller.DoxController.DoxModelAndView.*;
 
 import java.time.DayOfWeek;
@@ -17,7 +17,7 @@ import org.doxer.xbase.aop.interceptor.supports.DoValidation;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.github.hatimiti.flutist.common.annotation.Function;
+import com.github.hatimiti.doxer.common.annotation.Function;
 
 /**
  * sample

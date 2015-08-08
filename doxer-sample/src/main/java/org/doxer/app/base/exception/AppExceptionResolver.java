@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.github.hatimiti.flutist.common.util._Obj;
+import com.github.hatimiti.doxer.common.util._Obj;
 
 @Component
 public class AppExceptionResolver implements HandlerExceptionResolver {

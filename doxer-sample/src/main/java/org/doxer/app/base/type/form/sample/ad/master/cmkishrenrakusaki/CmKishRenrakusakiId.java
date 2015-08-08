@@ -1,7 +1,7 @@
 package org.doxer.app.base.type.form.sample.ad.master.cmkishrenrakusaki;
 
-import static com.github.hatimiti.flutist.common.domain.supports.InputAttribute.*;
-import static com.github.hatimiti.flutist.common.util._Obj.*;
+import static com.github.hatimiti.doxer.common.domain.supports.InputAttribute.*;
+import static com.github.hatimiti.doxer.common.util._Obj.*;
 
 import org.doxer.app.base.type.form.base.Id;
 import org.doxer.app.db.dbflute.bsentity.dbmeta.CmKishRenrakusakiDbm;
@@ -9,9 +9,9 @@ import org.doxer.app.db.dbflute.cbean.CmKishRenrakusakiCB;
 import org.doxer.app.db.dbflute.exbhv.CmKishRenrakusakiBhv;
 import org.doxer.xbase.validation.validator.ExistsFieldValidator;
 
-import com.github.hatimiti.flutist.common.domain.supports.InputAttribute;
-import com.github.hatimiti.flutist.common.message.AppMessagesContainer;
-import com.github.hatimiti.flutist.common.message.Owner;
+import com.github.hatimiti.doxer.common.domain.supports.InputAttribute;
+import com.github.hatimiti.doxer.common.message.AppMessagesContainer;
+import com.github.hatimiti.doxer.common.message.Owner;
 
 
 public class CmKishRenrakusakiId extends Id {
