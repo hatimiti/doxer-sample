@@ -3,7 +3,6 @@
 	<name>doxer-sample</name>
 	<comment></comment>
 	<projects>
-		<project>doxer-common</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
