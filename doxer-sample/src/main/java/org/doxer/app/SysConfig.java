@@ -1,6 +1,7 @@
-package org.doxer;
+package org.doxer.app;
 
 import org.doxer.app.base.thymeleaf.util.JUtilityDialect;
+import org.doxer.xbase.config.DoxSysConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.thymeleaf.spring4.SpringTemplateEngine;

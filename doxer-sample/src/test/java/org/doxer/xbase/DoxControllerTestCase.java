@@ -1,6 +1,6 @@
 package org.doxer.xbase;
 
-import org.doxer.Application;
+import org.doxer.app.Application;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.rules.TestName;

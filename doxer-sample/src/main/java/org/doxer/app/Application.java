@@ -1,4 +1,4 @@
-package org.doxer;
+package org.doxer.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

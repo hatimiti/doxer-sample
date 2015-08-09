@@ -15,7 +15,7 @@ import org.dbunit.dataset.IDataSet;
 import org.dbunit.dataset.excel.XlsDataSet;
 import org.dbunit.ext.mssql.InsertIdentityOperation;
 import org.dbunit.operation.DatabaseOperation;
-import org.doxer.Application;
+import org.doxer.app.Application;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
