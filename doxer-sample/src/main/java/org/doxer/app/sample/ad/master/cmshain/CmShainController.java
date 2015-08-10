@@ -68,7 +68,7 @@ public class CmShainController extends BaseMasterController {
 	public DoxModelAndView downloadShainCsv(CmShainListForm form) throws Exception {
 		if (form.compresses.isOn()) {
 			Downloads.downloadZipCsv(
-					"shain.zip", form, UTF8, cmShainService::outputCsvBySearchCondition);
+					"shain.csv", form, UTF8, cmShainService::outputCsvBySearchCondition);
 		} else {
 			Downloads.downloadPlainCsv(
 					"shain.csv", form, UTF8, cmShainService::outputCsvBySearchCondition);

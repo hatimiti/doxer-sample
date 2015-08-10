@@ -1,6 +1,7 @@
 package org.doxer.app.sample.hello;
 
 import static com.github.hatimiti.doxer.common.message.AppMessageLevel.*;
+import static java.lang.String.*;
 import static org.doxer.xbase.aop.interceptor.supports.TokenType.*;
 import static org.doxer.xbase.controller.DoxController.DoxModelAndView.*;
 import static org.doxer.xbase.report.birt.DoxBirt.BIRT_OUTPUT_FORMAT.*;
@@ -93,6 +94,7 @@ public class HelloController extends DoxController {
 	@RequestMapping(value = "/output-doxls")
 	public void outputReportDoxls(HelloForm form) throws Exception {
 		Downloads.downloadXls("templates/report/xls/nested_command_template.xls",
+				format("sample_%s.xls", System.currentTimeMillis()),
 				helloService.createXlsValuesSetter(form));
 	}
 
