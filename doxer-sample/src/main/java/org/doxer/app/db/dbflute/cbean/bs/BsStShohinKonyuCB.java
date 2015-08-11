@@ -18,22 +18,23 @@ import org.doxer.app.db.dbflute.allcommon.ImplementedInvokerAssistant;
 import org.doxer.app.db.dbflute.allcommon.ImplementedSqlClauseCreator;
 import org.doxer.app.db.dbflute.cbean.*;
 import org.doxer.app.db.dbflute.cbean.cq.*;
+import org.doxer.app.db.dbflute.cbean.nss.*;
 
 /**
- * The base condition-bean of CM_SHAIN.
+ * The base condition-bean of ST_SHOHIN_KONYU.
  * @author DBFlute(AutoGenerator)
  */
-public class BsCmShainCB extends AbstractConditionBean {
+public class BsStShohinKonyuCB extends AbstractConditionBean {
 
     // ===================================================================================
     //                                                                           Attribute
     //                                                                           =========
-    protected CmShainCQ _conditionQuery;
+    protected StShohinKonyuCQ _conditionQuery;
 
     // ===================================================================================
     //                                                                         Constructor
     //                                                                         ===========
-    public BsCmShainCB() {
+    public BsStShohinKonyuCB() {
         if (DBFluteConfig.getInstance().isPagingCountLater()) {
             enablePagingCountLater();
         }
@@ -69,7 +70,7 @@ public class BsCmShainCB extends AbstractConditionBean {
     }
 
     public String asTableDbName() {
-        return "CM_SHAIN";
+        return "ST_SHOHIN_KONYU";
     }
 
     // ===================================================================================
@@ -77,23 +78,23 @@ public class BsCmShainCB extends AbstractConditionBean {
     //                                                                 ===================
     /**
      * Accept the query condition of primary key as equal.
-     * @param cmShainId : PK, ID, NotNull, BIGINT(19). (NotNull)
+     * @param stShohinKonyuId : PK, ID, NotNull, BIGINT(19). (NotNull)
      * @return this. (NotNull)
      */
-    public CmShainCB acceptPK(Long cmShainId) {
-        assertObjectNotNull("cmShainId", cmShainId);
-        BsCmShainCB cb = this;
-        cb.query().setCmShainId_Equal(cmShainId);
-        return (CmShainCB)this;
+    public StShohinKonyuCB acceptPK(Long stShohinKonyuId) {
+        assertObjectNotNull("stShohinKonyuId", stShohinKonyuId);
+        BsStShohinKonyuCB cb = this;
+        cb.query().setStShohinKonyuId_Equal(stShohinKonyuId);
+        return (StShohinKonyuCB)this;
     }
 
     public ConditionBean addOrderBy_PK_Asc() {
-        query().addOrderBy_CmShainId_Asc();
+        query().addOrderBy_StShohinKonyuId_Asc();
         return this;
     }
 
     public ConditionBean addOrderBy_PK_Desc() {
-        query().addOrderBy_CmShainId_Desc();
+        query().addOrderBy_StShohinKonyuId_Desc();
         return this;
     }
 
@@ -157,34 +158,34 @@ public class BsCmShainCB extends AbstractConditionBean {
      * </pre>
      * @return The instance of condition-query for base-point table to set up query. (NotNull)
      */
-    public CmShainCQ query() {
+    public StShohinKonyuCQ query() {
         assertQueryPurpose(); // assert only when user-public query 
         return doGetConditionQuery();
     }
 
-    public CmShainCQ xdfgetConditionQuery() { // public for parameter comment and internal
+    public StShohinKonyuCQ xdfgetConditionQuery() { // public for parameter comment and internal
         return doGetConditionQuery();
     }
 
-    protected CmShainCQ doGetConditionQuery() {
+    protected StShohinKonyuCQ doGetConditionQuery() {
         if (_conditionQuery == null) {
             _conditionQuery = createLocalCQ();
         }
         return _conditionQuery;
     }
 
-    protected CmShainCQ createLocalCQ() {
+    protected StShohinKonyuCQ createLocalCQ() {
         return xcreateCQ(null, getSqlClause(), getSqlClause().getBasePointAliasName(), 0);
     }
 
-    protected CmShainCQ xcreateCQ(ConditionQuery childQuery, SqlClause sqlClause, String aliasName, int nestLevel) {
-        CmShainCQ cq = xnewCQ(childQuery, sqlClause, aliasName, nestLevel);
+    protected StShohinKonyuCQ xcreateCQ(ConditionQuery childQuery, SqlClause sqlClause, String aliasName, int nestLevel) {
+        StShohinKonyuCQ cq = xnewCQ(childQuery, sqlClause, aliasName, nestLevel);
         cq.xsetBaseCB(this);
         return cq;
     }
 
-    protected CmShainCQ xnewCQ(ConditionQuery childQuery, SqlClause sqlClause, String aliasName, int nestLevel) {
-        return new CmShainCQ(childQuery, sqlClause, aliasName, nestLevel);
+    protected StShohinKonyuCQ xnewCQ(ConditionQuery childQuery, SqlClause sqlClause, String aliasName, int nestLevel) {
+        return new StShohinKonyuCQ(childQuery, sqlClause, aliasName, nestLevel);
     }
 
     /**
@@ -208,10 +209,10 @@ public class BsCmShainCB extends AbstractConditionBean {
      * </pre>
      * @param unionCBLambda The callback for query of 'union'. (NotNull)
      */
-    public void union(UnionQuery<CmShainCB> unionCBLambda) {
-        final CmShainCB cb = new CmShainCB(); cb.xsetupForUnion(this); xsyncUQ(cb); 
+    public void union(UnionQuery<StShohinKonyuCB> unionCBLambda) {
+        final StShohinKonyuCB cb = new StShohinKonyuCB(); cb.xsetupForUnion(this); xsyncUQ(cb); 
         try { lock(); unionCBLambda.query(cb); } finally { unlock(); } xsaveUCB(cb);
-        final CmShainCQ cq = cb.query(); query().xsetUnionQuery(cq);
+        final StShohinKonyuCQ cq = cb.query(); query().xsetUnionQuery(cq);
     }
 
     /**
@@ -225,33 +226,42 @@ public class BsCmShainCB extends AbstractConditionBean {
      * </pre>
      * @param unionCBLambda The callback for query of 'union all'. (NotNull)
      */
-    public void unionAll(UnionQuery<CmShainCB> unionCBLambda) {
-        final CmShainCB cb = new CmShainCB(); cb.xsetupForUnion(this); xsyncUQ(cb);
+    public void unionAll(UnionQuery<StShohinKonyuCB> unionCBLambda) {
+        final StShohinKonyuCB cb = new StShohinKonyuCB(); cb.xsetupForUnion(this); xsyncUQ(cb);
         try { lock(); unionCBLambda.query(cb); } finally { unlock(); } xsaveUCB(cb);
-        final CmShainCQ cq = cb.query(); query().xsetUnionAllQuery(cq);
+        final StShohinKonyuCQ cq = cb.query(); query().xsetUnionAllQuery(cq);
     }
 
     // ===================================================================================
     //                                                                         SetupSelect
     //                                                                         ===========
+    protected CmShainNss _nssCmShain;
+    public CmShainNss xdfgetNssCmShain() {
+        if (_nssCmShain == null) { _nssCmShain = new CmShainNss(null); }
+        return _nssCmShain;
+    }
     /**
      * Set up relation columns to select clause. <br>
-     * CM_KAISHA by my CM_KAISHA_ID, named 'cmKaisha'.
+     * CM_SHAIN by my KONYU_CM_SHAIN_ID, named 'cmShain'.
      * <pre>
-     * <span style="color: #0000C0">cmShainBhv</span>.selectEntity(<span style="color: #553000">cb</span> <span style="color: #90226C; font-weight: bold"><span style="font-size: 120%">-</span>&gt;</span> {
-     *     <span style="color: #553000">cb</span>.<span style="color: #CC4747">setupSelect_CmKaisha()</span>; <span style="color: #3F7E5E">// ...().with[nested-relation]()</span>
+     * <span style="color: #0000C0">stShohinKonyuBhv</span>.selectEntity(<span style="color: #553000">cb</span> <span style="color: #90226C; font-weight: bold"><span style="font-size: 120%">-</span>&gt;</span> {
+     *     <span style="color: #553000">cb</span>.<span style="color: #CC4747">setupSelect_CmShain()</span>; <span style="color: #3F7E5E">// ...().with[nested-relation]()</span>
      *     <span style="color: #553000">cb</span>.query().set...
-     * }).alwaysPresent(<span style="color: #553000">cmShain</span> <span style="color: #90226C; font-weight: bold"><span style="font-size: 120%">-</span>&gt;</span> {
-     *     ... = <span style="color: #553000">cmShain</span>.<span style="color: #CC4747">getCmKaisha()</span>; <span style="color: #3F7E5E">// you can get by using SetupSelect</span>
+     * }).alwaysPresent(<span style="color: #553000">stShohinKonyu</span> <span style="color: #90226C; font-weight: bold"><span style="font-size: 120%">-</span>&gt;</span> {
+     *     ... = <span style="color: #553000">stShohinKonyu</span>.<span style="color: #CC4747">getCmShain()</span>; <span style="color: #3F7E5E">// you can get by using SetupSelect</span>
      * });
      * </pre>
+     * @return The set-upper of nested relation. {setupSelect...().with[nested-relation]} (NotNull)
      */
-    public void setupSelect_CmKaisha() {
-        assertSetupSelectPurpose("cmKaisha");
+    public CmShainNss setupSelect_CmShain() {
+        assertSetupSelectPurpose("cmShain");
         if (hasSpecifiedLocalColumn()) {
-            specify().columnCmKaishaId();
+            specify().columnKonyuCmShainId();
         }
-        doSetupSelect(() -> query().queryCmKaisha());
+        doSetupSelect(() -> query().queryCmShain());
+        if (_nssCmShain == null || !_nssCmShain.hasConditionQuery())
+        { _nssCmShain = new CmShainNss(query().queryCmShain()); }
+        return _nssCmShain;
     }
 
     // [DBFlute-0.7.4]
@@ -294,52 +304,42 @@ public class BsCmShainCB extends AbstractConditionBean {
         return _specification != null && _specification.hasSpecifiedColumn();
     }
 
-    public static class HpSpecification extends HpAbstractSpecification<CmShainCQ> {
-        protected CmKaishaCB.HpSpecification _cmKaisha;
-        public HpSpecification(ConditionBean baseCB, HpSpQyCall<CmShainCQ> qyCall
+    public static class HpSpecification extends HpAbstractSpecification<StShohinKonyuCQ> {
+        protected CmShainCB.HpSpecification _cmShain;
+        public HpSpecification(ConditionBean baseCB, HpSpQyCall<StShohinKonyuCQ> qyCall
                              , HpCBPurpose purpose, DBMetaProvider dbmetaProvider
                              , HpSDRFunctionFactory sdrFuncFactory)
         { super(baseCB, qyCall, purpose, dbmetaProvider, sdrFuncFactory); }
         /**
-         * CM_SHAIN_ID: {PK, ID, NotNull, BIGINT(19)}
+         * ST_SHOHIN_KONYU_ID: {PK, ID, NotNull, BIGINT(19)}
          * @return The information object of specified column. (NotNull)
          */
-        public SpecifiedColumn columnCmShainId() { return doColumn("CM_SHAIN_ID"); }
+        public SpecifiedColumn columnStShohinKonyuId() { return doColumn("ST_SHOHIN_KONYU_ID"); }
         /**
-         * CM_KAISHA_ID: {NotNull, BIGINT(19), FK to cm_kaisha}
+         * KONYU_CM_SHAIN_ID: {NotNull, DECIMAL(12), FK to cm_shain}
          * @return The information object of specified column. (NotNull)
          */
-        public SpecifiedColumn columnCmKaishaId() { return doColumn("CM_KAISHA_ID"); }
+        public SpecifiedColumn columnKonyuCmShainId() { return doColumn("KONYU_CM_SHAIN_ID"); }
         /**
-         * SHAIN_SEI: {NotNull, VARCHAR(50)}
+         * KONYU_YMD: {CHAR(8)}
          * @return The information object of specified column. (NotNull)
          */
-        public SpecifiedColumn columnShainSei() { return doColumn("SHAIN_SEI"); }
+        public SpecifiedColumn columnKonyuYmd() { return doColumn("KONYU_YMD"); }
         /**
-         * SHAIN_MEI: {NotNull, VARCHAR(50)}
+         * KONYU_TM: {CHAR(4)}
          * @return The information object of specified column. (NotNull)
          */
-        public SpecifiedColumn columnShainMei() { return doColumn("SHAIN_MEI"); }
+        public SpecifiedColumn columnKonyuTm() { return doColumn("KONYU_TM"); }
         /**
-         * SHAIN_SEI_EN: {VARCHAR(100)}
+         * KONYU_PRICE: {NotNull, DECIMAL(9)}
          * @return The information object of specified column. (NotNull)
          */
-        public SpecifiedColumn columnShainSeiEn() { return doColumn("SHAIN_SEI_EN"); }
+        public SpecifiedColumn columnKonyuPrice() { return doColumn("KONYU_PRICE"); }
         /**
-         * SHAIN_MEI_EN: {VARCHAR(100)}
+         * KONYU_TAX: {NotNull, DECIMAL(9)}
          * @return The information object of specified column. (NotNull)
          */
-        public SpecifiedColumn columnShainMeiEn() { return doColumn("SHAIN_MEI_EN"); }
-        /**
-         * LOGIN_CD: {NotNull, VARCHAR(50)}
-         * @return The information object of specified column. (NotNull)
-         */
-        public SpecifiedColumn columnLoginCd() { return doColumn("LOGIN_CD"); }
-        /**
-         * PASSWORD: {NotNull, VARCHAR(100)}
-         * @return The information object of specified column. (NotNull)
-         */
-        public SpecifiedColumn columnPassword() { return doColumn("PASSWORD"); }
+        public SpecifiedColumn columnKonyuTax() { return doColumn("KONYU_TAX"); }
         /**
          * REG_USER_ID: {NotNull, VARCHAR(10)}
          * @return The information object of specified column. (NotNull)
@@ -379,58 +379,58 @@ public class BsCmShainCB extends AbstractConditionBean {
         public void exceptRecordMetaColumn() { doExceptRecordMetaColumn(); }
         @Override
         protected void doSpecifyRequiredColumn() {
-            columnCmShainId(); // PK
-            if (qyCall().qy().hasConditionQueryCmKaisha()
-                    || qyCall().qy().xgetReferrerQuery() instanceof CmKaishaCQ) {
-                columnCmKaishaId(); // FK or one-to-one referrer
+            columnStShohinKonyuId(); // PK
+            if (qyCall().qy().hasConditionQueryCmShain()
+                    || qyCall().qy().xgetReferrerQuery() instanceof CmShainCQ) {
+                columnKonyuCmShainId(); // FK or one-to-one referrer
             }
         }
         @Override
-        protected String getTableDbName() { return "CM_SHAIN"; }
+        protected String getTableDbName() { return "ST_SHOHIN_KONYU"; }
         /**
          * Prepare to specify functions about relation table. <br>
-         * CM_KAISHA by my CM_KAISHA_ID, named 'cmKaisha'.
+         * CM_SHAIN by my KONYU_CM_SHAIN_ID, named 'cmShain'.
          * @return The instance for specification for relation table to specify. (NotNull)
          */
-        public CmKaishaCB.HpSpecification specifyCmKaisha() {
-            assertRelation("cmKaisha");
-            if (_cmKaisha == null) {
-                _cmKaisha = new CmKaishaCB.HpSpecification(_baseCB
-                    , xcreateSpQyCall(() -> _qyCall.has() && _qyCall.qy().hasConditionQueryCmKaisha()
-                                    , () -> _qyCall.qy().queryCmKaisha())
+        public CmShainCB.HpSpecification specifyCmShain() {
+            assertRelation("cmShain");
+            if (_cmShain == null) {
+                _cmShain = new CmShainCB.HpSpecification(_baseCB
+                    , xcreateSpQyCall(() -> _qyCall.has() && _qyCall.qy().hasConditionQueryCmShain()
+                                    , () -> _qyCall.qy().queryCmShain())
                     , _purpose, _dbmetaProvider, xgetSDRFnFc());
                 if (xhasSyncQyCall()) { // inherits it
-                    _cmKaisha.xsetSyncQyCall(xcreateSpQyCall(
-                        () -> xsyncQyCall().has() && xsyncQyCall().qy().hasConditionQueryCmKaisha()
-                      , () -> xsyncQyCall().qy().queryCmKaisha()));
+                    _cmShain.xsetSyncQyCall(xcreateSpQyCall(
+                        () -> xsyncQyCall().has() && xsyncQyCall().qy().hasConditionQueryCmShain()
+                      , () -> xsyncQyCall().qy().queryCmShain()));
                 }
             }
-            return _cmKaisha;
+            return _cmShain;
         }
         /**
          * Prepare for (Specify)DerivedReferrer (correlated sub-query). <br>
-         * {select max(FOO) from ST_SHOHIN_KONYU where ...) as FOO_MAX} <br>
-         * ST_SHOHIN_KONYU by KONYU_CM_SHAIN_ID, named 'stShohinKonyuList'.
+         * {select max(FOO) from ST_SHHN_KNY_MS where ...) as FOO_MAX} <br>
+         * ST_SHHN_KNY_MS by ST_SHOHIN_KONYU_ID, named 'stShhnKnyMsList'.
          * <pre>
-         * cb.specify().<span style="color: #CC4747">derived${relationMethodIdentityName}()</span>.<span style="color: #CC4747">max</span>(konyuCB <span style="color: #90226C; font-weight: bold"><span style="font-size: 120%">-</span>&gt;</span> {
-         *     konyuCB.specify().<span style="color: #CC4747">column...</span> <span style="color: #3F7E5E">// derived column by function</span>
-         *     konyuCB.query().set... <span style="color: #3F7E5E">// referrer condition</span>
-         * }, StShohinKonyu.<span style="color: #CC4747">ALIAS_foo...</span>);
+         * cb.specify().<span style="color: #CC4747">derived${relationMethodIdentityName}()</span>.<span style="color: #CC4747">max</span>(msCB <span style="color: #90226C; font-weight: bold"><span style="font-size: 120%">-</span>&gt;</span> {
+         *     msCB.specify().<span style="color: #CC4747">column...</span> <span style="color: #3F7E5E">// derived column by function</span>
+         *     msCB.query().set... <span style="color: #3F7E5E">// referrer condition</span>
+         * }, StShhnKnyMs.<span style="color: #CC4747">ALIAS_foo...</span>);
          * </pre>
          * @return The object to set up a function for referrer table. (NotNull)
          */
-        public HpSDRFunction<StShohinKonyuCB, CmShainCQ> derivedStShohinKonyu() {
-            assertDerived("stShohinKonyuList"); if (xhasSyncQyCall()) { xsyncQyCall().qy(); } // for sync (for example, this in ColumnQuery)
-            return cHSDRF(_baseCB, _qyCall.qy(), (String fn, SubQuery<StShohinKonyuCB> sq, CmShainCQ cq, String al, DerivedReferrerOption op)
-                    -> cq.xsderiveStShohinKonyuList(fn, sq, al, op), _dbmetaProvider);
+        public HpSDRFunction<StShhnKnyMsCB, StShohinKonyuCQ> derivedStShhnKnyMs() {
+            assertDerived("stShhnKnyMsList"); if (xhasSyncQyCall()) { xsyncQyCall().qy(); } // for sync (for example, this in ColumnQuery)
+            return cHSDRF(_baseCB, _qyCall.qy(), (String fn, SubQuery<StShhnKnyMsCB> sq, StShohinKonyuCQ cq, String al, DerivedReferrerOption op)
+                    -> cq.xsderiveStShhnKnyMsList(fn, sq, al, op), _dbmetaProvider);
         }
         /**
          * Prepare for (Specify)MyselfDerived (SubQuery).
          * @return The object to set up a function for myself table. (NotNull)
          */
-        public HpSDRFunction<CmShainCB, CmShainCQ> myselfDerived() {
+        public HpSDRFunction<StShohinKonyuCB, StShohinKonyuCQ> myselfDerived() {
             assertDerived("myselfDerived"); if (xhasSyncQyCall()) { xsyncQyCall().qy(); } // for sync (for example, this in ColumnQuery)
-            return cHSDRF(_baseCB, _qyCall.qy(), (String fn, SubQuery<CmShainCB> sq, CmShainCQ cq, String al, DerivedReferrerOption op)
+            return cHSDRF(_baseCB, _qyCall.qy(), (String fn, SubQuery<StShohinKonyuCB> sq, StShohinKonyuCQ cq, String al, DerivedReferrerOption op)
                     -> cq.xsmyselfDerive(fn, sq, al, op), _dbmetaProvider);
         }
     }
@@ -443,9 +443,9 @@ public class BsCmShainCB extends AbstractConditionBean {
      * This is very specialty so you can get the frontier spirit. Bon voyage!
      * @return The condition-bean for dream cruise, which is linked to main condition-bean.
      */
-    public CmShainCB dreamCruiseCB() {
-        CmShainCB cb = new CmShainCB();
-        cb.xsetupForDreamCruise((CmShainCB) this);
+    public StShohinKonyuCB dreamCruiseCB() {
+        StShohinKonyuCB cb = new StShohinKonyuCB();
+        cb.xsetupForDreamCruise((StShohinKonyuCB) this);
         return cb;
     }
 
@@ -470,15 +470,15 @@ public class BsCmShainCB extends AbstractConditionBean {
      * @param colCBLambda The callback for specify-query of left column. (NotNull)
      * @return The object for setting up operand and right column. (NotNull)
      */
-    public HpColQyOperand<CmShainCB> columnQuery(final SpecifyQuery<CmShainCB> colCBLambda) {
+    public HpColQyOperand<StShohinKonyuCB> columnQuery(final SpecifyQuery<StShohinKonyuCB> colCBLambda) {
         return xcreateColQyOperand((rightSp, operand) -> {
             return xcolqy(xcreateColumnQueryCB(), xcreateColumnQueryCB(), colCBLambda, rightSp, operand);
         });
     }
 
-    protected CmShainCB xcreateColumnQueryCB() {
-        CmShainCB cb = new CmShainCB();
-        cb.xsetupForColumnQuery((CmShainCB)this);
+    protected StShohinKonyuCB xcreateColumnQueryCB() {
+        StShohinKonyuCB cb = new StShohinKonyuCB();
+        cb.xsetupForColumnQuery((StShohinKonyuCB)this);
         return cb;
     }
 
@@ -498,8 +498,8 @@ public class BsCmShainCB extends AbstractConditionBean {
      * </pre>
      * @param orCBLambda The callback for query of or-condition. (NotNull)
      */
-    public void orScopeQuery(OrQuery<CmShainCB> orCBLambda) {
-        xorSQ((CmShainCB)this, orCBLambda);
+    public void orScopeQuery(OrQuery<StShohinKonyuCB> orCBLambda) {
+        xorSQ((StShohinKonyuCB)this, orCBLambda);
     }
 
     /**
@@ -517,8 +517,8 @@ public class BsCmShainCB extends AbstractConditionBean {
      * </pre>
      * @param andCBLambda The callback for query of and-condition. (NotNull)
      */
-    public void orScopeQueryAndPart(AndQuery<CmShainCB> andCBLambda) {
-        xorSQAP((CmShainCB)this, andCBLambda);
+    public void orScopeQueryAndPart(AndQuery<StShohinKonyuCB> andCBLambda) {
+        xorSQAP((StShohinKonyuCB)this, andCBLambda);
     }
 
     // ===================================================================================
@@ -548,11 +548,11 @@ public class BsCmShainCB extends AbstractConditionBean {
     //                                                                        ============
     @Override
     protected void xprepareSyncQyCall(ConditionBean mainCB) {
-        final CmShainCB cb;
+        final StShohinKonyuCB cb;
         if (mainCB != null) {
-            cb = (CmShainCB)mainCB;
+            cb = (StShohinKonyuCB)mainCB;
         } else {
-            cb = new CmShainCB();
+            cb = new StShohinKonyuCB();
         }
         specify().xsetSyncQyCall(xcreateSpQyCall(() -> true, () -> cb.query()));
     }
@@ -561,8 +561,8 @@ public class BsCmShainCB extends AbstractConditionBean {
     //                                                                            Internal
     //                                                                            ========
     // very internal (for suppressing warn about 'Not Use Import')
-    protected String xgetConditionBeanClassNameInternally() { return CmShainCB.class.getName(); }
-    protected String xgetConditionQueryClassNameInternally() { return CmShainCQ.class.getName(); }
+    protected String xgetConditionBeanClassNameInternally() { return StShohinKonyuCB.class.getName(); }
+    protected String xgetConditionQueryClassNameInternally() { return StShohinKonyuCQ.class.getName(); }
     protected String xgetSubQueryClassNameInternally() { return SubQuery.class.getName(); }
     protected String xgetConditionOptionClassNameInternally() { return ConditionOption.class.getName(); }
 }

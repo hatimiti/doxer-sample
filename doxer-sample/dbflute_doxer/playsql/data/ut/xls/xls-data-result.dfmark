@@ -11,5 +11,8 @@ data-directory: playsql/data/ut/xls
   cm_kish_tesuryo (16)
   cm_kish_renrakusaki (1)
   cm_shain (5)
+  sm_shohin (5)
+  st_shohin_konyu (5)
+  st_shhn_kny_ms (10)
   cm_tesuryo_kb (2)
   cm_renrakusaki_yoto_kb (2)

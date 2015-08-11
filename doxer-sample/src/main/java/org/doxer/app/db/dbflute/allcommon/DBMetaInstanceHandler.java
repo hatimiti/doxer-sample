@@ -37,6 +37,9 @@ public class DBMetaInstanceHandler implements DBMetaProvider {
         tmpMap.put("CM_RENRAKUSAKI_YOTO_KB", "org.doxer.app.db.dbflute.bsentity.dbmeta.CmRenrakusakiYotoKbDbm");
         tmpMap.put("CM_SHAIN", "org.doxer.app.db.dbflute.bsentity.dbmeta.CmShainDbm");
         tmpMap.put("CM_TESURYO_KB", "org.doxer.app.db.dbflute.bsentity.dbmeta.CmTesuryoKbDbm");
+        tmpMap.put("SM_SHOHIN", "org.doxer.app.db.dbflute.bsentity.dbmeta.SmShohinDbm");
+        tmpMap.put("ST_SHHN_KNY_MS", "org.doxer.app.db.dbflute.bsentity.dbmeta.StShhnKnyMsDbm");
+        tmpMap.put("ST_SHOHIN_KONYU", "org.doxer.app.db.dbflute.bsentity.dbmeta.StShohinKonyuDbm");
         tmpMap.put("TCM_SAMPLE", "org.doxer.app.db.dbflute.bsentity.dbmeta.TcmSampleDbm");
         _tableDbNameClassNameMap = Collections.unmodifiableMap(tmpMap);
     }

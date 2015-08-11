@@ -12,21 +12,21 @@ import org.doxer.app.db.dbflute.cbean.cq.bs.*;
 import org.doxer.app.db.dbflute.cbean.cq.*;
 
 /**
- * The condition-query for in-line of CM_SHAIN.
+ * The condition-query for in-line of ST_SHOHIN_KONYU.
  * @author DBFlute(AutoGenerator)
  */
-public class CmShainCIQ extends AbstractBsCmShainCQ {
+public class StShohinKonyuCIQ extends AbstractBsStShohinKonyuCQ {
 
     // ===================================================================================
     //                                                                           Attribute
     //                                                                           =========
-    protected BsCmShainCQ _myCQ;
+    protected BsStShohinKonyuCQ _myCQ;
 
     // ===================================================================================
     //                                                                         Constructor
     //                                                                         ===========
-    public CmShainCIQ(ConditionQuery referrerQuery, SqlClause sqlClause
-                        , String aliasName, int nestLevel, BsCmShainCQ myCQ) {
+    public StShohinKonyuCIQ(ConditionQuery referrerQuery, SqlClause sqlClause
+                        , String aliasName, int nestLevel, BsStShohinKonyuCQ myCQ) {
         super(referrerQuery, sqlClause, aliasName, nestLevel);
         _myCQ = myCQ;
         _foreignPropertyName = _myCQ.xgetForeignPropertyName(); // accept foreign property name
@@ -61,24 +61,22 @@ public class CmShainCIQ extends AbstractBsCmShainCQ {
     // ===================================================================================
     //                                                                Override about Query
     //                                                                ====================
-    protected ConditionValue xgetCValueCmShainId() { return _myCQ.xdfgetCmShainId(); }
-    public String keepCmShainId_ExistsReferrer_StShohinKonyuList(StShohinKonyuCQ sq)
+    protected ConditionValue xgetCValueStShohinKonyuId() { return _myCQ.xdfgetStShohinKonyuId(); }
+    public String keepStShohinKonyuId_ExistsReferrer_StShhnKnyMsList(StShhnKnyMsCQ sq)
     { throwIICBOE("ExistsReferrer"); return null; }
-    public String keepCmShainId_NotExistsReferrer_StShohinKonyuList(StShohinKonyuCQ sq)
+    public String keepStShohinKonyuId_NotExistsReferrer_StShhnKnyMsList(StShhnKnyMsCQ sq)
     { throwIICBOE("NotExistsReferrer"); return null; }
-    public String keepCmShainId_SpecifyDerivedReferrer_StShohinKonyuList(StShohinKonyuCQ sq)
+    public String keepStShohinKonyuId_SpecifyDerivedReferrer_StShhnKnyMsList(StShhnKnyMsCQ sq)
     { throwIICBOE("(Specify)DerivedReferrer"); return null; }
-    public String keepCmShainId_QueryDerivedReferrer_StShohinKonyuList(StShohinKonyuCQ sq)
+    public String keepStShohinKonyuId_QueryDerivedReferrer_StShhnKnyMsList(StShhnKnyMsCQ sq)
     { throwIICBOE("(Query)DerivedReferrer"); return null; }
-    public String keepCmShainId_QueryDerivedReferrer_StShohinKonyuListParameter(Object vl)
+    public String keepStShohinKonyuId_QueryDerivedReferrer_StShhnKnyMsListParameter(Object vl)
     { throwIICBOE("(Query)DerivedReferrer"); return null; }
-    protected ConditionValue xgetCValueCmKaishaId() { return _myCQ.xdfgetCmKaishaId(); }
-    protected ConditionValue xgetCValueShainSei() { return _myCQ.xdfgetShainSei(); }
-    protected ConditionValue xgetCValueShainMei() { return _myCQ.xdfgetShainMei(); }
-    protected ConditionValue xgetCValueShainSeiEn() { return _myCQ.xdfgetShainSeiEn(); }
-    protected ConditionValue xgetCValueShainMeiEn() { return _myCQ.xdfgetShainMeiEn(); }
-    protected ConditionValue xgetCValueLoginCd() { return _myCQ.xdfgetLoginCd(); }
-    protected ConditionValue xgetCValuePassword() { return _myCQ.xdfgetPassword(); }
+    protected ConditionValue xgetCValueKonyuCmShainId() { return _myCQ.xdfgetKonyuCmShainId(); }
+    protected ConditionValue xgetCValueKonyuYmd() { return _myCQ.xdfgetKonyuYmd(); }
+    protected ConditionValue xgetCValueKonyuTm() { return _myCQ.xdfgetKonyuTm(); }
+    protected ConditionValue xgetCValueKonyuPrice() { return _myCQ.xdfgetKonyuPrice(); }
+    protected ConditionValue xgetCValueKonyuTax() { return _myCQ.xdfgetKonyuTax(); }
     protected ConditionValue xgetCValueRegUserId() { return _myCQ.xdfgetRegUserId(); }
     protected ConditionValue xgetCValueRegTm() { return _myCQ.xdfgetRegTm(); }
     protected ConditionValue xgetCValueRegFuncCd() { return _myCQ.xdfgetRegFuncCd(); }
@@ -87,15 +85,15 @@ public class CmShainCIQ extends AbstractBsCmShainCQ {
     protected ConditionValue xgetCValueUpdFuncCd() { return _myCQ.xdfgetUpdFuncCd(); }
     protected ConditionValue xgetCValueVersionNo() { return _myCQ.xdfgetVersionNo(); }
     protected Map<String, Object> xfindFixedConditionDynamicParameterMap(String pp) { return null; }
-    public String keepScalarCondition(CmShainCQ sq)
+    public String keepScalarCondition(StShohinKonyuCQ sq)
     { throwIICBOE("ScalarCondition"); return null; }
-    public String keepSpecifyMyselfDerived(CmShainCQ sq)
+    public String keepSpecifyMyselfDerived(StShohinKonyuCQ sq)
     { throwIICBOE("(Specify)MyselfDerived"); return null;}
-    public String keepQueryMyselfDerived(CmShainCQ sq)
+    public String keepQueryMyselfDerived(StShohinKonyuCQ sq)
     { throwIICBOE("(Query)MyselfDerived"); return null;}
     public String keepQueryMyselfDerivedParameter(Object vl)
     { throwIICBOE("(Query)MyselfDerived"); return null;}
-    public String keepMyselfExists(CmShainCQ sq)
+    public String keepMyselfExists(StShohinKonyuCQ sq)
     { throwIICBOE("MyselfExists"); return null;}
 
     protected void throwIICBOE(String name)
@@ -105,6 +103,6 @@ public class CmShainCIQ extends AbstractBsCmShainCQ {
     //                                                                       Very Internal
     //                                                                       =============
     // very internal (for suppressing warn about 'Not Use Import')
-    protected String xinCB() { return CmShainCB.class.getName(); }
-    protected String xinCQ() { return CmShainCQ.class.getName(); }
+    protected String xinCB() { return StShohinKonyuCB.class.getName(); }
+    protected String xinCQ() { return StShohinKonyuCQ.class.getName(); }
 }

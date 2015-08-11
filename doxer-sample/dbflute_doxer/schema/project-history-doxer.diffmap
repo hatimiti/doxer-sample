@@ -1,4 +1,74 @@
 map:{
+    ; 2015/08/11 22:34:23 = map:{
+        ; diffDate = 2015/08/11 22:34:23
+        ; tableDiff = map:{
+            ; SM_SHOHIN = map:{
+                ; tableName = SM_SHOHIN
+                ; diffType = CHANGE
+                ; columnDiff = map:{
+                    ; SM_SHOHIN_ID = map:{
+                        ; columnName = SM_SHOHIN_ID
+                        ; diffType = ADD
+                    }
+                    ; CM_SHOHIN_ID = map:{
+                        ; columnName = CM_SHOHIN_ID
+                        ; diffType = DELETE
+                    }
+                }
+                ; primaryKeyDiff = map:{
+                    ; CONSTRAINT_8 = map:{
+                        ; constraintName = CONSTRAINT_8
+                        ; diffType = CHANGE
+                        ; columnDiff = map:{
+                            ; next = SM_SHOHIN_ID
+                            ; previous = CM_SHOHIN_ID
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ; 2015/08/11 22:28:36 = map:{
+        ; diffDate = 2015/08/11 22:28:36
+        ; tableCount = map:{
+            ; next = 10
+            ; previous = 7
+        }
+        ; tableDiff = map:{
+            ; SM_SHOHIN = map:{
+                ; tableName = SM_SHOHIN
+                ; diffType = ADD
+            }
+            ; ST_SHHN_KNY_MS = map:{
+                ; tableName = ST_SHHN_KNY_MS
+                ; diffType = ADD
+            }
+            ; ST_SHOHIN_KONYU = map:{
+                ; tableName = ST_SHOHIN_KONYU
+                ; diffType = ADD
+            }
+            ; CM_SHAIN = map:{
+                ; tableName = CM_SHAIN
+                ; diffType = CHANGE
+                ; columnDiff = map:{
+                    ; PASSWORD = map:{
+                        ; columnName = PASSWORD
+                        ; diffType = CHANGE
+                        ; columnSizeDiff = map:{
+                            ; next = 100
+                            ; previous = 50
+                        }
+                    }
+                }
+                ; uniqueKeyDiff = map:{
+                    ; UX01_CM_SHAIN = map:{
+                        ; constraintName = UX01_CM_SHAIN
+                        ; diffType = DELETE
+                    }
+                }
+            }
+        }
+    }
     ; 2015/06/25 21:45:58 = map:{
         ; diffDate = 2015/06/25 21:45:58
         ; tableDiff = map:{

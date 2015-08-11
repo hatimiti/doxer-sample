@@ -49,5 +49,17 @@ map:{
         ; localTableName  = cm_shain            ; foreignTableName  = cm_kaisha
         ; localColumnName = cm_kaisha_id        ; foreignColumnName = cm_kaisha_id
     }
+    ; FK_ST_SHOHIN_KONYU_CM_SHAIN = map:{
+        ; localTableName  = st_shohin_konyu     ; foreignTableName  = cm_shain
+        ; localColumnName = konyu_cm_shain_id   ; foreignColumnName = cm_shain_id
+    }
+    ; FK_ST_SHHN_KNY_MS_ST_SHOHIN_KONYU = map:{
+        ; localTableName  = st_shhn_kny_ms      ; foreignTableName  = st_shohin_konyu
+        ; localColumnName = st_shohin_konyu_id  ; foreignColumnName = st_shohin_konyu_id
+    }
+    ; FK_ST_SHHN_KNY_MS_SM_SHOHIN = map:{
+        ; localTableName  = st_shhn_kny_ms      ; foreignTableName  = sm_shohin
+        ; localColumnName = sm_shohin_id        ; foreignColumnName = sm_shohin_id
+    }
 }
 # ----------------/

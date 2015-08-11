@@ -90,14 +90,14 @@ public class CmShainDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                         Column Info
     //                                                                         ===========
-    protected final ColumnInfo _columnCmShainId = cci("CM_SHAIN_ID", "CM_SHAIN_ID", null, null, Long.class, "cmShainId", null, true, true, true, "BIGINT", 19, 0, "NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_E8CB7387_4942_42DD_AA19_DA45705C69FE", false, null, null, null, null, null, false);
+    protected final ColumnInfo _columnCmShainId = cci("CM_SHAIN_ID", "CM_SHAIN_ID", null, null, Long.class, "cmShainId", null, true, true, true, "BIGINT", 19, 0, "NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_C580B55C_A76A_4D60_88D2_D0367ADD69E3", false, null, null, null, "stShohinKonyuList", null, false);
     protected final ColumnInfo _columnCmKaishaId = cci("CM_KAISHA_ID", "CM_KAISHA_ID", null, null, Long.class, "cmKaishaId", null, false, false, true, "BIGINT", 19, 0, null, false, null, null, "cmKaisha", null, null, false);
     protected final ColumnInfo _columnShainSei = cci("SHAIN_SEI", "SHAIN_SEI", null, null, String.class, "shainSei", null, false, false, true, "VARCHAR", 50, 0, null, false, null, null, null, null, null, false);
     protected final ColumnInfo _columnShainMei = cci("SHAIN_MEI", "SHAIN_MEI", null, null, String.class, "shainMei", null, false, false, true, "VARCHAR", 50, 0, null, false, null, null, null, null, null, false);
     protected final ColumnInfo _columnShainSeiEn = cci("SHAIN_SEI_EN", "SHAIN_SEI_EN", null, null, String.class, "shainSeiEn", null, false, false, false, "VARCHAR", 100, 0, null, false, null, null, null, null, null, false);
     protected final ColumnInfo _columnShainMeiEn = cci("SHAIN_MEI_EN", "SHAIN_MEI_EN", null, null, String.class, "shainMeiEn", null, false, false, false, "VARCHAR", 100, 0, null, false, null, null, null, null, null, false);
     protected final ColumnInfo _columnLoginCd = cci("LOGIN_CD", "LOGIN_CD", null, null, String.class, "loginCd", null, false, false, true, "VARCHAR", 50, 0, null, false, null, null, null, null, null, false);
-    protected final ColumnInfo _columnPassword = cci("PASSWORD", "PASSWORD", null, null, String.class, "password", null, false, false, true, "VARCHAR", 50, 0, null, false, null, null, null, null, null, false);
+    protected final ColumnInfo _columnPassword = cci("PASSWORD", "PASSWORD", null, null, String.class, "password", null, false, false, true, "VARCHAR", 100, 0, null, false, null, null, null, null, null, false);
     protected final ColumnInfo _columnRegUserId = cci("REG_USER_ID", "REG_USER_ID", null, null, String.class, "regUserId", null, false, false, true, "VARCHAR", 10, 0, null, true, null, null, null, null, null, false);
     protected final ColumnInfo _columnRegTm = cci("REG_TM", "REG_TM", null, null, java.time.LocalDateTime.class, "regTm", null, false, false, true, "TIMESTAMP", 23, 10, null, true, null, null, null, null, null, false);
     protected final ColumnInfo _columnRegFuncCd = cci("REG_FUNC_CD", "REG_FUNC_CD", null, null, String.class, "regFuncCd", null, false, false, true, "VARCHAR", 9, 0, null, true, null, null, null, null, null, false);
@@ -112,7 +112,7 @@ public class CmShainDbm extends AbstractDBMeta {
      */
     public ColumnInfo columnCmShainId() { return _columnCmShainId; }
     /**
-     * CM_KAISHA_ID: {UQ+, NotNull, BIGINT(19), FK to cm_kaisha}
+     * CM_KAISHA_ID: {NotNull, BIGINT(19), FK to cm_kaisha}
      * @return The information object of specified column. (NotNull)
      */
     public ColumnInfo columnCmKaishaId() { return _columnCmKaishaId; }
@@ -137,12 +137,12 @@ public class CmShainDbm extends AbstractDBMeta {
      */
     public ColumnInfo columnShainMeiEn() { return _columnShainMeiEn; }
     /**
-     * LOGIN_CD: {+UQ, NotNull, VARCHAR(50)}
+     * LOGIN_CD: {NotNull, VARCHAR(50)}
      * @return The information object of specified column. (NotNull)
      */
     public ColumnInfo columnLoginCd() { return _columnLoginCd; }
     /**
-     * PASSWORD: {NotNull, VARCHAR(50)}
+     * PASSWORD: {NotNull, VARCHAR(100)}
      * @return The information object of specified column. (NotNull)
      */
     public ColumnInfo columnPassword() { return _columnPassword; }
@@ -214,16 +214,6 @@ public class CmShainDbm extends AbstractDBMeta {
     public boolean hasPrimaryKey() { return true; }
     public boolean hasCompoundPrimaryKey() { return false; }
 
-    // -----------------------------------------------------
-    //                                        Unique Element
-    //                                        --------------
-    public UniqueInfo uniqueOf() {
-        List<ColumnInfo> ls = newArrayListSized(4);
-        ls.add(columnCmKaishaId());
-        ls.add(columnLoginCd());
-        return hpcui(ls);
-    }
-
     // ===================================================================================
     //                                                                       Relation Info
     //                                                                       =============
@@ -244,6 +234,14 @@ public class CmShainDbm extends AbstractDBMeta {
     // -----------------------------------------------------
     //                                     Referrer Property
     //                                     -----------------
+    /**
+     * ST_SHOHIN_KONYU by KONYU_CM_SHAIN_ID, named 'stShohinKonyuList'.
+     * @return The information object of referrer property. (NotNull)
+     */
+    public ReferrerInfo referrerStShohinKonyuList() {
+        Map<ColumnInfo, ColumnInfo> mp = newLinkedHashMap(columnCmShainId(), StShohinKonyuDbm.getInstance().columnKonyuCmShainId());
+        return cri("FK_ST_SHOHIN_KONYU_CM_SHAIN", "stShohinKonyuList", this, StShohinKonyuDbm.getInstance(), mp, false, "cmShain");
+    }
 
     // ===================================================================================
     //                                                                        Various Info

@@ -13,45 +13,43 @@ import org.doxer.app.db.dbflute.allcommon.DBMetaInstanceHandler;
 import org.doxer.app.db.dbflute.exentity.*;
 
 /**
- * The entity of CM_SHAIN as TABLE. <br>
+ * The entity of ST_SHOHIN_KONYU as TABLE. <br>
  * <pre>
  * [primary-key]
- *     CM_SHAIN_ID
+ *     ST_SHOHIN_KONYU_ID
  * 
  * [column]
- *     CM_SHAIN_ID, CM_KAISHA_ID, SHAIN_SEI, SHAIN_MEI, SHAIN_SEI_EN, SHAIN_MEI_EN, LOGIN_CD, PASSWORD, REG_USER_ID, REG_TM, REG_FUNC_CD, UPD_USER_ID, UPD_TM, UPD_FUNC_CD, VERSION_NO
+ *     ST_SHOHIN_KONYU_ID, KONYU_CM_SHAIN_ID, KONYU_YMD, KONYU_TM, KONYU_PRICE, KONYU_TAX, REG_USER_ID, REG_TM, REG_FUNC_CD, UPD_USER_ID, UPD_TM, UPD_FUNC_CD, VERSION_NO
  * 
  * [sequence]
  *     
  * 
  * [identity]
- *     CM_SHAIN_ID
+ *     ST_SHOHIN_KONYU_ID
  * 
  * [version-no]
  *     VERSION_NO
  * 
  * [foreign table]
- *     CM_KAISHA
+ *     CM_SHAIN
  * 
  * [referrer table]
- *     ST_SHOHIN_KONYU
+ *     ST_SHHN_KNY_MS
  * 
  * [foreign property]
- *     cmKaisha
+ *     cmShain
  * 
  * [referrer property]
- *     stShohinKonyuList
+ *     stShhnKnyMsList
  * 
  * [get/set template]
  * /= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
- * Long cmShainId = entity.getCmShainId();
- * Long cmKaishaId = entity.getCmKaishaId();
- * String shainSei = entity.getShainSei();
- * String shainMei = entity.getShainMei();
- * String shainSeiEn = entity.getShainSeiEn();
- * String shainMeiEn = entity.getShainMeiEn();
- * String loginCd = entity.getLoginCd();
- * String password = entity.getPassword();
+ * Long stShohinKonyuId = entity.getStShohinKonyuId();
+ * Long konyuCmShainId = entity.getKonyuCmShainId();
+ * String konyuYmd = entity.getKonyuYmd();
+ * String konyuTm = entity.getKonyuTm();
+ * Integer konyuPrice = entity.getKonyuPrice();
+ * Integer konyuTax = entity.getKonyuTax();
  * String regUserId = entity.getRegUserId();
  * java.time.LocalDateTime regTm = entity.getRegTm();
  * String regFuncCd = entity.getRegFuncCd();
@@ -59,14 +57,12 @@ import org.doxer.app.db.dbflute.exentity.*;
  * java.time.LocalDateTime updTm = entity.getUpdTm();
  * String updFuncCd = entity.getUpdFuncCd();
  * Integer versionNo = entity.getVersionNo();
- * entity.setCmShainId(cmShainId);
- * entity.setCmKaishaId(cmKaishaId);
- * entity.setShainSei(shainSei);
- * entity.setShainMei(shainMei);
- * entity.setShainSeiEn(shainSeiEn);
- * entity.setShainMeiEn(shainMeiEn);
- * entity.setLoginCd(loginCd);
- * entity.setPassword(password);
+ * entity.setStShohinKonyuId(stShohinKonyuId);
+ * entity.setKonyuCmShainId(konyuCmShainId);
+ * entity.setKonyuYmd(konyuYmd);
+ * entity.setKonyuTm(konyuTm);
+ * entity.setKonyuPrice(konyuPrice);
+ * entity.setKonyuTax(konyuTax);
  * entity.setRegUserId(regUserId);
  * entity.setRegTm(regTm);
  * entity.setRegFuncCd(regFuncCd);
@@ -78,7 +74,7 @@ import org.doxer.app.db.dbflute.exentity.*;
  * </pre>
  * @author DBFlute(AutoGenerator)
  */
-public abstract class BsCmShain extends AbstractEntity implements DomainEntity, EntityDefinedCommonColumn {
+public abstract class BsStShohinKonyu extends AbstractEntity implements DomainEntity, EntityDefinedCommonColumn {
 
     // ===================================================================================
     //                                                                          Definition
@@ -89,29 +85,23 @@ public abstract class BsCmShain extends AbstractEntity implements DomainEntity, 
     // ===================================================================================
     //                                                                           Attribute
     //                                                                           =========
-    /** CM_SHAIN_ID: {PK, ID, NotNull, BIGINT(19)} */
-    protected Long _cmShainId;
+    /** ST_SHOHIN_KONYU_ID: {PK, ID, NotNull, BIGINT(19)} */
+    protected Long _stShohinKonyuId;
 
-    /** CM_KAISHA_ID: {NotNull, BIGINT(19), FK to cm_kaisha} */
-    protected Long _cmKaishaId;
+    /** KONYU_CM_SHAIN_ID: {NotNull, DECIMAL(12), FK to cm_shain} */
+    protected Long _konyuCmShainId;
 
-    /** SHAIN_SEI: {NotNull, VARCHAR(50)} */
-    protected String _shainSei;
+    /** KONYU_YMD: {CHAR(8)} */
+    protected String _konyuYmd;
 
-    /** SHAIN_MEI: {NotNull, VARCHAR(50)} */
-    protected String _shainMei;
+    /** KONYU_TM: {CHAR(4)} */
+    protected String _konyuTm;
 
-    /** SHAIN_SEI_EN: {VARCHAR(100)} */
-    protected String _shainSeiEn;
+    /** KONYU_PRICE: {NotNull, DECIMAL(9)} */
+    protected Integer _konyuPrice;
 
-    /** SHAIN_MEI_EN: {VARCHAR(100)} */
-    protected String _shainMeiEn;
-
-    /** LOGIN_CD: {NotNull, VARCHAR(50)} */
-    protected String _loginCd;
-
-    /** PASSWORD: {NotNull, VARCHAR(100)} */
-    protected String _password;
+    /** KONYU_TAX: {NotNull, DECIMAL(9)} */
+    protected Integer _konyuTax;
 
     /** REG_USER_ID: {NotNull, VARCHAR(10)} */
     protected String _regUserId;
@@ -144,7 +134,7 @@ public abstract class BsCmShain extends AbstractEntity implements DomainEntity, 
 
     /** {@inheritDoc} */
     public String asTableDbName() {
-        return "CM_SHAIN";
+        return "ST_SHOHIN_KONYU";
     }
 
     // ===================================================================================
@@ -152,55 +142,55 @@ public abstract class BsCmShain extends AbstractEntity implements DomainEntity, 
     //                                                                        ============
     /** {@inheritDoc} */
     public boolean hasPrimaryKeyValue() {
-        if (_cmShainId == null) { return false; }
+        if (_stShohinKonyuId == null) { return false; }
         return true;
     }
 
     // ===================================================================================
     //                                                                    Foreign Property
     //                                                                    ================
-    /** CM_KAISHA by my CM_KAISHA_ID, named 'cmKaisha'. */
-    protected OptionalEntity<CmKaisha> _cmKaisha;
+    /** CM_SHAIN by my KONYU_CM_SHAIN_ID, named 'cmShain'. */
+    protected OptionalEntity<CmShain> _cmShain;
 
     /**
-     * [get] CM_KAISHA by my CM_KAISHA_ID, named 'cmKaisha'. <br>
+     * [get] CM_SHAIN by my KONYU_CM_SHAIN_ID, named 'cmShain'. <br>
      * Optional: alwaysPresent(), ifPresent().orElse(), get(), ...
-     * @return The entity of foreign property 'cmKaisha'. (NotNull, EmptyAllowed: when e.g. null FK column, no setupSelect)
+     * @return The entity of foreign property 'cmShain'. (NotNull, EmptyAllowed: when e.g. null FK column, no setupSelect)
      */
-    public OptionalEntity<CmKaisha> getCmKaisha() {
-        if (_cmKaisha == null) { _cmKaisha = OptionalEntity.relationEmpty(this, "cmKaisha"); }
-        return _cmKaisha;
+    public OptionalEntity<CmShain> getCmShain() {
+        if (_cmShain == null) { _cmShain = OptionalEntity.relationEmpty(this, "cmShain"); }
+        return _cmShain;
     }
 
     /**
-     * [set] CM_KAISHA by my CM_KAISHA_ID, named 'cmKaisha'.
-     * @param cmKaisha The entity of foreign property 'cmKaisha'. (NullAllowed)
+     * [set] CM_SHAIN by my KONYU_CM_SHAIN_ID, named 'cmShain'.
+     * @param cmShain The entity of foreign property 'cmShain'. (NullAllowed)
      */
-    public void setCmKaisha(OptionalEntity<CmKaisha> cmKaisha) {
-        _cmKaisha = cmKaisha;
+    public void setCmShain(OptionalEntity<CmShain> cmShain) {
+        _cmShain = cmShain;
     }
 
     // ===================================================================================
     //                                                                   Referrer Property
     //                                                                   =================
-    /** ST_SHOHIN_KONYU by KONYU_CM_SHAIN_ID, named 'stShohinKonyuList'. */
-    protected List<StShohinKonyu> _stShohinKonyuList;
+    /** ST_SHHN_KNY_MS by ST_SHOHIN_KONYU_ID, named 'stShhnKnyMsList'. */
+    protected List<StShhnKnyMs> _stShhnKnyMsList;
 
     /**
-     * [get] ST_SHOHIN_KONYU by KONYU_CM_SHAIN_ID, named 'stShohinKonyuList'.
-     * @return The entity list of referrer property 'stShohinKonyuList'. (NotNull: even if no loading, returns empty list)
+     * [get] ST_SHHN_KNY_MS by ST_SHOHIN_KONYU_ID, named 'stShhnKnyMsList'.
+     * @return The entity list of referrer property 'stShhnKnyMsList'. (NotNull: even if no loading, returns empty list)
      */
-    public List<StShohinKonyu> getStShohinKonyuList() {
-        if (_stShohinKonyuList == null) { _stShohinKonyuList = newReferrerList(); }
-        return _stShohinKonyuList;
+    public List<StShhnKnyMs> getStShhnKnyMsList() {
+        if (_stShhnKnyMsList == null) { _stShhnKnyMsList = newReferrerList(); }
+        return _stShhnKnyMsList;
     }
 
     /**
-     * [set] ST_SHOHIN_KONYU by KONYU_CM_SHAIN_ID, named 'stShohinKonyuList'.
-     * @param stShohinKonyuList The entity list of referrer property 'stShohinKonyuList'. (NullAllowed)
+     * [set] ST_SHHN_KNY_MS by ST_SHOHIN_KONYU_ID, named 'stShhnKnyMsList'.
+     * @param stShhnKnyMsList The entity list of referrer property 'stShhnKnyMsList'. (NullAllowed)
      */
-    public void setStShohinKonyuList(List<StShohinKonyu> stShohinKonyuList) {
-        _stShohinKonyuList = stShohinKonyuList;
+    public void setStShhnKnyMsList(List<StShhnKnyMs> stShhnKnyMsList) {
+        _stShhnKnyMsList = stShhnKnyMsList;
     }
 
     protected <ELEMENT> List<ELEMENT> newReferrerList() {
@@ -212,9 +202,9 @@ public abstract class BsCmShain extends AbstractEntity implements DomainEntity, 
     //                                                                      ==============
     @Override
     protected boolean doEquals(Object obj) {
-        if (obj instanceof BsCmShain) {
-            BsCmShain other = (BsCmShain)obj;
-            if (!xSV(_cmShainId, other._cmShainId)) { return false; }
+        if (obj instanceof BsStShohinKonyu) {
+            BsStShohinKonyu other = (BsStShohinKonyu)obj;
+            if (!xSV(_stShohinKonyuId, other._stShohinKonyuId)) { return false; }
             return true;
         } else {
             return false;
@@ -225,17 +215,17 @@ public abstract class BsCmShain extends AbstractEntity implements DomainEntity, 
     protected int doHashCode(int initial) {
         int hs = initial;
         hs = xCH(hs, asTableDbName());
-        hs = xCH(hs, _cmShainId);
+        hs = xCH(hs, _stShohinKonyuId);
         return hs;
     }
 
     @Override
     protected String doBuildStringWithRelation(String li) {
         StringBuilder sb = new StringBuilder();
-        if (_cmKaisha != null && _cmKaisha.isPresent())
-        { sb.append(li).append(xbRDS(_cmKaisha, "cmKaisha")); }
-        if (_stShohinKonyuList != null) { for (StShohinKonyu et : _stShohinKonyuList)
-        { if (et != null) { sb.append(li).append(xbRDS(et, "stShohinKonyuList")); } } }
+        if (_cmShain != null && _cmShain.isPresent())
+        { sb.append(li).append(xbRDS(_cmShain, "cmShain")); }
+        if (_stShhnKnyMsList != null) { for (StShhnKnyMs et : _stShhnKnyMsList)
+        { if (et != null) { sb.append(li).append(xbRDS(et, "stShhnKnyMsList")); } } }
         return sb.toString();
     }
     protected <ET extends Entity> String xbRDS(org.dbflute.optional.OptionalEntity<ET> et, String name) { // buildRelationDisplayString()
@@ -245,14 +235,12 @@ public abstract class BsCmShain extends AbstractEntity implements DomainEntity, 
     @Override
     protected String doBuildColumnString(String dm) {
         StringBuilder sb = new StringBuilder();
-        sb.append(dm).append(xfND(_cmShainId));
-        sb.append(dm).append(xfND(_cmKaishaId));
-        sb.append(dm).append(xfND(_shainSei));
-        sb.append(dm).append(xfND(_shainMei));
-        sb.append(dm).append(xfND(_shainSeiEn));
-        sb.append(dm).append(xfND(_shainMeiEn));
-        sb.append(dm).append(xfND(_loginCd));
-        sb.append(dm).append(xfND(_password));
+        sb.append(dm).append(xfND(_stShohinKonyuId));
+        sb.append(dm).append(xfND(_konyuCmShainId));
+        sb.append(dm).append(xfND(_konyuYmd));
+        sb.append(dm).append(xfND(_konyuTm));
+        sb.append(dm).append(xfND(_konyuPrice));
+        sb.append(dm).append(xfND(_konyuTax));
         sb.append(dm).append(xfND(_regUserId));
         sb.append(dm).append(xfND(_regTm));
         sb.append(dm).append(xfND(_regFuncCd));
@@ -270,10 +258,10 @@ public abstract class BsCmShain extends AbstractEntity implements DomainEntity, 
     @Override
     protected String doBuildRelationString(String dm) {
         StringBuilder sb = new StringBuilder();
-        if (_cmKaisha != null && _cmKaisha.isPresent())
-        { sb.append(dm).append("cmKaisha"); }
-        if (_stShohinKonyuList != null && !_stShohinKonyuList.isEmpty())
-        { sb.append(dm).append("stShohinKonyuList"); }
+        if (_cmShain != null && _cmShain.isPresent())
+        { sb.append(dm).append("cmShain"); }
+        if (_stShhnKnyMsList != null && !_stShhnKnyMsList.isEmpty())
+        { sb.append(dm).append("stShhnKnyMsList"); }
         if (sb.length() > dm.length()) {
             sb.delete(0, dm.length()).insert(0, "(").append(")");
         }
@@ -281,155 +269,119 @@ public abstract class BsCmShain extends AbstractEntity implements DomainEntity, 
     }
 
     @Override
-    public CmShain clone() {
-        return (CmShain)super.clone();
+    public StShohinKonyu clone() {
+        return (StShohinKonyu)super.clone();
     }
 
     // ===================================================================================
     //                                                                            Accessor
     //                                                                            ========
     /**
-     * [get] CM_SHAIN_ID: {PK, ID, NotNull, BIGINT(19)} <br>
-     * @return The value of the column 'CM_SHAIN_ID'. (basically NotNull if selected: for the constraint)
+     * [get] ST_SHOHIN_KONYU_ID: {PK, ID, NotNull, BIGINT(19)} <br>
+     * @return The value of the column 'ST_SHOHIN_KONYU_ID'. (basically NotNull if selected: for the constraint)
      */
-    public Long getCmShainId() {
-        checkSpecifiedProperty("cmShainId");
-        return _cmShainId;
+    public Long getStShohinKonyuId() {
+        checkSpecifiedProperty("stShohinKonyuId");
+        return _stShohinKonyuId;
     }
 
     /**
-     * [set] CM_SHAIN_ID: {PK, ID, NotNull, BIGINT(19)} <br>
-     * @param cmShainId The value of the column 'CM_SHAIN_ID'. (basically NotNull if update: for the constraint)
+     * [set] ST_SHOHIN_KONYU_ID: {PK, ID, NotNull, BIGINT(19)} <br>
+     * @param stShohinKonyuId The value of the column 'ST_SHOHIN_KONYU_ID'. (basically NotNull if update: for the constraint)
      */
-    public void setCmShainId(Long cmShainId) {
-        registerModifiedProperty("cmShainId");
-        _cmShainId = cmShainId;
+    public void setStShohinKonyuId(Long stShohinKonyuId) {
+        registerModifiedProperty("stShohinKonyuId");
+        _stShohinKonyuId = stShohinKonyuId;
     }
 
     /**
-     * [get] CM_KAISHA_ID: {NotNull, BIGINT(19), FK to cm_kaisha} <br>
-     * @return The value of the column 'CM_KAISHA_ID'. (basically NotNull if selected: for the constraint)
+     * [get] KONYU_CM_SHAIN_ID: {NotNull, DECIMAL(12), FK to cm_shain} <br>
+     * @return The value of the column 'KONYU_CM_SHAIN_ID'. (basically NotNull if selected: for the constraint)
      */
-    public Long getCmKaishaId() {
-        checkSpecifiedProperty("cmKaishaId");
-        return _cmKaishaId;
+    public Long getKonyuCmShainId() {
+        checkSpecifiedProperty("konyuCmShainId");
+        return _konyuCmShainId;
     }
 
     /**
-     * [set] CM_KAISHA_ID: {NotNull, BIGINT(19), FK to cm_kaisha} <br>
-     * @param cmKaishaId The value of the column 'CM_KAISHA_ID'. (basically NotNull if update: for the constraint)
+     * [set] KONYU_CM_SHAIN_ID: {NotNull, DECIMAL(12), FK to cm_shain} <br>
+     * @param konyuCmShainId The value of the column 'KONYU_CM_SHAIN_ID'. (basically NotNull if update: for the constraint)
      */
-    public void setCmKaishaId(Long cmKaishaId) {
-        registerModifiedProperty("cmKaishaId");
-        _cmKaishaId = cmKaishaId;
+    public void setKonyuCmShainId(Long konyuCmShainId) {
+        registerModifiedProperty("konyuCmShainId");
+        _konyuCmShainId = konyuCmShainId;
     }
 
     /**
-     * [get] SHAIN_SEI: {NotNull, VARCHAR(50)} <br>
-     * @return The value of the column 'SHAIN_SEI'. (basically NotNull if selected: for the constraint)
+     * [get] KONYU_YMD: {CHAR(8)} <br>
+     * @return The value of the column 'KONYU_YMD'. (NullAllowed even if selected: for no constraint)
      */
-    public String getShainSei() {
-        checkSpecifiedProperty("shainSei");
-        return _shainSei;
+    public String getKonyuYmd() {
+        checkSpecifiedProperty("konyuYmd");
+        return _konyuYmd;
     }
 
     /**
-     * [set] SHAIN_SEI: {NotNull, VARCHAR(50)} <br>
-     * @param shainSei The value of the column 'SHAIN_SEI'. (basically NotNull if update: for the constraint)
+     * [set] KONYU_YMD: {CHAR(8)} <br>
+     * @param konyuYmd The value of the column 'KONYU_YMD'. (NullAllowed: null update allowed for no constraint)
      */
-    public void setShainSei(String shainSei) {
-        registerModifiedProperty("shainSei");
-        _shainSei = shainSei;
+    public void setKonyuYmd(String konyuYmd) {
+        registerModifiedProperty("konyuYmd");
+        _konyuYmd = konyuYmd;
     }
 
     /**
-     * [get] SHAIN_MEI: {NotNull, VARCHAR(50)} <br>
-     * @return The value of the column 'SHAIN_MEI'. (basically NotNull if selected: for the constraint)
+     * [get] KONYU_TM: {CHAR(4)} <br>
+     * @return The value of the column 'KONYU_TM'. (NullAllowed even if selected: for no constraint)
      */
-    public String getShainMei() {
-        checkSpecifiedProperty("shainMei");
-        return _shainMei;
+    public String getKonyuTm() {
+        checkSpecifiedProperty("konyuTm");
+        return _konyuTm;
     }
 
     /**
-     * [set] SHAIN_MEI: {NotNull, VARCHAR(50)} <br>
-     * @param shainMei The value of the column 'SHAIN_MEI'. (basically NotNull if update: for the constraint)
+     * [set] KONYU_TM: {CHAR(4)} <br>
+     * @param konyuTm The value of the column 'KONYU_TM'. (NullAllowed: null update allowed for no constraint)
      */
-    public void setShainMei(String shainMei) {
-        registerModifiedProperty("shainMei");
-        _shainMei = shainMei;
+    public void setKonyuTm(String konyuTm) {
+        registerModifiedProperty("konyuTm");
+        _konyuTm = konyuTm;
     }
 
     /**
-     * [get] SHAIN_SEI_EN: {VARCHAR(100)} <br>
-     * @return The value of the column 'SHAIN_SEI_EN'. (NullAllowed even if selected: for no constraint)
+     * [get] KONYU_PRICE: {NotNull, DECIMAL(9)} <br>
+     * @return The value of the column 'KONYU_PRICE'. (basically NotNull if selected: for the constraint)
      */
-    public String getShainSeiEn() {
-        checkSpecifiedProperty("shainSeiEn");
-        return _shainSeiEn;
+    public Integer getKonyuPrice() {
+        checkSpecifiedProperty("konyuPrice");
+        return _konyuPrice;
     }
 
     /**
-     * [set] SHAIN_SEI_EN: {VARCHAR(100)} <br>
-     * @param shainSeiEn The value of the column 'SHAIN_SEI_EN'. (NullAllowed: null update allowed for no constraint)
+     * [set] KONYU_PRICE: {NotNull, DECIMAL(9)} <br>
+     * @param konyuPrice The value of the column 'KONYU_PRICE'. (basically NotNull if update: for the constraint)
      */
-    public void setShainSeiEn(String shainSeiEn) {
-        registerModifiedProperty("shainSeiEn");
-        _shainSeiEn = shainSeiEn;
+    public void setKonyuPrice(Integer konyuPrice) {
+        registerModifiedProperty("konyuPrice");
+        _konyuPrice = konyuPrice;
     }
 
     /**
-     * [get] SHAIN_MEI_EN: {VARCHAR(100)} <br>
-     * @return The value of the column 'SHAIN_MEI_EN'. (NullAllowed even if selected: for no constraint)
+     * [get] KONYU_TAX: {NotNull, DECIMAL(9)} <br>
+     * @return The value of the column 'KONYU_TAX'. (basically NotNull if selected: for the constraint)
      */
-    public String getShainMeiEn() {
-        checkSpecifiedProperty("shainMeiEn");
-        return _shainMeiEn;
+    public Integer getKonyuTax() {
+        checkSpecifiedProperty("konyuTax");
+        return _konyuTax;
     }
 
     /**
-     * [set] SHAIN_MEI_EN: {VARCHAR(100)} <br>
-     * @param shainMeiEn The value of the column 'SHAIN_MEI_EN'. (NullAllowed: null update allowed for no constraint)
+     * [set] KONYU_TAX: {NotNull, DECIMAL(9)} <br>
+     * @param konyuTax The value of the column 'KONYU_TAX'. (basically NotNull if update: for the constraint)
      */
-    public void setShainMeiEn(String shainMeiEn) {
-        registerModifiedProperty("shainMeiEn");
-        _shainMeiEn = shainMeiEn;
-    }
-
-    /**
-     * [get] LOGIN_CD: {NotNull, VARCHAR(50)} <br>
-     * @return The value of the column 'LOGIN_CD'. (basically NotNull if selected: for the constraint)
-     */
-    public String getLoginCd() {
-        checkSpecifiedProperty("loginCd");
-        return _loginCd;
-    }
-
-    /**
-     * [set] LOGIN_CD: {NotNull, VARCHAR(50)} <br>
-     * @param loginCd The value of the column 'LOGIN_CD'. (basically NotNull if update: for the constraint)
-     */
-    public void setLoginCd(String loginCd) {
-        registerModifiedProperty("loginCd");
-        _loginCd = loginCd;
-    }
-
-    /**
-     * [get] PASSWORD: {NotNull, VARCHAR(100)} <br>
-     * @return The value of the column 'PASSWORD'. (basically NotNull if selected: for the constraint)
-     */
-    public String getPassword() {
-        checkSpecifiedProperty("password");
-        return _password;
-    }
-
-    /**
-     * [set] PASSWORD: {NotNull, VARCHAR(100)} <br>
-     * @param password The value of the column 'PASSWORD'. (basically NotNull if update: for the constraint)
-     */
-    public void setPassword(String password) {
-        registerModifiedProperty("password");
-        _password = password;
+    public void setKonyuTax(Integer konyuTax) {
+        registerModifiedProperty("konyuTax");
+        _konyuTax = konyuTax;
     }
 
     /**

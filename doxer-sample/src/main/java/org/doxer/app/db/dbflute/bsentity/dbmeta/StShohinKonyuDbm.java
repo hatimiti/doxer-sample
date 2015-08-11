@@ -14,17 +14,17 @@ import org.doxer.app.db.dbflute.allcommon.*;
 import org.doxer.app.db.dbflute.exentity.*;
 
 /**
- * The DB meta of CM_KISH_TESURYO. (Singleton)
+ * The DB meta of ST_SHOHIN_KONYU. (Singleton)
  * @author DBFlute(AutoGenerator)
  */
-public class CmKishTesuryoDbm extends AbstractDBMeta {
+public class StShohinKonyuDbm extends AbstractDBMeta {
 
     // ===================================================================================
     //                                                                           Singleton
     //                                                                           =========
-    private static final CmKishTesuryoDbm _instance = new CmKishTesuryoDbm();
-    private CmKishTesuryoDbm() {}
-    public static CmKishTesuryoDbm getInstance() { return _instance; }
+    private static final StShohinKonyuDbm _instance = new StShohinKonyuDbm();
+    private StShohinKonyuDbm() {}
+    public static StShohinKonyuDbm getInstance() { return _instance; }
 
     // ===================================================================================
     //                                                                       Current DBDef
@@ -43,27 +43,19 @@ public class CmKishTesuryoDbm extends AbstractDBMeta {
     protected final Map<String, PropertyGateway> _epgMap = newHashMap();
     { xsetupEpg(); }
     protected void xsetupEpg() {
-        setupEpg(_epgMap, et -> ((CmKishTesuryo)et).getCmKishTesuryoId(), (et, vl) -> ((CmKishTesuryo)et).setCmKishTesuryoId(ctl(vl)), "cmKishTesuryoId");
-        setupEpg(_epgMap, et -> ((CmKishTesuryo)et).getCmKaishaId(), (et, vl) -> ((CmKishTesuryo)et).setCmKaishaId(ctl(vl)), "cmKaishaId");
-        setupEpg(_epgMap, et -> ((CmKishTesuryo)et).getTekiyoKikanFromDt(), (et, vl) -> ((CmKishTesuryo)et).setTekiyoKikanFromDt((String)vl), "tekiyoKikanFromDt");
-        setupEpg(_epgMap, et -> ((CmKishTesuryo)et).getTekiyoKikanToDt(), (et, vl) -> ((CmKishTesuryo)et).setTekiyoKikanToDt((String)vl), "tekiyoKikanToDt");
-        setupEpg(_epgMap, et -> ((CmKishTesuryo)et).getTesuryoSu(), (et, vl) -> ((CmKishTesuryo)et).setTesuryoSu(ctb(vl)), "tesuryoSu");
-        setupEpg(_epgMap, et -> ((CmKishTesuryo)et).getTesuryoKb(), (et, vl) -> {
-            ColumnInfo col = columnTesuryoKb();
-            CDef.TesuryoKb cls = (CDef.TesuryoKb)gcls(et, col, vl);
-            if (cls != null) {
-                ((CmKishTesuryo)et).setTesuryoKbAsTesuryoKb(cls);
-            } else {
-                ((CmKishTesuryo)et).mynativeMappingTesuryoKb((String)vl);
-            }
-        }, "tesuryoKb");
-        setupEpg(_epgMap, et -> ((CmKishTesuryo)et).getRegUserId(), (et, vl) -> ((CmKishTesuryo)et).setRegUserId((String)vl), "regUserId");
-        setupEpg(_epgMap, et -> ((CmKishTesuryo)et).getRegTm(), (et, vl) -> ((CmKishTesuryo)et).setRegTm(ctldt(vl)), "regTm");
-        setupEpg(_epgMap, et -> ((CmKishTesuryo)et).getRegFuncCd(), (et, vl) -> ((CmKishTesuryo)et).setRegFuncCd((String)vl), "regFuncCd");
-        setupEpg(_epgMap, et -> ((CmKishTesuryo)et).getUpdUserId(), (et, vl) -> ((CmKishTesuryo)et).setUpdUserId((String)vl), "updUserId");
-        setupEpg(_epgMap, et -> ((CmKishTesuryo)et).getUpdTm(), (et, vl) -> ((CmKishTesuryo)et).setUpdTm(ctldt(vl)), "updTm");
-        setupEpg(_epgMap, et -> ((CmKishTesuryo)et).getUpdFuncCd(), (et, vl) -> ((CmKishTesuryo)et).setUpdFuncCd((String)vl), "updFuncCd");
-        setupEpg(_epgMap, et -> ((CmKishTesuryo)et).getVersionNo(), (et, vl) -> ((CmKishTesuryo)et).setVersionNo(cti(vl)), "versionNo");
+        setupEpg(_epgMap, et -> ((StShohinKonyu)et).getStShohinKonyuId(), (et, vl) -> ((StShohinKonyu)et).setStShohinKonyuId(ctl(vl)), "stShohinKonyuId");
+        setupEpg(_epgMap, et -> ((StShohinKonyu)et).getKonyuCmShainId(), (et, vl) -> ((StShohinKonyu)et).setKonyuCmShainId(ctl(vl)), "konyuCmShainId");
+        setupEpg(_epgMap, et -> ((StShohinKonyu)et).getKonyuYmd(), (et, vl) -> ((StShohinKonyu)et).setKonyuYmd((String)vl), "konyuYmd");
+        setupEpg(_epgMap, et -> ((StShohinKonyu)et).getKonyuTm(), (et, vl) -> ((StShohinKonyu)et).setKonyuTm((String)vl), "konyuTm");
+        setupEpg(_epgMap, et -> ((StShohinKonyu)et).getKonyuPrice(), (et, vl) -> ((StShohinKonyu)et).setKonyuPrice(cti(vl)), "konyuPrice");
+        setupEpg(_epgMap, et -> ((StShohinKonyu)et).getKonyuTax(), (et, vl) -> ((StShohinKonyu)et).setKonyuTax(cti(vl)), "konyuTax");
+        setupEpg(_epgMap, et -> ((StShohinKonyu)et).getRegUserId(), (et, vl) -> ((StShohinKonyu)et).setRegUserId((String)vl), "regUserId");
+        setupEpg(_epgMap, et -> ((StShohinKonyu)et).getRegTm(), (et, vl) -> ((StShohinKonyu)et).setRegTm(ctldt(vl)), "regTm");
+        setupEpg(_epgMap, et -> ((StShohinKonyu)et).getRegFuncCd(), (et, vl) -> ((StShohinKonyu)et).setRegFuncCd((String)vl), "regFuncCd");
+        setupEpg(_epgMap, et -> ((StShohinKonyu)et).getUpdUserId(), (et, vl) -> ((StShohinKonyu)et).setUpdUserId((String)vl), "updUserId");
+        setupEpg(_epgMap, et -> ((StShohinKonyu)et).getUpdTm(), (et, vl) -> ((StShohinKonyu)et).setUpdTm(ctldt(vl)), "updTm");
+        setupEpg(_epgMap, et -> ((StShohinKonyu)et).getUpdFuncCd(), (et, vl) -> ((StShohinKonyu)et).setUpdFuncCd((String)vl), "updFuncCd");
+        setupEpg(_epgMap, et -> ((StShohinKonyu)et).getVersionNo(), (et, vl) -> ((StShohinKonyu)et).setVersionNo(cti(vl)), "versionNo");
     }
     public PropertyGateway findPropertyGateway(String prop)
     { return doFindEpg(_epgMap, prop); }
@@ -75,8 +67,7 @@ public class CmKishTesuryoDbm extends AbstractDBMeta {
     { xsetupEfpg(); }
     @SuppressWarnings("unchecked")
     protected void xsetupEfpg() {
-        setupEfpg(_efpgMap, et -> ((CmKishTesuryo)et).getCmKaisha(), (et, vl) -> ((CmKishTesuryo)et).setCmKaisha((OptionalEntity<CmKaisha>)vl), "cmKaisha");
-        setupEfpg(_efpgMap, et -> ((CmKishTesuryo)et).getCmTesuryoKb(), (et, vl) -> ((CmKishTesuryo)et).setCmTesuryoKb((OptionalEntity<CmTesuryoKb>)vl), "cmTesuryoKb");
+        setupEfpg(_efpgMap, et -> ((StShohinKonyu)et).getCmShain(), (et, vl) -> ((StShohinKonyu)et).setCmShain((OptionalEntity<CmShain>)vl), "cmShain");
     }
     public PropertyGateway findForeignPropertyGateway(String prop)
     { return doFindEfpg(_efpgMap, prop); }
@@ -84,10 +75,10 @@ public class CmKishTesuryoDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                          Table Info
     //                                                                          ==========
-    protected final String _tableDbName = "CM_KISH_TESURYO";
-    protected final String _tableDispName = "CM_KISH_TESURYO";
-    protected final String _tablePropertyName = "cmKishTesuryo";
-    protected final TableSqlName _tableSqlName = new TableSqlName("CM_KISH_TESURYO", _tableDbName);
+    protected final String _tableDbName = "ST_SHOHIN_KONYU";
+    protected final String _tableDispName = "ST_SHOHIN_KONYU";
+    protected final String _tablePropertyName = "stShohinKonyu";
+    protected final TableSqlName _tableSqlName = new TableSqlName("ST_SHOHIN_KONYU", _tableDbName);
     { _tableSqlName.xacceptFilter(DBFluteConfig.getInstance().getTableSqlNameFilter()); }
     public String getTableDbName() { return _tableDbName; }
     public String getTableDispName() { return _tableDispName; }
@@ -97,12 +88,12 @@ public class CmKishTesuryoDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                         Column Info
     //                                                                         ===========
-    protected final ColumnInfo _columnCmKishTesuryoId = cci("CM_KISH_TESURYO_ID", "CM_KISH_TESURYO_ID", null, null, Long.class, "cmKishTesuryoId", null, true, true, true, "BIGINT", 19, 0, "NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_FB1E73E5_5DB0_40EC_A12E_7C0C3FA21D4E", false, null, null, null, null, null, false);
-    protected final ColumnInfo _columnCmKaishaId = cci("CM_KAISHA_ID", "CM_KAISHA_ID", null, null, Long.class, "cmKaishaId", null, false, false, true, "BIGINT", 19, 0, null, false, null, null, "cmKaisha", null, null, false);
-    protected final ColumnInfo _columnTekiyoKikanFromDt = cci("TEKIYO_KIKAN_FROM_DT", "TEKIYO_KIKAN_FROM_DT", null, null, String.class, "tekiyoKikanFromDt", null, false, false, true, "CHAR", 8, 0, null, false, null, null, null, null, null, false);
-    protected final ColumnInfo _columnTekiyoKikanToDt = cci("TEKIYO_KIKAN_TO_DT", "TEKIYO_KIKAN_TO_DT", null, null, String.class, "tekiyoKikanToDt", null, false, false, true, "CHAR", 8, 0, null, false, null, null, null, null, null, false);
-    protected final ColumnInfo _columnTesuryoSu = cci("TESURYO_SU", "TESURYO_SU", null, null, java.math.BigDecimal.class, "tesuryoSu", null, false, false, true, "DECIMAL", 7, 1, null, false, null, null, null, null, null, false);
-    protected final ColumnInfo _columnTesuryoKb = cci("TESURYO_KB", "TESURYO_KB", null, null, String.class, "tesuryoKb", null, false, false, true, "CHAR", 3, 0, null, false, null, null, "cmTesuryoKb", null, CDef.DefMeta.TesuryoKb, false);
+    protected final ColumnInfo _columnStShohinKonyuId = cci("ST_SHOHIN_KONYU_ID", "ST_SHOHIN_KONYU_ID", null, null, Long.class, "stShohinKonyuId", null, true, true, true, "BIGINT", 19, 0, "NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_ABF66E19_1F0B_41C7_BF5F_2B45BFFE0EB7", false, null, null, null, "stShhnKnyMsList", null, false);
+    protected final ColumnInfo _columnKonyuCmShainId = cci("KONYU_CM_SHAIN_ID", "KONYU_CM_SHAIN_ID", null, null, Long.class, "konyuCmShainId", null, false, false, true, "DECIMAL", 12, 0, null, false, null, null, "cmShain", null, null, false);
+    protected final ColumnInfo _columnKonyuYmd = cci("KONYU_YMD", "KONYU_YMD", null, null, String.class, "konyuYmd", null, false, false, false, "CHAR", 8, 0, null, false, null, null, null, null, null, false);
+    protected final ColumnInfo _columnKonyuTm = cci("KONYU_TM", "KONYU_TM", null, null, String.class, "konyuTm", null, false, false, false, "CHAR", 4, 0, null, false, null, null, null, null, null, false);
+    protected final ColumnInfo _columnKonyuPrice = cci("KONYU_PRICE", "KONYU_PRICE", null, null, Integer.class, "konyuPrice", null, false, false, true, "DECIMAL", 9, 0, null, false, null, null, null, null, null, false);
+    protected final ColumnInfo _columnKonyuTax = cci("KONYU_TAX", "KONYU_TAX", null, null, Integer.class, "konyuTax", null, false, false, true, "DECIMAL", 9, 0, null, false, null, null, null, null, null, false);
     protected final ColumnInfo _columnRegUserId = cci("REG_USER_ID", "REG_USER_ID", null, null, String.class, "regUserId", null, false, false, true, "VARCHAR", 10, 0, null, true, null, null, null, null, null, false);
     protected final ColumnInfo _columnRegTm = cci("REG_TM", "REG_TM", null, null, java.time.LocalDateTime.class, "regTm", null, false, false, true, "TIMESTAMP", 23, 10, null, true, null, null, null, null, null, false);
     protected final ColumnInfo _columnRegFuncCd = cci("REG_FUNC_CD", "REG_FUNC_CD", null, null, String.class, "regFuncCd", null, false, false, true, "VARCHAR", 9, 0, null, true, null, null, null, null, null, false);
@@ -112,35 +103,35 @@ public class CmKishTesuryoDbm extends AbstractDBMeta {
     protected final ColumnInfo _columnVersionNo = cci("VERSION_NO", "VERSION_NO", null, null, Integer.class, "versionNo", null, false, false, true, "DECIMAL", 9, 0, null, true, OptimisticLockType.VERSION_NO, null, null, null, null, false);
 
     /**
-     * CM_KISH_TESURYO_ID: {PK, ID, NotNull, BIGINT(19)}
+     * ST_SHOHIN_KONYU_ID: {PK, ID, NotNull, BIGINT(19)}
      * @return The information object of specified column. (NotNull)
      */
-    public ColumnInfo columnCmKishTesuryoId() { return _columnCmKishTesuryoId; }
+    public ColumnInfo columnStShohinKonyuId() { return _columnStShohinKonyuId; }
     /**
-     * CM_KAISHA_ID: {UQ+, NotNull, BIGINT(19), FK to cm_kaisha}
+     * KONYU_CM_SHAIN_ID: {NotNull, DECIMAL(12), FK to cm_shain}
      * @return The information object of specified column. (NotNull)
      */
-    public ColumnInfo columnCmKaishaId() { return _columnCmKaishaId; }
+    public ColumnInfo columnKonyuCmShainId() { return _columnKonyuCmShainId; }
     /**
-     * TEKIYO_KIKAN_FROM_DT: {+UQ, NotNull, CHAR(8)}
+     * KONYU_YMD: {CHAR(8)}
      * @return The information object of specified column. (NotNull)
      */
-    public ColumnInfo columnTekiyoKikanFromDt() { return _columnTekiyoKikanFromDt; }
+    public ColumnInfo columnKonyuYmd() { return _columnKonyuYmd; }
     /**
-     * TEKIYO_KIKAN_TO_DT: {NotNull, CHAR(8)}
+     * KONYU_TM: {CHAR(4)}
      * @return The information object of specified column. (NotNull)
      */
-    public ColumnInfo columnTekiyoKikanToDt() { return _columnTekiyoKikanToDt; }
+    public ColumnInfo columnKonyuTm() { return _columnKonyuTm; }
     /**
-     * TESURYO_SU: {NotNull, DECIMAL(7, 1)}
+     * KONYU_PRICE: {NotNull, DECIMAL(9)}
      * @return The information object of specified column. (NotNull)
      */
-    public ColumnInfo columnTesuryoSu() { return _columnTesuryoSu; }
+    public ColumnInfo columnKonyuPrice() { return _columnKonyuPrice; }
     /**
-     * TESURYO_KB: {NotNull, CHAR(3), FK to cm_tesuryo_kb, classification=TesuryoKb}
+     * KONYU_TAX: {NotNull, DECIMAL(9)}
      * @return The information object of specified column. (NotNull)
      */
-    public ColumnInfo columnTesuryoKb() { return _columnTesuryoKb; }
+    public ColumnInfo columnKonyuTax() { return _columnKonyuTax; }
     /**
      * REG_USER_ID: {NotNull, VARCHAR(10)}
      * @return The information object of specified column. (NotNull)
@@ -179,12 +170,12 @@ public class CmKishTesuryoDbm extends AbstractDBMeta {
 
     protected List<ColumnInfo> ccil() {
         List<ColumnInfo> ls = newArrayList();
-        ls.add(columnCmKishTesuryoId());
-        ls.add(columnCmKaishaId());
-        ls.add(columnTekiyoKikanFromDt());
-        ls.add(columnTekiyoKikanToDt());
-        ls.add(columnTesuryoSu());
-        ls.add(columnTesuryoKb());
+        ls.add(columnStShohinKonyuId());
+        ls.add(columnKonyuCmShainId());
+        ls.add(columnKonyuYmd());
+        ls.add(columnKonyuTm());
+        ls.add(columnKonyuPrice());
+        ls.add(columnKonyuTax());
         ls.add(columnRegUserId());
         ls.add(columnRegTm());
         ls.add(columnRegFuncCd());
@@ -203,19 +194,9 @@ public class CmKishTesuryoDbm extends AbstractDBMeta {
     // -----------------------------------------------------
     //                                       Primary Element
     //                                       ---------------
-    protected UniqueInfo cpui() { return hpcpui(columnCmKishTesuryoId()); }
+    protected UniqueInfo cpui() { return hpcpui(columnStShohinKonyuId()); }
     public boolean hasPrimaryKey() { return true; }
     public boolean hasCompoundPrimaryKey() { return false; }
-
-    // -----------------------------------------------------
-    //                                        Unique Element
-    //                                        --------------
-    public UniqueInfo uniqueOf() {
-        List<ColumnInfo> ls = newArrayListSized(4);
-        ls.add(columnCmKaishaId());
-        ls.add(columnTekiyoKikanFromDt());
-        return hpcui(ls);
-    }
 
     // ===================================================================================
     //                                                                       Relation Info
@@ -226,25 +207,25 @@ public class CmKishTesuryoDbm extends AbstractDBMeta {
     //                                      Foreign Property
     //                                      ----------------
     /**
-     * CM_KAISHA by my CM_KAISHA_ID, named 'cmKaisha'.
+     * CM_SHAIN by my KONYU_CM_SHAIN_ID, named 'cmShain'.
      * @return The information object of foreign property. (NotNull)
      */
-    public ForeignInfo foreignCmKaisha() {
-        Map<ColumnInfo, ColumnInfo> mp = newLinkedHashMap(columnCmKaishaId(), CmKaishaDbm.getInstance().columnCmKaishaId());
-        return cfi("FK_CM_KISH_TESURYO_CM_KAISHA", "cmKaisha", this, CmKaishaDbm.getInstance(), mp, 0, org.dbflute.optional.OptionalEntity.class, false, false, false, true, null, null, false, "cmKishTesuryoList", false);
-    }
-    /**
-     * CM_TESURYO_KB by my TESURYO_KB, named 'cmTesuryoKb'.
-     * @return The information object of foreign property. (NotNull)
-     */
-    public ForeignInfo foreignCmTesuryoKb() {
-        Map<ColumnInfo, ColumnInfo> mp = newLinkedHashMap(columnTesuryoKb(), CmTesuryoKbDbm.getInstance().columnKbVal());
-        return cfi("FK_CM_KISH_TESURYO_CM_TESURYO_KB", "cmTesuryoKb", this, CmTesuryoKbDbm.getInstance(), mp, 1, org.dbflute.optional.OptionalEntity.class, false, false, false, true, null, null, false, "cmKishTesuryoList", false);
+    public ForeignInfo foreignCmShain() {
+        Map<ColumnInfo, ColumnInfo> mp = newLinkedHashMap(columnKonyuCmShainId(), CmShainDbm.getInstance().columnCmShainId());
+        return cfi("FK_ST_SHOHIN_KONYU_CM_SHAIN", "cmShain", this, CmShainDbm.getInstance(), mp, 0, org.dbflute.optional.OptionalEntity.class, false, false, false, true, null, null, false, "stShohinKonyuList", false);
     }
 
     // -----------------------------------------------------
     //                                     Referrer Property
     //                                     -----------------
+    /**
+     * ST_SHHN_KNY_MS by ST_SHOHIN_KONYU_ID, named 'stShhnKnyMsList'.
+     * @return The information object of referrer property. (NotNull)
+     */
+    public ReferrerInfo referrerStShhnKnyMsList() {
+        Map<ColumnInfo, ColumnInfo> mp = newLinkedHashMap(columnStShohinKonyuId(), StShhnKnyMsDbm.getInstance().columnStShohinKonyuId());
+        return cri("FK_ST_SHHN_KNY_MS_ST_SHOHIN_KONYU", "stShhnKnyMsList", this, StShhnKnyMsDbm.getInstance(), mp, false, "stShohinKonyu");
+    }
 
     // ===================================================================================
     //                                                                        Various Info
@@ -263,27 +244,27 @@ public class CmKishTesuryoDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                           Type Name
     //                                                                           =========
-    public String getEntityTypeName() { return "org.doxer.app.db.dbflute.exentity.CmKishTesuryo"; }
-    public String getConditionBeanTypeName() { return "org.doxer.app.db.dbflute.cbean.CmKishTesuryoCB"; }
-    public String getBehaviorTypeName() { return "org.doxer.app.db.dbflute.exbhv.CmKishTesuryoBhv"; }
+    public String getEntityTypeName() { return "org.doxer.app.db.dbflute.exentity.StShohinKonyu"; }
+    public String getConditionBeanTypeName() { return "org.doxer.app.db.dbflute.cbean.StShohinKonyuCB"; }
+    public String getBehaviorTypeName() { return "org.doxer.app.db.dbflute.exbhv.StShohinKonyuBhv"; }
 
     // ===================================================================================
     //                                                                         Object Type
     //                                                                         ===========
-    public Class<CmKishTesuryo> getEntityType() { return CmKishTesuryo.class; }
+    public Class<StShohinKonyu> getEntityType() { return StShohinKonyu.class; }
 
     // ===================================================================================
     //                                                                     Object Instance
     //                                                                     ===============
-    public CmKishTesuryo newEntity() { return new CmKishTesuryo(); }
+    public StShohinKonyu newEntity() { return new StShohinKonyu(); }
 
     // ===================================================================================
     //                                                                   Map Communication
     //                                                                   =================
     public void acceptPrimaryKeyMap(Entity et, Map<String, ? extends Object> mp)
-    { doAcceptPrimaryKeyMap((CmKishTesuryo)et, mp); }
+    { doAcceptPrimaryKeyMap((StShohinKonyu)et, mp); }
     public void acceptAllColumnMap(Entity et, Map<String, ? extends Object> mp)
-    { doAcceptAllColumnMap((CmKishTesuryo)et, mp); }
+    { doAcceptAllColumnMap((StShohinKonyu)et, mp); }
     public Map<String, Object> extractPrimaryKeyMap(Entity et) { return doExtractPrimaryKeyMap(et); }
     public Map<String, Object> extractAllColumnMap(Entity et) { return doExtractAllColumnMap(et); }
 }

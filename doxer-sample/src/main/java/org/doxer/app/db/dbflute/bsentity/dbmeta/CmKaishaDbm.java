@@ -72,7 +72,7 @@ public class CmKaishaDbm extends AbstractDBMeta {
     // ===================================================================================
     //                                                                         Column Info
     //                                                                         ===========
-    protected final ColumnInfo _columnCmKaishaId = cci("CM_KAISHA_ID", "CM_KAISHA_ID", null, null, Long.class, "cmKaishaId", null, true, true, true, "BIGINT", 19, 0, "NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_53A0EF60_510F_4D68_A06D_54F937DFC929", false, null, null, null, "cmKishTesuryoList,cmKishRenrakusakiList,cmShainList", null, false);
+    protected final ColumnInfo _columnCmKaishaId = cci("CM_KAISHA_ID", "CM_KAISHA_ID", null, null, Long.class, "cmKaishaId", null, true, true, true, "BIGINT", 19, 0, "NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_8216B247_029A_41FE_8B2A_C701E0551139", false, null, null, null, "cmKishTesuryoList,cmKishRenrakusakiList,cmShainList", null, false);
     protected final ColumnInfo _columnKaishaMei = cci("KAISHA_MEI", "KAISHA_MEI", null, null, String.class, "kaishaMei", null, false, false, true, "VARCHAR", 50, 0, null, false, null, null, null, null, null, false);
     protected final ColumnInfo _columnKaishaMeiEn = cci("KAISHA_MEI_EN", "KAISHA_MEI_EN", null, null, String.class, "kaishaMeiEn", null, false, false, false, "VARCHAR", 100, 0, null, false, null, null, null, null, null, false);
     protected final ColumnInfo _columnRegUserId = cci("REG_USER_ID", "REG_USER_ID", null, null, String.class, "regUserId", null, false, false, true, "VARCHAR", 10, 0, null, true, null, null, null, null, null, false);

@@ -13,20 +13,20 @@ import org.doxer.app.db.dbflute.cbean.*;
 import org.doxer.app.db.dbflute.cbean.cq.*;
 
 /**
- * The base condition-query of CM_SHAIN.
+ * The base condition-query of SM_SHOHIN.
  * @author DBFlute(AutoGenerator)
  */
-public class BsCmShainCQ extends AbstractBsCmShainCQ {
+public class BsSmShohinCQ extends AbstractBsSmShohinCQ {
 
     // ===================================================================================
     //                                                                           Attribute
     //                                                                           =========
-    protected CmShainCIQ _inlineQuery;
+    protected SmShohinCIQ _inlineQuery;
 
     // ===================================================================================
     //                                                                         Constructor
     //                                                                         ===========
-    public BsCmShainCQ(ConditionQuery referrerQuery, SqlClause sqlClause, String aliasName, int nestLevel) {
+    public BsSmShohinCQ(ConditionQuery referrerQuery, SqlClause sqlClause, String aliasName, int nestLevel) {
         super(referrerQuery, sqlClause, aliasName, nestLevel);
     }
 
@@ -35,217 +35,157 @@ public class BsCmShainCQ extends AbstractBsCmShainCQ {
     //                                                                 ===================
     /**
      * Prepare InlineView query. <br>
-     * {select ... from ... left outer join (select * from CM_SHAIN) where FOO = [value] ...}
+     * {select ... from ... left outer join (select * from SM_SHOHIN) where FOO = [value] ...}
      * <pre>
      * cb.query().queryMemberStatus().<span style="color: #CC4747">inline()</span>.setFoo...;
      * </pre>
      * @return The condition-query for InlineView query. (NotNull)
      */
-    public CmShainCIQ inline() {
+    public SmShohinCIQ inline() {
         if (_inlineQuery == null) { _inlineQuery = xcreateCIQ(); }
         _inlineQuery.xsetOnClause(false); return _inlineQuery;
     }
 
-    protected CmShainCIQ xcreateCIQ() {
-        CmShainCIQ ciq = xnewCIQ();
+    protected SmShohinCIQ xcreateCIQ() {
+        SmShohinCIQ ciq = xnewCIQ();
         ciq.xsetBaseCB(_baseCB);
         return ciq;
     }
 
-    protected CmShainCIQ xnewCIQ() {
-        return new CmShainCIQ(xgetReferrerQuery(), xgetSqlClause(), xgetAliasName(), xgetNestLevel(), this);
+    protected SmShohinCIQ xnewCIQ() {
+        return new SmShohinCIQ(xgetReferrerQuery(), xgetSqlClause(), xgetAliasName(), xgetNestLevel(), this);
     }
 
     /**
      * Prepare OnClause query. <br>
-     * {select ... from ... left outer join CM_SHAIN on ... and FOO = [value] ...}
+     * {select ... from ... left outer join SM_SHOHIN on ... and FOO = [value] ...}
      * <pre>
      * cb.query().queryMemberStatus().<span style="color: #CC4747">on()</span>.setFoo...;
      * </pre>
      * @return The condition-query for OnClause query. (NotNull)
      * @throws IllegalConditionBeanOperationException When this condition-query is base query.
      */
-    public CmShainCIQ on() {
+    public SmShohinCIQ on() {
         if (isBaseQuery()) { throw new IllegalConditionBeanOperationException("OnClause for local table is unavailable!"); }
-        CmShainCIQ inlineQuery = inline(); inlineQuery.xsetOnClause(true); return inlineQuery;
+        SmShohinCIQ inlineQuery = inline(); inlineQuery.xsetOnClause(true); return inlineQuery;
     }
 
     // ===================================================================================
     //                                                                               Query
     //                                                                               =====
-    protected ConditionValue _cmShainId;
-    public ConditionValue xdfgetCmShainId()
-    { if (_cmShainId == null) { _cmShainId = nCV(); }
-      return _cmShainId; }
-    protected ConditionValue xgetCValueCmShainId() { return xdfgetCmShainId(); }
+    protected ConditionValue _smShohinId;
+    public ConditionValue xdfgetSmShohinId()
+    { if (_smShohinId == null) { _smShohinId = nCV(); }
+      return _smShohinId; }
+    protected ConditionValue xgetCValueSmShohinId() { return xdfgetSmShohinId(); }
 
-    public Map<String, StShohinKonyuCQ> xdfgetCmShainId_ExistsReferrer_StShohinKonyuList() { return xgetSQueMap("cmShainId_ExistsReferrer_StShohinKonyuList"); }
-    public String keepCmShainId_ExistsReferrer_StShohinKonyuList(StShohinKonyuCQ sq) { return xkeepSQue("cmShainId_ExistsReferrer_StShohinKonyuList", sq); }
+    public Map<String, StShhnKnyMsCQ> xdfgetSmShohinId_ExistsReferrer_StShhnKnyMsList() { return xgetSQueMap("smShohinId_ExistsReferrer_StShhnKnyMsList"); }
+    public String keepSmShohinId_ExistsReferrer_StShhnKnyMsList(StShhnKnyMsCQ sq) { return xkeepSQue("smShohinId_ExistsReferrer_StShhnKnyMsList", sq); }
 
-    public Map<String, StShohinKonyuCQ> xdfgetCmShainId_NotExistsReferrer_StShohinKonyuList() { return xgetSQueMap("cmShainId_NotExistsReferrer_StShohinKonyuList"); }
-    public String keepCmShainId_NotExistsReferrer_StShohinKonyuList(StShohinKonyuCQ sq) { return xkeepSQue("cmShainId_NotExistsReferrer_StShohinKonyuList", sq); }
+    public Map<String, StShhnKnyMsCQ> xdfgetSmShohinId_NotExistsReferrer_StShhnKnyMsList() { return xgetSQueMap("smShohinId_NotExistsReferrer_StShhnKnyMsList"); }
+    public String keepSmShohinId_NotExistsReferrer_StShhnKnyMsList(StShhnKnyMsCQ sq) { return xkeepSQue("smShohinId_NotExistsReferrer_StShhnKnyMsList", sq); }
 
-    public Map<String, StShohinKonyuCQ> xdfgetCmShainId_SpecifyDerivedReferrer_StShohinKonyuList() { return xgetSQueMap("cmShainId_SpecifyDerivedReferrer_StShohinKonyuList"); }
-    public String keepCmShainId_SpecifyDerivedReferrer_StShohinKonyuList(StShohinKonyuCQ sq) { return xkeepSQue("cmShainId_SpecifyDerivedReferrer_StShohinKonyuList", sq); }
+    public Map<String, StShhnKnyMsCQ> xdfgetSmShohinId_SpecifyDerivedReferrer_StShhnKnyMsList() { return xgetSQueMap("smShohinId_SpecifyDerivedReferrer_StShhnKnyMsList"); }
+    public String keepSmShohinId_SpecifyDerivedReferrer_StShhnKnyMsList(StShhnKnyMsCQ sq) { return xkeepSQue("smShohinId_SpecifyDerivedReferrer_StShhnKnyMsList", sq); }
 
-    public Map<String, StShohinKonyuCQ> xdfgetCmShainId_QueryDerivedReferrer_StShohinKonyuList() { return xgetSQueMap("cmShainId_QueryDerivedReferrer_StShohinKonyuList"); }
-    public String keepCmShainId_QueryDerivedReferrer_StShohinKonyuList(StShohinKonyuCQ sq) { return xkeepSQue("cmShainId_QueryDerivedReferrer_StShohinKonyuList", sq); }
-    public Map<String, Object> xdfgetCmShainId_QueryDerivedReferrer_StShohinKonyuListParameter() { return xgetSQuePmMap("cmShainId_QueryDerivedReferrer_StShohinKonyuList"); }
-    public String keepCmShainId_QueryDerivedReferrer_StShohinKonyuListParameter(Object pm) { return xkeepSQuePm("cmShainId_QueryDerivedReferrer_StShohinKonyuList", pm); }
-
-    /** 
-     * Add order-by as ascend. <br>
-     * CM_SHAIN_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @return this. (NotNull)
-     */
-    public BsCmShainCQ addOrderBy_CmShainId_Asc() { regOBA("CM_SHAIN_ID"); return this; }
-
-    /**
-     * Add order-by as descend. <br>
-     * CM_SHAIN_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @return this. (NotNull)
-     */
-    public BsCmShainCQ addOrderBy_CmShainId_Desc() { regOBD("CM_SHAIN_ID"); return this; }
-
-    protected ConditionValue _cmKaishaId;
-    public ConditionValue xdfgetCmKaishaId()
-    { if (_cmKaishaId == null) { _cmKaishaId = nCV(); }
-      return _cmKaishaId; }
-    protected ConditionValue xgetCValueCmKaishaId() { return xdfgetCmKaishaId(); }
+    public Map<String, StShhnKnyMsCQ> xdfgetSmShohinId_QueryDerivedReferrer_StShhnKnyMsList() { return xgetSQueMap("smShohinId_QueryDerivedReferrer_StShhnKnyMsList"); }
+    public String keepSmShohinId_QueryDerivedReferrer_StShhnKnyMsList(StShhnKnyMsCQ sq) { return xkeepSQue("smShohinId_QueryDerivedReferrer_StShhnKnyMsList", sq); }
+    public Map<String, Object> xdfgetSmShohinId_QueryDerivedReferrer_StShhnKnyMsListParameter() { return xgetSQuePmMap("smShohinId_QueryDerivedReferrer_StShhnKnyMsList"); }
+    public String keepSmShohinId_QueryDerivedReferrer_StShhnKnyMsListParameter(Object pm) { return xkeepSQuePm("smShohinId_QueryDerivedReferrer_StShhnKnyMsList", pm); }
 
     /** 
      * Add order-by as ascend. <br>
-     * CM_KAISHA_ID: {NotNull, BIGINT(19), FK to cm_kaisha}
+     * SM_SHOHIN_ID: {PK, ID, NotNull, BIGINT(19)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_CmKaishaId_Asc() { regOBA("CM_KAISHA_ID"); return this; }
+    public BsSmShohinCQ addOrderBy_SmShohinId_Asc() { regOBA("SM_SHOHIN_ID"); return this; }
 
     /**
      * Add order-by as descend. <br>
-     * CM_KAISHA_ID: {NotNull, BIGINT(19), FK to cm_kaisha}
+     * SM_SHOHIN_ID: {PK, ID, NotNull, BIGINT(19)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_CmKaishaId_Desc() { regOBD("CM_KAISHA_ID"); return this; }
+    public BsSmShohinCQ addOrderBy_SmShohinId_Desc() { regOBD("SM_SHOHIN_ID"); return this; }
 
-    protected ConditionValue _shainSei;
-    public ConditionValue xdfgetShainSei()
-    { if (_shainSei == null) { _shainSei = nCV(); }
-      return _shainSei; }
-    protected ConditionValue xgetCValueShainSei() { return xdfgetShainSei(); }
+    protected ConditionValue _shohinNo;
+    public ConditionValue xdfgetShohinNo()
+    { if (_shohinNo == null) { _shohinNo = nCV(); }
+      return _shohinNo; }
+    protected ConditionValue xgetCValueShohinNo() { return xdfgetShohinNo(); }
 
     /** 
      * Add order-by as ascend. <br>
-     * SHAIN_SEI: {NotNull, VARCHAR(50)}
+     * SHOHIN_NO: {UQ, NotNull, VARCHAR(20)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_ShainSei_Asc() { regOBA("SHAIN_SEI"); return this; }
+    public BsSmShohinCQ addOrderBy_ShohinNo_Asc() { regOBA("SHOHIN_NO"); return this; }
 
     /**
      * Add order-by as descend. <br>
-     * SHAIN_SEI: {NotNull, VARCHAR(50)}
+     * SHOHIN_NO: {UQ, NotNull, VARCHAR(20)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_ShainSei_Desc() { regOBD("SHAIN_SEI"); return this; }
+    public BsSmShohinCQ addOrderBy_ShohinNo_Desc() { regOBD("SHOHIN_NO"); return this; }
 
-    protected ConditionValue _shainMei;
-    public ConditionValue xdfgetShainMei()
-    { if (_shainMei == null) { _shainMei = nCV(); }
-      return _shainMei; }
-    protected ConditionValue xgetCValueShainMei() { return xdfgetShainMei(); }
+    protected ConditionValue _shohinMei;
+    public ConditionValue xdfgetShohinMei()
+    { if (_shohinMei == null) { _shohinMei = nCV(); }
+      return _shohinMei; }
+    protected ConditionValue xgetCValueShohinMei() { return xdfgetShohinMei(); }
 
     /** 
      * Add order-by as ascend. <br>
-     * SHAIN_MEI: {NotNull, VARCHAR(50)}
+     * SHOHIN_MEI: {NotNull, VARCHAR(50)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_ShainMei_Asc() { regOBA("SHAIN_MEI"); return this; }
+    public BsSmShohinCQ addOrderBy_ShohinMei_Asc() { regOBA("SHOHIN_MEI"); return this; }
 
     /**
      * Add order-by as descend. <br>
-     * SHAIN_MEI: {NotNull, VARCHAR(50)}
+     * SHOHIN_MEI: {NotNull, VARCHAR(50)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_ShainMei_Desc() { regOBD("SHAIN_MEI"); return this; }
+    public BsSmShohinCQ addOrderBy_ShohinMei_Desc() { regOBD("SHOHIN_MEI"); return this; }
 
-    protected ConditionValue _shainSeiEn;
-    public ConditionValue xdfgetShainSeiEn()
-    { if (_shainSeiEn == null) { _shainSeiEn = nCV(); }
-      return _shainSeiEn; }
-    protected ConditionValue xgetCValueShainSeiEn() { return xdfgetShainSeiEn(); }
+    protected ConditionValue _shohinMeiEn;
+    public ConditionValue xdfgetShohinMeiEn()
+    { if (_shohinMeiEn == null) { _shohinMeiEn = nCV(); }
+      return _shohinMeiEn; }
+    protected ConditionValue xgetCValueShohinMeiEn() { return xdfgetShohinMeiEn(); }
 
     /** 
      * Add order-by as ascend. <br>
-     * SHAIN_SEI_EN: {VARCHAR(100)}
+     * SHOHIN_MEI_EN: {VARCHAR(100)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_ShainSeiEn_Asc() { regOBA("SHAIN_SEI_EN"); return this; }
+    public BsSmShohinCQ addOrderBy_ShohinMeiEn_Asc() { regOBA("SHOHIN_MEI_EN"); return this; }
 
     /**
      * Add order-by as descend. <br>
-     * SHAIN_SEI_EN: {VARCHAR(100)}
+     * SHOHIN_MEI_EN: {VARCHAR(100)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_ShainSeiEn_Desc() { regOBD("SHAIN_SEI_EN"); return this; }
+    public BsSmShohinCQ addOrderBy_ShohinMeiEn_Desc() { regOBD("SHOHIN_MEI_EN"); return this; }
 
-    protected ConditionValue _shainMeiEn;
-    public ConditionValue xdfgetShainMeiEn()
-    { if (_shainMeiEn == null) { _shainMeiEn = nCV(); }
-      return _shainMeiEn; }
-    protected ConditionValue xgetCValueShainMeiEn() { return xdfgetShainMeiEn(); }
+    protected ConditionValue _shohinPrice;
+    public ConditionValue xdfgetShohinPrice()
+    { if (_shohinPrice == null) { _shohinPrice = nCV(); }
+      return _shohinPrice; }
+    protected ConditionValue xgetCValueShohinPrice() { return xdfgetShohinPrice(); }
 
     /** 
      * Add order-by as ascend. <br>
-     * SHAIN_MEI_EN: {VARCHAR(100)}
+     * SHOHIN_PRICE: {NotNull, DECIMAL(9)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_ShainMeiEn_Asc() { regOBA("SHAIN_MEI_EN"); return this; }
+    public BsSmShohinCQ addOrderBy_ShohinPrice_Asc() { regOBA("SHOHIN_PRICE"); return this; }
 
     /**
      * Add order-by as descend. <br>
-     * SHAIN_MEI_EN: {VARCHAR(100)}
+     * SHOHIN_PRICE: {NotNull, DECIMAL(9)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_ShainMeiEn_Desc() { regOBD("SHAIN_MEI_EN"); return this; }
-
-    protected ConditionValue _loginCd;
-    public ConditionValue xdfgetLoginCd()
-    { if (_loginCd == null) { _loginCd = nCV(); }
-      return _loginCd; }
-    protected ConditionValue xgetCValueLoginCd() { return xdfgetLoginCd(); }
-
-    /** 
-     * Add order-by as ascend. <br>
-     * LOGIN_CD: {NotNull, VARCHAR(50)}
-     * @return this. (NotNull)
-     */
-    public BsCmShainCQ addOrderBy_LoginCd_Asc() { regOBA("LOGIN_CD"); return this; }
-
-    /**
-     * Add order-by as descend. <br>
-     * LOGIN_CD: {NotNull, VARCHAR(50)}
-     * @return this. (NotNull)
-     */
-    public BsCmShainCQ addOrderBy_LoginCd_Desc() { regOBD("LOGIN_CD"); return this; }
-
-    protected ConditionValue _password;
-    public ConditionValue xdfgetPassword()
-    { if (_password == null) { _password = nCV(); }
-      return _password; }
-    protected ConditionValue xgetCValuePassword() { return xdfgetPassword(); }
-
-    /** 
-     * Add order-by as ascend. <br>
-     * PASSWORD: {NotNull, VARCHAR(100)}
-     * @return this. (NotNull)
-     */
-    public BsCmShainCQ addOrderBy_Password_Asc() { regOBA("PASSWORD"); return this; }
-
-    /**
-     * Add order-by as descend. <br>
-     * PASSWORD: {NotNull, VARCHAR(100)}
-     * @return this. (NotNull)
-     */
-    public BsCmShainCQ addOrderBy_Password_Desc() { regOBD("PASSWORD"); return this; }
+    public BsSmShohinCQ addOrderBy_ShohinPrice_Desc() { regOBD("SHOHIN_PRICE"); return this; }
 
     protected ConditionValue _regUserId;
     public ConditionValue xdfgetRegUserId()
@@ -258,14 +198,14 @@ public class BsCmShainCQ extends AbstractBsCmShainCQ {
      * REG_USER_ID: {NotNull, VARCHAR(10)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_RegUserId_Asc() { regOBA("REG_USER_ID"); return this; }
+    public BsSmShohinCQ addOrderBy_RegUserId_Asc() { regOBA("REG_USER_ID"); return this; }
 
     /**
      * Add order-by as descend. <br>
      * REG_USER_ID: {NotNull, VARCHAR(10)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_RegUserId_Desc() { regOBD("REG_USER_ID"); return this; }
+    public BsSmShohinCQ addOrderBy_RegUserId_Desc() { regOBD("REG_USER_ID"); return this; }
 
     protected ConditionValue _regTm;
     public ConditionValue xdfgetRegTm()
@@ -278,14 +218,14 @@ public class BsCmShainCQ extends AbstractBsCmShainCQ {
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_RegTm_Asc() { regOBA("REG_TM"); return this; }
+    public BsSmShohinCQ addOrderBy_RegTm_Asc() { regOBA("REG_TM"); return this; }
 
     /**
      * Add order-by as descend. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_RegTm_Desc() { regOBD("REG_TM"); return this; }
+    public BsSmShohinCQ addOrderBy_RegTm_Desc() { regOBD("REG_TM"); return this; }
 
     protected ConditionValue _regFuncCd;
     public ConditionValue xdfgetRegFuncCd()
@@ -298,14 +238,14 @@ public class BsCmShainCQ extends AbstractBsCmShainCQ {
      * REG_FUNC_CD: {NotNull, VARCHAR(9)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_RegFuncCd_Asc() { regOBA("REG_FUNC_CD"); return this; }
+    public BsSmShohinCQ addOrderBy_RegFuncCd_Asc() { regOBA("REG_FUNC_CD"); return this; }
 
     /**
      * Add order-by as descend. <br>
      * REG_FUNC_CD: {NotNull, VARCHAR(9)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_RegFuncCd_Desc() { regOBD("REG_FUNC_CD"); return this; }
+    public BsSmShohinCQ addOrderBy_RegFuncCd_Desc() { regOBD("REG_FUNC_CD"); return this; }
 
     protected ConditionValue _updUserId;
     public ConditionValue xdfgetUpdUserId()
@@ -318,14 +258,14 @@ public class BsCmShainCQ extends AbstractBsCmShainCQ {
      * UPD_USER_ID: {NotNull, VARCHAR(10)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_UpdUserId_Asc() { regOBA("UPD_USER_ID"); return this; }
+    public BsSmShohinCQ addOrderBy_UpdUserId_Asc() { regOBA("UPD_USER_ID"); return this; }
 
     /**
      * Add order-by as descend. <br>
      * UPD_USER_ID: {NotNull, VARCHAR(10)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_UpdUserId_Desc() { regOBD("UPD_USER_ID"); return this; }
+    public BsSmShohinCQ addOrderBy_UpdUserId_Desc() { regOBD("UPD_USER_ID"); return this; }
 
     protected ConditionValue _updTm;
     public ConditionValue xdfgetUpdTm()
@@ -338,14 +278,14 @@ public class BsCmShainCQ extends AbstractBsCmShainCQ {
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_UpdTm_Asc() { regOBA("UPD_TM"); return this; }
+    public BsSmShohinCQ addOrderBy_UpdTm_Asc() { regOBA("UPD_TM"); return this; }
 
     /**
      * Add order-by as descend. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_UpdTm_Desc() { regOBD("UPD_TM"); return this; }
+    public BsSmShohinCQ addOrderBy_UpdTm_Desc() { regOBD("UPD_TM"); return this; }
 
     protected ConditionValue _updFuncCd;
     public ConditionValue xdfgetUpdFuncCd()
@@ -358,14 +298,14 @@ public class BsCmShainCQ extends AbstractBsCmShainCQ {
      * UPD_FUNC_CD: {NotNull, VARCHAR(9)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_UpdFuncCd_Asc() { regOBA("UPD_FUNC_CD"); return this; }
+    public BsSmShohinCQ addOrderBy_UpdFuncCd_Asc() { regOBA("UPD_FUNC_CD"); return this; }
 
     /**
      * Add order-by as descend. <br>
      * UPD_FUNC_CD: {NotNull, VARCHAR(9)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_UpdFuncCd_Desc() { regOBD("UPD_FUNC_CD"); return this; }
+    public BsSmShohinCQ addOrderBy_UpdFuncCd_Desc() { regOBD("UPD_FUNC_CD"); return this; }
 
     protected ConditionValue _versionNo;
     public ConditionValue xdfgetVersionNo()
@@ -378,14 +318,14 @@ public class BsCmShainCQ extends AbstractBsCmShainCQ {
      * VERSION_NO: {NotNull, DECIMAL(9)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_VersionNo_Asc() { regOBA("VERSION_NO"); return this; }
+    public BsSmShohinCQ addOrderBy_VersionNo_Asc() { regOBA("VERSION_NO"); return this; }
 
     /**
      * Add order-by as descend. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addOrderBy_VersionNo_Desc() { regOBD("VERSION_NO"); return this; }
+    public BsSmShohinCQ addOrderBy_VersionNo_Desc() { regOBD("VERSION_NO"); return this; }
 
     // ===================================================================================
     //                                                             SpecifiedDerivedOrderBy
@@ -404,7 +344,7 @@ public class BsCmShainCQ extends AbstractBsCmShainCQ {
      * @param aliasName The alias name specified at (Specify)DerivedReferrer. (NotNull)
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addSpecifiedDerivedOrderBy_Asc(String aliasName) { registerSpecifiedDerivedOrderBy_Asc(aliasName); return this; }
+    public BsSmShohinCQ addSpecifiedDerivedOrderBy_Asc(String aliasName) { registerSpecifiedDerivedOrderBy_Asc(aliasName); return this; }
 
     /**
      * Add order-by for specified derived column as descend.
@@ -420,42 +360,17 @@ public class BsCmShainCQ extends AbstractBsCmShainCQ {
      * @param aliasName The alias name specified at (Specify)DerivedReferrer. (NotNull)
      * @return this. (NotNull)
      */
-    public BsCmShainCQ addSpecifiedDerivedOrderBy_Desc(String aliasName) { registerSpecifiedDerivedOrderBy_Desc(aliasName); return this; }
+    public BsSmShohinCQ addSpecifiedDerivedOrderBy_Desc(String aliasName) { registerSpecifiedDerivedOrderBy_Desc(aliasName); return this; }
 
     // ===================================================================================
     //                                                                         Union Query
     //                                                                         ===========
     public void reflectRelationOnUnionQuery(ConditionQuery bqs, ConditionQuery uqs) {
-        CmShainCQ bq = (CmShainCQ)bqs;
-        CmShainCQ uq = (CmShainCQ)uqs;
-        if (bq.hasConditionQueryCmKaisha()) {
-            uq.queryCmKaisha().reflectRelationOnUnionQuery(bq.queryCmKaisha(), uq.queryCmKaisha());
-        }
     }
 
     // ===================================================================================
     //                                                                       Foreign Query
     //                                                                       =============
-    /**
-     * Get the condition-query for relation table. <br>
-     * CM_KAISHA by my CM_KAISHA_ID, named 'cmKaisha'.
-     * @return The instance of condition-query. (NotNull)
-     */
-    public CmKaishaCQ queryCmKaisha() {
-        return xdfgetConditionQueryCmKaisha();
-    }
-    public CmKaishaCQ xdfgetConditionQueryCmKaisha() {
-        String prop = "cmKaisha";
-        if (!xhasQueRlMap(prop)) { xregQueRl(prop, xcreateQueryCmKaisha()); xsetupOuterJoinCmKaisha(); }
-        return xgetQueRlMap(prop);
-    }
-    protected CmKaishaCQ xcreateQueryCmKaisha() {
-        String nrp = xresolveNRP("CM_SHAIN", "cmKaisha"); String jan = xresolveJAN(nrp, xgetNNLvl());
-        return xinitRelCQ(new CmKaishaCQ(this, xgetSqlClause(), jan, xgetNNLvl()), _baseCB, "cmKaisha", nrp);
-    }
-    protected void xsetupOuterJoinCmKaisha() { xregOutJo("cmKaisha"); }
-    public boolean hasConditionQueryCmKaisha() { return xhasQueRlMap("cmKaisha"); }
-
     protected Map<String, Object> xfindFixedConditionDynamicParameterMap(String property) {
         return null;
     }
@@ -463,39 +378,39 @@ public class BsCmShainCQ extends AbstractBsCmShainCQ {
     // ===================================================================================
     //                                                                     ScalarCondition
     //                                                                     ===============
-    public Map<String, CmShainCQ> xdfgetScalarCondition() { return xgetSQueMap("scalarCondition"); }
-    public String keepScalarCondition(CmShainCQ sq) { return xkeepSQue("scalarCondition", sq); }
+    public Map<String, SmShohinCQ> xdfgetScalarCondition() { return xgetSQueMap("scalarCondition"); }
+    public String keepScalarCondition(SmShohinCQ sq) { return xkeepSQue("scalarCondition", sq); }
 
     // ===================================================================================
     //                                                                       MyselfDerived
     //                                                                       =============
-    public Map<String, CmShainCQ> xdfgetSpecifyMyselfDerived() { return xgetSQueMap("specifyMyselfDerived"); }
-    public String keepSpecifyMyselfDerived(CmShainCQ sq) { return xkeepSQue("specifyMyselfDerived", sq); }
+    public Map<String, SmShohinCQ> xdfgetSpecifyMyselfDerived() { return xgetSQueMap("specifyMyselfDerived"); }
+    public String keepSpecifyMyselfDerived(SmShohinCQ sq) { return xkeepSQue("specifyMyselfDerived", sq); }
 
-    public Map<String, CmShainCQ> xdfgetQueryMyselfDerived() { return xgetSQueMap("queryMyselfDerived"); }
-    public String keepQueryMyselfDerived(CmShainCQ sq) { return xkeepSQue("queryMyselfDerived", sq); }
+    public Map<String, SmShohinCQ> xdfgetQueryMyselfDerived() { return xgetSQueMap("queryMyselfDerived"); }
+    public String keepQueryMyselfDerived(SmShohinCQ sq) { return xkeepSQue("queryMyselfDerived", sq); }
     public Map<String, Object> xdfgetQueryMyselfDerivedParameter() { return xgetSQuePmMap("queryMyselfDerived"); }
     public String keepQueryMyselfDerivedParameter(Object pm) { return xkeepSQuePm("queryMyselfDerived", pm); }
 
     // ===================================================================================
     //                                                                        MyselfExists
     //                                                                        ============
-    protected Map<String, CmShainCQ> _myselfExistsMap;
-    public Map<String, CmShainCQ> xdfgetMyselfExists() { return xgetSQueMap("myselfExists"); }
-    public String keepMyselfExists(CmShainCQ sq) { return xkeepSQue("myselfExists", sq); }
+    protected Map<String, SmShohinCQ> _myselfExistsMap;
+    public Map<String, SmShohinCQ> xdfgetMyselfExists() { return xgetSQueMap("myselfExists"); }
+    public String keepMyselfExists(SmShohinCQ sq) { return xkeepSQue("myselfExists", sq); }
 
     // ===================================================================================
     //                                                                       MyselfInScope
     //                                                                       =============
-    public Map<String, CmShainCQ> xdfgetMyselfInScope() { return xgetSQueMap("myselfInScope"); }
-    public String keepMyselfInScope(CmShainCQ sq) { return xkeepSQue("myselfInScope", sq); }
+    public Map<String, SmShohinCQ> xdfgetMyselfInScope() { return xgetSQueMap("myselfInScope"); }
+    public String keepMyselfInScope(SmShohinCQ sq) { return xkeepSQue("myselfInScope", sq); }
 
     // ===================================================================================
     //                                                                       Very Internal
     //                                                                       =============
     // very internal (for suppressing warn about 'Not Use Import')
-    protected String xCB() { return CmShainCB.class.getName(); }
-    protected String xCQ() { return CmShainCQ.class.getName(); }
+    protected String xCB() { return SmShohinCB.class.getName(); }
+    protected String xCQ() { return SmShohinCQ.class.getName(); }
     protected String xCHp() { return HpQDRFunction.class.getName(); }
     protected String xCOp() { return ConditionOption.class.getName(); }
     protected String xMap() { return Map.class.getName(); }
