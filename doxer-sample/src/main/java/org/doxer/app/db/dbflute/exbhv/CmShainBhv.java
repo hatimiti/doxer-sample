@@ -7,6 +7,7 @@ import static org.doxer.xbase.support.SortOrder.*;
 
 import org.dbflute.cbean.ConditionQuery;
 import org.dbflute.cbean.result.PagingResultBean;
+import org.doxer.app.base.type.form.sample.ad.master.cmshain.CmShainId;
 import org.doxer.app.db.ExEntityRowHandler;
 import org.doxer.app.db.dbflute.bsbhv.BsCmShainBhv;
 import org.doxer.app.db.dbflute.cbean.CmShainCB;
@@ -26,10 +27,10 @@ import org.doxer.xbase.support.TableHeaderSortableBhv;
 public class CmShainBhv extends BsCmShainBhv
 		implements TableHeaderSortableBhv<CmShainCB> {
 
-	public CmShain selectByPk4Update(Long cmShainId) {
+	public CmShain selectByPk4Update(CmShainId cmShainId) {
 //		cb.lockForUpdateWait(LOCK_WAIT_TIME);
 		return selectEntity(cb -> {
-			cb.query().setCmShainId_Equal(cmShainId);
+			cb.query().setCmShainId_Equal(cmShainId.getValL());
 		}).get();
 	}
 
@@ -51,10 +52,10 @@ public class CmShainBhv extends BsCmShainBhv
 		selectCursor(cb -> cb.setMasterSearchCondition(form), uncheck(handler));
 	}
 
-	public CmShain selectByPkWithRel(Long cmShainId) {
+	public CmShain selectByPkWithRel(CmShainId cmShainId) {
 
 		CmShain cmShain = selectEntity(cb -> {
-			cb.query().setCmShainId_Equal(cmShainId);
+			cb.query().setCmShainId_Equal(cmShainId.getValL());
 			cb.setupSelect_CmKaisha();
 		}).get();
 

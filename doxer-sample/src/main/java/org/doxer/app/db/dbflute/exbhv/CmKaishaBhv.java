@@ -6,6 +6,7 @@ import static org.doxer.xbase.support.SortOrder.*;
 
 import org.dbflute.cbean.ConditionQuery;
 import org.dbflute.cbean.result.PagingResultBean;
+import org.doxer.app.base.type.form.sample.ad.master.cmkaisha.CmKaishaId;
 import org.doxer.app.db.dbflute.bsbhv.BsCmKaishaBhv;
 import org.doxer.app.db.dbflute.cbean.CmKaishaCB;
 import org.doxer.app.db.dbflute.exentity.CmKaisha;
@@ -24,10 +25,10 @@ import org.doxer.xbase.support.TableHeaderSortableBhv;
 public class CmKaishaBhv extends BsCmKaishaBhv
 		implements TableHeaderSortableBhv<CmKaishaCB> {
 
-	public CmKaisha selectByPk4Update(Long cmKaishaId) {
+	public CmKaisha selectByPk4Update(CmKaishaId cmKaishaId) {
 //		cb.lockForUpdateWait(LOCK_WAIT_TIME);
 		return selectEntity(cb -> {
-			cb.query().setCmKaishaId_Equal(cmKaishaId);
+			cb.query().setCmKaishaId_Equal(cmKaishaId.getValL());
 		}).get();
 	}
 
@@ -45,10 +46,10 @@ public class CmKaishaBhv extends BsCmKaishaBhv
 		return userPage;
 	}
 
-	public CmKaisha selectByPkWithRel(Long cmKaishaId) {
+	public CmKaisha selectByPkWithRel(CmKaishaId cmKaishaId) {
 
 		CmKaisha cmKaisha = selectEntity(cb -> {
-			cb.query().setCmKaishaId_Equal(cmKaishaId);
+			cb.query().setCmKaishaId_Equal(cmKaishaId.getValL());
 		}).get();
 
 		loadCmKishTesuryo(cmKaisha, cb -> {

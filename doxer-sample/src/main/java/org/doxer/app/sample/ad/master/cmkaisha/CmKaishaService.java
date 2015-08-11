@@ -83,7 +83,7 @@ public class CmKaishaService extends DoxService {
 	public CmKaisha update(
 			final CmKaishaForm form) {
 
-		CmKaisha kaisha = this.cmKaishaBhv.selectByPk4Update(form.cmKaishaId.getValL());
+		CmKaisha kaisha = this.cmKaishaBhv.selectByPk4Update(form.cmKaishaId);
 		kaisha.copyFrom(form);
 		this.cmKaishaBhv.update(kaisha);
 
@@ -145,7 +145,7 @@ public class CmKaishaService extends DoxService {
 	public CmKaisha delete(final CmKaishaForm form) {
 
 		// 行ロック
-		this.cmKaishaBhv.selectByPk4Update(form.cmKaishaId.getValL());
+		this.cmKaishaBhv.selectByPk4Update(form.cmKaishaId);
 
 		CmKaisha kaisha = selectByPkWithRel(form.cmKaishaId);
 		kaisha.getCmKishTesuryoList()
@@ -208,7 +208,7 @@ public class CmKaishaService extends DoxService {
 	}
 
 	protected CmKaisha selectByPkWithRel(CmKaishaId cmKaishaId) {
-		CmKaisha cmKaisha = this.cmKaishaBhv.selectByPkWithRel(cmKaishaId.getValL());
+		CmKaisha cmKaisha = this.cmKaishaBhv.selectByPkWithRel(cmKaishaId);
 		if (isEmpty(cmKaisha)) {
 //			throw new XActionMessagesException("valid.exists", get("vers.kaisha"));
 		}

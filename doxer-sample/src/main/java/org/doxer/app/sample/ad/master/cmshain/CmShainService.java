@@ -1,6 +1,7 @@
 package org.doxer.app.sample.ad.master.cmshain;
 
 import static com.github.hatimiti.doxer.common.message.AppMessageLevel.*;
+import static com.github.hatimiti.doxer.common.util.Encrypter.*;
 import static com.github.hatimiti.doxer.common.util._Obj.*;
 import static org.doxer.xbase.util._Container.*;
 
@@ -120,7 +121,7 @@ public class CmShainService extends DoxService {
 	public CmShain update(
 			final CmShainForm form) {
 
-		val shain = this.cmShainBhv.selectByPk4Update(form.cmShainId.getValL());
+		val shain = this.cmShainBhv.selectByPk4Update(form.cmShainId);
 		shain.copyFrom(form);
 		this.cmShainBhv.update(shain);
 
@@ -138,7 +139,7 @@ public class CmShainService extends DoxService {
 	public CmShain delete(final CmShainForm form) {
 
 		// 行ロック
-		this.cmShainBhv.selectByPk4Update(form.cmShainId.getValL());
+		this.cmShainBhv.selectByPk4Update(form.cmShainId);
 
 		val shain = selectByPkWithRel(form.cmShainId);
 
@@ -158,7 +159,7 @@ public class CmShainService extends DoxService {
 	}
 
 	protected CmShain selectByPkWithRel(CmShainId cmShainId) {
-		val cmShain = this.cmShainBhv.selectByPkWithRel(cmShainId.getValL());
+		val cmShain = this.cmShainBhv.selectByPkWithRel(cmShainId);
 		if (isEmpty(cmShain)) {
 			throw new AppMessagesException(
 					new AppMessage(ERROR, "valid.exists", prop("shain")));
