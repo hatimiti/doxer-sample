@@ -1,8 +1,8 @@
 package org.doxer.app.sample.ad.master.cmshain;
 
 import static com.github.hatimiti.doxer.common.message.AppMessageLevel.*;
-import static com.github.hatimiti.doxer.common.util.Encrypter.*;
 import static com.github.hatimiti.doxer.common.util._Obj.*;
+import static com.github.hatimiti.doxer.common.util._Str.*;
 import static org.doxer.xbase.util._Container.*;
 
 import java.io.IOException;
@@ -13,6 +13,7 @@ import javax.annotation.Resource;
 import lombok.val;
 
 import org.doxer.app.base.type.form.sample.ad.master.cmshain.CmShainId;
+import org.doxer.app.base.type.form.sample.ad.master.cmshain.Password;
 import org.doxer.app.db.dbflute.exbhv.CmShainBhv;
 import org.doxer.app.db.dbflute.exentity.CmShain;
 import org.doxer.xbase.exception.DoxBusinessRuntimeException;
@@ -104,9 +105,12 @@ public class CmShainService extends DoxService {
 			final CmShainForm form) {
 
 		val shain = new CmShain();
+
 		shain.copyFrom(form);
+		shain.setPassword(form.getPassword().encrypt());
 
 		this.cmShainBhv.insert(shain);
+
 		return shain;
 	}
 
@@ -122,7 +126,14 @@ public class CmShainService extends DoxService {
 			final CmShainForm form) {
 
 		val shain = this.cmShainBhv.selectByPk4Update(form.cmShainId);
+
+		Password nowPassword = Password.of(shain.getPassword());
 		shain.copyFrom(form);
+
+		shain.setPassword(form.getPassword().isEmpty()
+				? nowPassword.getVal()
+				: form.getPassword().encrypt());
+
 		this.cmShainBhv.update(shain);
 
 		return shain;
@@ -164,6 +175,7 @@ public class CmShainService extends DoxService {
 			throw new AppMessagesException(
 					new AppMessage(ERROR, "valid.exists", prop("shain")));
 		}
+		cmShain.setPassword(EMPTY);
 		return cmShain;
 	}
 

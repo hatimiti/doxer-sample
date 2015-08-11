@@ -8,6 +8,7 @@ import org.doxer.xbase.form.type.SingleFormType;
 import com.github.hatimiti.doxer.common.domain.supports.InputAttribute;
 import com.github.hatimiti.doxer.common.message.AppMessagesContainer;
 import com.github.hatimiti.doxer.common.message.Owner;
+import com.github.hatimiti.doxer.common.util.Encrypter;
 import com.github.hatimiti.doxer.common.validation.validator.ContainsCharsFieldValidator;
 import com.github.hatimiti.doxer.common.validation.validator.HalfSizeFieldValidator;
 import com.github.hatimiti.doxer.common.validation.validator.RangeLengthFieldValidator;
@@ -34,6 +35,10 @@ public class Password extends SingleFormType {
 		Password obj = new Password(ARBITRARY);
 		obj.setStrictVal(val);
 		return obj;
+	}
+
+	public String encrypt() {
+		return Encrypter.SHA256.encrypt(getVal());
 	}
 
 }

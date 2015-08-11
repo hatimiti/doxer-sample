@@ -46,7 +46,7 @@ public class LoginController extends DoxController {
 		this.loginService.login(form);
 		renewSession4FixationAttack(request);
 
-		return view("/sample/ad/menu/", form);
+		return redirect("/sample/ad/menu/", ra);
 	}
 
 	@RequestMapping(params = "dummyLogin")

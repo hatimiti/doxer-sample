@@ -35,12 +35,35 @@ public class CmShainForm extends BaseEntityForm<CmShain> {
 	@Condition Mei shainMeiEn = new ShainMeiEn(ARBITRARY);
 
 	@Condition LoginCd loginCd = new LoginCd(REQUIRED);
-	@Condition Password password = new Password(REQUIRED);
+	@Condition Password password = new Password(ARBITRARY);
 
 //	@Session
 	Mode mode;
 
-	class Validate implements FormValidator {
+	class Validate4Register extends Validator {
+		@Override
+		public void validate(AppMessagesContainer c) {
+			super.validate(c);
+			password.inCompleteRequired().validate(c);
+		}
+	}
+
+	class Validate4Update extends Validator {
+		@Override
+		public void validate(AppMessagesContainer c) {
+			super.validate(c);
+			password.validate(c);
+		}
+	}
+
+	class ValidId implements FormValidator {
+		@Override
+		public void validate(AppMessagesContainer container) {
+			cmShainId.inCompleteRequired().validate(container);
+		}
+	}
+
+	abstract class Validator implements FormValidator {
 		@Override
 		public void validate(AppMessagesContainer c) {
 			cmShainId.validate(c);
@@ -50,14 +73,6 @@ public class CmShainForm extends BaseEntityForm<CmShain> {
 			shainSeiEn.validate(c);
 			shainMeiEn.validate(c);
 			loginCd.validWithUniqueCheck(c, cmShainId, cmKaishaId);
-			password.validate(c);
-		}
-	}
-
-	class ValidId implements FormValidator {
-		@Override
-		public void validate(AppMessagesContainer container) {
-			cmShainId.inCompleteRequired().validate(container);
 		}
 	}
 

@@ -16,7 +16,8 @@ import org.doxer.app.base.type.form.sample.ad.master.cmshain.CmShainId;
 import org.doxer.app.db.dbflute.allcommon.CDef.Mode;
 import org.doxer.app.db.dbflute.exentity.CmShain;
 import org.doxer.app.sample.ad.master.cmshain.CmShainForm.ValidId;
-import org.doxer.app.sample.ad.master.cmshain.CmShainForm.Validate;
+import org.doxer.app.sample.ad.master.cmshain.CmShainForm.Validate4Register;
+import org.doxer.app.sample.ad.master.cmshain.CmShainForm.Validate4Update;
 import org.doxer.app.sample.ad.master.cmshain.CmShainListForm.ValidateCsvUpload;
 import org.doxer.app.sample.ad.master.cmshain.CmShainListForm.ValidateDownload;
 import org.doxer.app.sample.ad.master.cmshain.CmShainListForm.ValidateList;
@@ -95,14 +96,14 @@ public class CmShainController extends BaseMasterController {
 		return view(BASE_URI, "edit.html", form);
 	}
 
-	@DoValidation(v = { Validate.class }, to = "backToPrepare", transition = FORWORD)
+	@DoValidation(v = { Validate4Register.class }, to = "backToPrepare", transition = FORWORD)
 	@RequestMapping(params = "confirmRegister")
 	public DoxModelAndView confirmRegister(CmShainForm form) {
 		return view(BASE_URI, "confirm.html", form);
 	}
 
 	@Token(CHECK)
-	@DoValidation(v = { Validate.class }, to = "backToList", transition = FORWORD)
+	@DoValidation(v = { Validate4Register.class }, to = "backToList", transition = FORWORD)
 	@RequestMapping(params = "register")
 	public DoxModelAndView register(CmShainForm form, RedirectAttributes ra) {
 		CmShain shain = this.cmShainService.register(form);
@@ -122,14 +123,14 @@ public class CmShainController extends BaseMasterController {
 		return view(BASE_URI, "edit.html", form);
 	}
 
-	@DoValidation(v = { Validate.class, ValidId.class }, to = "backToPrepare", transition = FORWORD)
+	@DoValidation(v = { ValidId.class, Validate4Update.class }, to = "backToPrepare", transition = FORWORD)
 	@RequestMapping(params = "confirmUpdate")
 	public DoxModelAndView confirmUpdate(CmShainForm form) {
 		return view(BASE_URI, "confirm.html", form);
 	}
 
 	@Token(CHECK)
-	@DoValidation(v = { Validate.class, ValidId.class }, to = "backToList", transition = FORWORD)
+	@DoValidation(v = { ValidId.class, Validate4Update.class }, to = "backToList", transition = FORWORD)
 	@RequestMapping(params = "update")
 	public DoxModelAndView update(CmShainForm form, RedirectAttributes ra) {
 		CmShain shain = this.cmShainService.update(form);
