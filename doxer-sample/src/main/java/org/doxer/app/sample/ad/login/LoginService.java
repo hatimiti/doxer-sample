@@ -3,7 +3,6 @@ package org.doxer.app.sample.ad.login;
 import static com.github.hatimiti.doxer.common.util._Str.*;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpSession;
 
 import org.dbflute.optional.OptionalEntity;
 import org.doxer.app.db.dbflute.exbhv.CmShainBhv;
@@ -18,8 +17,6 @@ public class LoginService extends DoxService {
 	@Resource AccessUser accessUser;
 	@Resource CmShainBhv cmShainBhv;
 
-	@Resource HttpSession session;
-
 	/*
 	 * 一覧検索
 	 */
@@ -32,14 +29,10 @@ public class LoginService extends DoxService {
 			cb.query().setPassword_Equal(form.getPassword().getVal());
 		});
 
-		session.invalidate();
 		shain.ifPresent(this::setAccessUserDto);
 	}
 
 	public void dummyLogin() {
-
-		session.invalidate();
-
 		CmShain shain = new CmShain();
 		shain.setCmShainId(0L);
 		shain.setShainSei("ダミー");
