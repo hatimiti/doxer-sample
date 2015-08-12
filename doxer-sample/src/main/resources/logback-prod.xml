@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE logback>
+<included
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="./logback.xsd">
+
+	<logger name="org.thymeleaf" level="ERROR" />
+
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<prudent>true</prudent>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>/var/log/doxer/app.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{yyyy/MM/dd HH:mm:ss:SSS} %.5level - %logger{0}.%.20method %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="MAIL" class="ch.qos.logback.classic.net.SMTPAppender">
+		<smtpHost>localhost</smtpHost>
+		<smtpPort>25</smtpPort>
+		<to>info@localhost</to>
+		<from>sample@exsample.com</from>
+		<subject>TESTING: %logger{20} - %m</subject>
+		<username></username>
+		<password></password>
+		<asynchronousSending>false</asynchronousSending>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%date %-5level %logger{35} - %message%n</pattern>
+		</layout>
+	</appender>
+
+	<root level="DEBUG">
+		<appender-ref ref="FILE" />
+	</root>
+	<logger name="ErrorMailLogger" level="ERROR">
+		<appender-ref ref="MAIL" />
+	</logger>
+</included>

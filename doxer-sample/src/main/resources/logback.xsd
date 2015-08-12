@@ -108,7 +108,18 @@
 			<xsd:element name="prudent" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
 			<xsd:element name="layout" minOccurs="0" maxOccurs="1" type="Layout"/>
 			<xsd:element name="rollingPolicy" minOccurs="0" maxOccurs="1" type="RollingPolicy"/>
-      <xsd:any namespace="##other" processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+			<!-- SMTP Appender Only http://logback.qos.ch/manual/appenders.html#SMTPAppender -->
+			<xsd:element name="smtpHost" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+			<xsd:element name="smtpPort" minOccurs="0" maxOccurs="1" type="xsd:int"/>
+			<xsd:element name="to" minOccurs="0" maxOccurs="unbounded" type="xsd:string"/>
+			<xsd:element name="from" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+			<xsd:element name="username" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+			<xsd:element name="password" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+			<xsd:element name="subject" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+			<xsd:element name="localhost" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+			<xsd:element name="asynchronousSending" minOccurs="0" maxOccurs="1" type="xsd:boolean"/>
+			<!-- SMTP Appender Only -->
+			<xsd:any namespace="##other" processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:choice>
 		<xsd:attribute name="name" type="xsd:string" use="required"/>
 		<xsd:attribute name="class" type="xsd:string" use="required"/>
@@ -118,7 +129,7 @@
 	<xsd:complexType name="Filter">
 		<xsd:choice maxOccurs="unbounded">
 			<xsd:element name="level" minOccurs="0" maxOccurs="unbounded" type="xsd:string"/>
-      <xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:choice>
 		<xsd:attribute name="class" type="xsd:string" use="optional"/>
 		<xsd:anyAttribute/>
@@ -127,7 +138,7 @@
 	<xsd:complexType name="Layout">
 		<xsd:choice maxOccurs="unbounded">
 			<xsd:element name="pattern" minOccurs="0" maxOccurs="1" type="xsd:string"/>
-      <xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:choice>
 		<xsd:attribute name="class" type="xsd:string" use="optional"/>
 		<xsd:anyAttribute/>
@@ -136,7 +147,7 @@
 	<xsd:complexType name="Logger">
 		<xsd:choice maxOccurs="unbounded">
 			<xsd:element name="appender-ref" minOccurs="0" maxOccurs="unbounded" type="AppenderRef"/>
-      <xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 		</xsd:choice>
 		<xsd:attribute name="name" type="xsd:string" use="required"/>
 		<xsd:attribute name="level" type="LoggerLevels" use="optional"/>
