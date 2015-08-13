@@ -6,17 +6,6 @@
 
 	<logger name="org.thymeleaf" level="ERROR" />
 
-	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<prudent>true</prudent>
-		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>/var/log/doxer/app.%d{yyyy-MM-dd}.log</fileNamePattern>
-			<maxHistory>30</maxHistory>
-		</rollingPolicy>
-		<encoder>
-			<pattern>%date{yyyy/MM/dd HH:mm:ss:SSS} %.5level - MDC[%X{sid},%X{ip},%X{ua},%X{id}] %logger{0}#%.20method:%L %msg%n</pattern>
-		</encoder>
-	</appender>
-
 	<appender name="MAIL" class="ch.qos.logback.classic.net.SMTPAppender">
 		<smtpHost>localhost</smtpHost>
 		<smtpPort>25</smtpPort>
@@ -31,10 +20,10 @@
 		</layout>
 	</appender>
 
-	<root level="DEBUG">
+	<root level="INFO">
 		<appender-ref ref="FILE" />
 	</root>
-	<logger name="ErrorMailLogger" level="ERROR">
+	<logger name="logger.mail.error" level="ERROR">
 		<appender-ref ref="MAIL" />
 	</logger>
 </included>

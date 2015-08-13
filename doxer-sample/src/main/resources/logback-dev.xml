@@ -8,25 +8,31 @@
 	<logger name="org.seasar" level="DEBUG" />
 	<logger name="org.dbflute" level="DEBUG" />
 
-	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<prudent>true</prudent>
-		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>/var/log/doxer/app.%d{yyyy-MM-dd}.log</fileNamePattern>
-			<maxHistory>30</maxHistory>
-		</rollingPolicy>
-		<encoder>
-			<pattern>%date{yyyy/MM/dd HH:mm:ss:SSS} %.5level - MDC[%X{sid},%X{ip},%X{ua},%X{id}] %logger{0}#%.20method:%L %msg%n</pattern>
-		</encoder>
-	</appender>
-
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder>
 			<pattern>%date{yyyy/MM/dd HH:mm:ss:SSS} %.5level - MDC[%X{sid},%X{ip},%X{ua},%X{id}] %logger{0}#%.20method:%L %msg%n</pattern>
 		</encoder>
 	</appender>
 
+	<appender name="MAIL" class="ch.qos.logback.classic.net.SMTPAppender">
+		<smtpHost>localhost</smtpHost>
+		<smtpPort>25</smtpPort>
+		<to>info@localhost</to>
+		<from>sample@exsample.com</from>
+		<subject>TESTING: %logger{20} - %m</subject>
+		<username></username>
+		<password></password>
+		<asynchronousSending>false</asynchronousSending>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%date{yyyy/MM/dd HH:mm:ss:SSS} %.5level - MDC[%X{sid},%X{ip},%X{ua},%X{id}] %logger{0}#%.20method:%L %msg%n</pattern>
+		</layout>
+	</appender>
+
 	<root level="INFO">
 		<appender-ref ref="FILE" />
 		<appender-ref ref="STDOUT" />
 	</root>
+	<logger name="logger.mail.error" level="ERROR">
+		<appender-ref ref="MAIL" />
+	</logger>
 </included>

@@ -8,6 +8,8 @@ import static org.doxer.xbase.util._Container.*;
 import org.doxer.app.sample.mail.SampleMailDataModel.NestedModel;
 import org.doxer.xbase.controller.BaseLangController;
 import org.doxer.xbase.mail.DoxMailSender;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -29,6 +31,13 @@ public class SendMailController extends BaseLangController {
 		new DoxMailSender(createModel()).send();
 		addMessage(new AppMessage(INFO, false, "メール送信が完了しました。"));
 		return view(BASE_URI, "mail.html", form);
+	}
+
+	@RequestMapping("log")
+	public DoxModelAndView log(SendMailForm form) throws Exception {
+		Logger errorMailLogger = LoggerFactory.getLogger("logger.mail.error");
+		errorMailLogger.error("エラーが発生しました．(サンプル)");
+		return view("/sample/ad/menu/menu.html", form);
 	}
 
 	private SampleMailDataModel createModel() {
