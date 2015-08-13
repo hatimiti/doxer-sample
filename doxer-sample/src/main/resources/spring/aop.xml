@@ -20,10 +20,11 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 		</property>
 		<property name="interceptorNames">
 			<list>
-				<value>stopWatchInterceptor</value>
+				<value>MDCInterceptor</value>
 				<value>setCommonColumnInterceptor</value>
 				<value>tokenInterceptor</value>
 				<value>validationInterceptor</value>
+				<value>stopWatchInterceptor</value>
 			</list>
 		</property>
 	</bean>

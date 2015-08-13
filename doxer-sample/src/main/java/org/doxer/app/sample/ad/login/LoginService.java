@@ -48,8 +48,8 @@ public class LoginService extends DoxService {
 
 	private void setAccessUserDto(CmShain shain) {
 		this.accessUser.setId(asStrOrNull(shain.getCmShainId()));
-		this.accessUser.setNameSei(shain.getShainSei());
-		this.accessUser.setNameMei(shain.getShainMei());
+		this.accessUser.setLastName(shain.getShainSei());
+		this.accessUser.setFirstName(shain.getShainMei());
 		this.accessUser.setLogged(true);
 	}
 }

@@ -43,7 +43,7 @@ public class HelloController extends DoxController {
 	public DoxModelAndView index(HelloForm form) {
 		LOG.info("ログ出力テスト 時間={}", getAccessDate());
 		LOG.info("user = {}", accessUser);
-		accessUser.setNameMei("hatimiti");
+		accessUser.setFirstName("hatimiti");
 		return view("/hello/hello.html", form);
 	}
 
@@ -112,6 +112,7 @@ public class HelloController extends DoxController {
 
 	@RequestMapping(value = "/output-xls")
 	public void outputReportXls(HelloForm form) throws Exception {
+		@SuppressWarnings("deprecation")
 		DoxBirt birt = new DoxBirt(
 				"/sample/hello/hello_xls.rptdesign",
 				"//LS-XHLE38/share/var/hello.xlsx",
