@@ -15,6 +15,7 @@ import org.doxer.app.base.type.form.sample.ad.master.cmshain.ShainSei;
 import org.doxer.app.base.type.form.sample.ad.master.cmshain.ShainSeiEn;
 import org.doxer.app.db.dbflute.allcommon.CDef.Mode;
 import org.doxer.app.db.dbflute.exentity.CmShain;
+import org.doxer.xbase.aop.interceptor.supports.Session;
 import org.doxer.xbase.form.BaseEntityForm;
 import org.doxer.xbase.validation.validator.FormValidator;
 import org.springframework.stereotype.Component;
@@ -27,18 +28,17 @@ import com.github.hatimiti.doxer.common.message.AppMessagesContainer;
 @Component
 public class CmShainForm extends BaseEntityForm<CmShain> {
 
-	@Condition CmShainId cmShainId = new CmShainId(CONDITION);
-	@Condition CmKaishaId cmKaishaId = new CmKaishaId(REQUIRED);
-	@Condition Mei shainSei = new ShainSei(REQUIRED);
-	@Condition Mei shainMei = new ShainMei(REQUIRED);
-	@Condition Mei shainSeiEn = new ShainSeiEn(ARBITRARY);
-	@Condition Mei shainMeiEn = new ShainMeiEn(ARBITRARY);
+	@Condition(session = true) CmShainId cmShainId = new CmShainId(CONDITION);
+	@Condition(session = true) CmKaishaId cmKaishaId = new CmKaishaId(REQUIRED);
+	@Condition(session = true) Mei shainSei = new ShainSei(REQUIRED);
+	@Condition(session = true) Mei shainMei = new ShainMei(REQUIRED);
+	@Condition(session = true) Mei shainSeiEn = new ShainSeiEn(ARBITRARY);
+	@Condition(session = true) Mei shainMeiEn = new ShainMeiEn(ARBITRARY);
 
-	@Condition LoginCd loginCd = new LoginCd(REQUIRED);
-	@Condition Password password = new Password(ARBITRARY);
+	@Condition(session = true) LoginCd loginCd = new LoginCd(REQUIRED);
+	@Condition(session = true) Password password = new Password(ARBITRARY);
 
-//	@Session
-	Mode mode;
+	@Session Mode mode;
 
 	class Validate4Register extends Validator {
 		@Override

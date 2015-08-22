@@ -13,7 +13,6 @@ import javax.annotation.Resource;
 import lombok.val;
 
 import org.doxer.app.base.type.form.sample.ad.master.cmshain.CmShainId;
-import org.doxer.app.base.type.form.sample.ad.master.cmshain.Password;
 import org.doxer.app.db.dbflute.exbhv.CmShainBhv;
 import org.doxer.app.db.dbflute.exentity.CmShain;
 import org.doxer.xbase.exception.DoxBusinessRuntimeException;
@@ -127,11 +126,11 @@ public class CmShainService extends DoxService {
 
 		val shain = this.cmShainBhv.selectByPk4Update(form.cmShainId);
 
-		Password nowPassword = Password.of(shain.getPassword());
+		String nowPassword = shain.getPassword();
 		shain.copyFrom(form);
 
 		shain.setPassword(form.getPassword().isEmpty()
-				? nowPassword.getVal()
+				? nowPassword
 				: form.getPassword().encrypt());
 
 		this.cmShainBhv.update(shain);
