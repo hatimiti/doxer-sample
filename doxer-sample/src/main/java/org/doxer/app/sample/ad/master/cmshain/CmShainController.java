@@ -26,7 +26,6 @@ import org.doxer.xbase.aop.interceptor.supports.Token;
 import org.doxer.xbase.util.Downloads;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.github.hatimiti.doxer.common.annotation.Function;
@@ -38,7 +37,6 @@ import com.github.hatimiti.doxer.common.message.AppMessage;
  */
 @Controller
 @Function("S0102")
-@SessionAttributes(types = { CmShainListForm.class, CmShainForm.class })
 @RequestMapping(CmShainController.BASE_URI)
 public class CmShainController extends BaseMasterController {
 

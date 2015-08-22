@@ -20,6 +20,7 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 		</property>
 		<property name="interceptorNames">
 			<list>
+				<value>registFormFieldsInSessionInterceptor</value>
 				<value>MDCInterceptor</value>
 				<value>setCommonColumnInterceptor</value>
 				<value>tokenInterceptor</value>

@@ -26,10 +26,10 @@ import com.github.hatimiti.doxer.common.message.AppMessagesContainer;
 @Component
 public class CmShainListForm extends BaseSortPageForm {
 
-	@Condition CmShainId cmShainId = new CmShainId(ARBITRARY);
-	@Condition CmKaishaId cmKaishaId = new CmKaishaId(ARBITRARY);
-	@Condition ShainMei shainMei = new ShainMei(ARBITRARY);
-	@Condition Flag compresses = new Flag(REQUIRED, "compresses");
+	@Condition(session = true) CmShainId cmShainId = new CmShainId(ARBITRARY);
+	@Condition(session = true) CmKaishaId cmKaishaId = new CmKaishaId(ARBITRARY);
+	@Condition(session = true) ShainMei shainMei = new ShainMei(ARBITRARY);
+	@Condition(session = true) Flag compresses = new Flag(REQUIRED, "compresses");
 
 	@Condition MultipartFile uploadedCsvFile;
 
