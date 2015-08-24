@@ -4,6 +4,7 @@ import org.dbflute.cbean.result.ListResultBean;
 import org.doxer.app.base.type.form.hello.Val;
 import org.doxer.app.db.dbflute.bsbhv.BsTcmSampleBhv;
 import org.doxer.app.db.dbflute.exentity.TcmSample;
+import org.springframework.cache.annotation.Cacheable;
 
 /**
  * The behavior of TCM_SAMPLE.
@@ -16,6 +17,7 @@ import org.doxer.app.db.dbflute.exentity.TcmSample;
 @org.springframework.stereotype.Component("tcmSampleBhv")
 public class TcmSampleBhv extends BsTcmSampleBhv {
 
+	@Cacheable("sampleData")
 	public ListResultBean<TcmSample> findBySampleName(Val name) {
 		return this.selectList(cb -> {
 			cb.query().setSampleName_Equal(name.getVal());
