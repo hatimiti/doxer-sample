@@ -14,6 +14,7 @@ import com.github.hatimiti.doxer.common.domain.supports.Condition;
 import com.github.hatimiti.doxer.common.message.AppMessagesContainer;
 import com.github.hatimiti.doxer.common.message.Owner;
 import com.github.hatimiti.doxer.common.validation.Vval;
+import com.github.hatimiti.doxer.common.validation.validator.DateFieldValidator;
 import com.github.hatimiti.doxer.common.validation.validator.IntFieldValidator;
 import com.github.hatimiti.doxer.common.validation.validator.IntRangeFieldValidator;
 import com.github.hatimiti.doxer.common.validation.validator.RequiredFieldValidator;
@@ -29,9 +30,14 @@ public class DateAndTimeAPICalcForm extends DoxForm {
 	@Condition String val3;
 	@Condition String val4;
 
+	@Condition String val5;
+	@Condition String val6;
+
 	String afterNDayFromNow;
 	String nextDayOfWeek;
 	String endOfMonth;
+	String daysFromBirth;
+	String nextWeekday;
 
 	public String getNowDt() {
 		LocalDate now = LocalDate.now();
@@ -71,4 +77,19 @@ public class DateAndTimeAPICalcForm extends DoxForm {
 		}
 	}
 
+	class ValidateDaysFromBirth implements FormValidator {
+		@Override
+		public void validate(AppMessagesContainer c) throws Exception {
+			new RequiredFieldValidator(c).check(Vval.of(val5), Owner.of("val5"), "生年月日");
+			new DateFieldValidator(c).check(Vval.of(val5), Owner.of("val5"), "生年月日");
+		}
+	}
+
+	class ValidateNextWeekday implements FormValidator {
+		@Override
+		public void validate(AppMessagesContainer c) throws Exception {
+			new RequiredFieldValidator(c).check(Vval.of(val6), Owner.of("val6"), "年月日");
+			new DateFieldValidator(c).check(Vval.of(val6), Owner.of("val6"), "年月日");
+		}
+	}
 }

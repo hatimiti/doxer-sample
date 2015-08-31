@@ -40,6 +40,19 @@
 		<span th:text="${form.endOfMonth?:'***'}">2015/10/10</span>日です。
 	</form>
 
+	<form action=".">
+		生年月日: <input type="text" th:field="${form.val5}" />
+		<input type="submit" name="daysFromBirth" value="現在までの日数" /><br />
+		<div th:each="e : ${#sa.messagesOf('val5')}" th:text="${e}">error</div>
+		<span th:text="${form.daysFromBirth?:'***'}">2500</span>日です。
+	</form>
+
+	<form action=".">
+		年月日: <input type="text" th:field="${form.val6}" />
+		<input type="submit" name="nextWeekday" value="の次の平日は" /><br />
+		<div th:each="e : ${#sa.messagesOf('val6')}" th:text="${e}">error</div>
+		<span th:text="${form.nextWeekday?:'***'}">2500</span>です。
+	</form>
 </div>
 </body>
 </html>
