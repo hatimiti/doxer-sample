@@ -17,11 +17,15 @@ import org.springframework.cache.annotation.Cacheable;
 @org.springframework.stereotype.Component("tcmSampleBhv")
 public class TcmSampleBhv extends BsTcmSampleBhv {
 
-	@Cacheable("sampleData")
 	public ListResultBean<TcmSample> findBySampleName(Val name) {
 		return this.selectList(cb -> {
 			cb.query().setSampleName_Equal(name.getVal());
 			cb.query().addOrderBy_SampleName_Asc();
 		});
+	}
+
+	@Cacheable("sampleData")
+	public ListResultBean<TcmSample> findBySampleNameWithCacheable(Val name) {
+		return findBySampleName(name);
 	}
 }

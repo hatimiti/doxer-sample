@@ -3,6 +3,7 @@ package org.doxer.xbase;
 import static org.dbunit.operation.DatabaseOperation.*;
 
 import java.io.FileNotFoundException;
+import java.lang.reflect.Method;
 
 import javax.annotation.Resource;
 import javax.sql.DataSource;
@@ -101,7 +102,23 @@ public abstract class DoxDataSourceTestCase extends DataSourceBasedDBTestCase {
 	}
 
 	protected XlsDataSet getDataSet4TestMethod() throws Exception {
-		return getXlsDataSet(testName.getMethodName() + ".xlsx");
+		return getXlsDataSet(getXlsDataSetFileName());
+	}
+
+	private String getXlsDataSetFileName() {
+
+		String fileName = testName.getMethodName() + ".xlsx";
+
+		try {
+			Method m = this.getClass().getMethod(testName.getMethodName());
+			DataSetDefinition d = m.getAnnotation(DataSetDefinition.class);
+			if (d != null) {
+				fileName = d.value();
+			}
+		} catch (Exception e) {
+		}
+
+		return fileName;
 	}
 
 	protected XlsDataSet getXlsDataSet(String xlsName) throws Exception {

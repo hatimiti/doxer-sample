@@ -25,8 +25,8 @@ http://www.springframework.org/schema/aop http://www.springframework.org/schema/
 		<property name="password" value="${jdbc.password}" />
 		<!-- Pooling Settings -->
 		<property name="initialSize" value="3" />
-		<property name="maxActive" value="5" />
-		<property name="maxIdle" value="5" />
+		<property name="maxActive" value="100" />
+		<property name="maxIdle" value="100" />
 		<property name="minIdle" value="2" />
 	</bean>
 

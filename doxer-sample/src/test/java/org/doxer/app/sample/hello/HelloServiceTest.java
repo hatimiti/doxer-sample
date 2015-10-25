@@ -6,6 +6,7 @@ import javax.annotation.Resource;
 
 import org.doxer.app.base.type.form.hello.Val;
 import org.doxer.app.db.dbflute.exbhv.TcmSampleBhv;
+import org.doxer.xbase.DataSetDefinition;
 import org.doxer.xbase.DoxDataSourceTestCase;
 import org.junit.Test;
 import org.springframework.test.annotation.Rollback;
@@ -53,8 +54,27 @@ public class HelloServiceTest extends DoxDataSourceTestCase {
 		service.search(form);
 		int after = countTcmSampleOf("hatimiti");
 
-		assertTrue(pre + 1 == after);
-		assertTrue(countTcmSampleOf("あいうえお") == 1);
+		assertSame(after, pre + 1);
+		assertSame(1, countTcmSampleOf("あいうえお"));
+	}
+
+	@Test
+	@DataSetDefinition("No001_検索処理_正常_固定データ登録.xls")
+    @Rollback(true)
+	public void No002_検索処理_正常_固定データ登録_キャッシュ機構() {
+		HelloForm form = new HelloForm();
+		form.setFval(getValOf("register"));
+
+		int pre = countCachedTcmSampleOf("hatimiti");
+		service.search(form);
+		int after = countCachedTcmSampleOf("hatimiti");
+
+		/*
+		 * 結果をキャッシュしているため、データ登録されても
+		 * キャッシュの結果が返される．
+		 */
+		assertSame(after, pre);
+		assertSame(1, countTcmSampleOf("あいうえお"));
 	}
 
 	/**
@@ -75,10 +95,10 @@ public class HelloServiceTest extends DoxDataSourceTestCase {
 	 */
 	@Test
     @Rollback(true)
-	public void No002_検索処理_正常_通常検索() {
-		assertTrue(countTcmSampleOf("はひふへほ") == 0);
-		assertTrue(countTcmSampleOf("テスト2用") == 1);
-		assertTrue(countTcmSampleOf("あいうえお") == 1);
+	public void No003_検索処理_正常_通常検索() {
+		assertSame(0, countTcmSampleOf("はひふへほ"));
+		assertSame(1, countTcmSampleOf("テスト2用"));
+		assertSame(1, countTcmSampleOf("あいうえお"));
 	}
 
 	@SuppressWarnings("deprecation")
@@ -90,6 +110,10 @@ public class HelloServiceTest extends DoxDataSourceTestCase {
 
 	private int countTcmSampleOf(String name) {
 		return tcmSampleBhv.findBySampleName(getValOf(name)).size();
+	}
+
+	private int countCachedTcmSampleOf(String name) {
+		return tcmSampleBhv.findBySampleNameWithCacheable(getValOf(name)).size();
 	}
 
 }
