@@ -1,5 +1,7 @@
 package org.doxer.xbase;
 
+import java.util.Locale;
+
 import org.doxer.app.Application;
 import org.junit.Before;
 import org.junit.Rule;
@@ -50,6 +52,14 @@ public abstract class DoxControllerTestCase {
 		mockMvc = MockMvcBuilders.webAppContextSetup(applicationContext).build();
 		adapter = new RequestMappingHandlerAdapter();
 		response.setOutputStreamAccessAllowed(true);
+	}
+
+	/**
+	 * Gets locale of JAPAN.
+	 * @return locale "ja_JP"
+	 */
+	protected Locale ja() {
+		return new Locale("ja_JP");
 	}
 
 }

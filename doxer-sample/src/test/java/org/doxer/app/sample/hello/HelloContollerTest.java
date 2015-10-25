@@ -30,7 +30,7 @@ public class HelloContollerTest extends DoxControllerTestCase {
 	 */
 	@Test
 	public void No001_初期表示_正常_() throws Exception {
-		mockMvc.perform(get("/sample/hello/index"))
+		mockMvc.perform(get("/sample/hello/index").locale(ja()))
 			.andExpect(status().isOk())
 //			.andExpect(content().contentType(MediaType.TEXT_HTML))
 			.andExpect(xpath("/html/body/div/div/h3/text()").string("Basic Input"))
@@ -57,7 +57,7 @@ public class HelloContollerTest extends DoxControllerTestCase {
 	 */
 	@Test
 	public void No002_値入力_正常_入力チェック() throws Exception {
-		mockMvc.perform(post("/sample/hello/input"))
+		mockMvc.perform(post("/sample/hello/input").locale(ja()))
 			.andExpect(status().isOk())
 			.andExpect(view().name("/hello/hello.html"))
 			.andExpect(xpath("/html/body/div/div/form/div/text()").string("入力値 は必須入力です。"))
@@ -90,7 +90,7 @@ public class HelloContollerTest extends DoxControllerTestCase {
 	 */
 	@Test
 	public void No003_値入力_正常_通常入力() throws Exception {
-		mockMvc.perform(post("/sample/hello/input")
+		mockMvc.perform(post("/sample/hello/input").locale(ja())
 				.param("fval.val", "Hatimiti")
 				.param("telNo.val[0]", "010")
 				.param("telNo.val[1]", "1234")
