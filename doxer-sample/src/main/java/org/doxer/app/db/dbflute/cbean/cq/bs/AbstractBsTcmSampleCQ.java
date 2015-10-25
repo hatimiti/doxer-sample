@@ -46,7 +46,7 @@ public abstract class AbstractBsTcmSampleCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * TCM_SAMPLE_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param tcmSampleId The value of tcmSampleId as equal. (NullAllowed: if null, no condition)
+     * @param tcmSampleId The value of tcmSampleId as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setTcmSampleId_Equal(Long tcmSampleId) {
         doSetTcmSampleId_Equal(tcmSampleId);
@@ -59,7 +59,7 @@ public abstract class AbstractBsTcmSampleCQ extends AbstractConditionQuery {
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * TCM_SAMPLE_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param tcmSampleId The value of tcmSampleId as notEqual. (NullAllowed: if null, no condition)
+     * @param tcmSampleId The value of tcmSampleId as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setTcmSampleId_NotEqual(Long tcmSampleId) {
         doSetTcmSampleId_NotEqual(tcmSampleId);
@@ -72,7 +72,7 @@ public abstract class AbstractBsTcmSampleCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * TCM_SAMPLE_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param tcmSampleId The value of tcmSampleId as greaterThan. (NullAllowed: if null, no condition)
+     * @param tcmSampleId The value of tcmSampleId as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setTcmSampleId_GreaterThan(Long tcmSampleId) {
         regTcmSampleId(CK_GT, tcmSampleId);
@@ -81,7 +81,7 @@ public abstract class AbstractBsTcmSampleCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * TCM_SAMPLE_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param tcmSampleId The value of tcmSampleId as lessThan. (NullAllowed: if null, no condition)
+     * @param tcmSampleId The value of tcmSampleId as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setTcmSampleId_LessThan(Long tcmSampleId) {
         regTcmSampleId(CK_LT, tcmSampleId);
@@ -90,7 +90,7 @@ public abstract class AbstractBsTcmSampleCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * TCM_SAMPLE_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param tcmSampleId The value of tcmSampleId as greaterEqual. (NullAllowed: if null, no condition)
+     * @param tcmSampleId The value of tcmSampleId as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setTcmSampleId_GreaterEqual(Long tcmSampleId) {
         regTcmSampleId(CK_GE, tcmSampleId);
@@ -99,7 +99,7 @@ public abstract class AbstractBsTcmSampleCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * TCM_SAMPLE_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param tcmSampleId The value of tcmSampleId as lessEqual. (NullAllowed: if null, no condition)
+     * @param tcmSampleId The value of tcmSampleId as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setTcmSampleId_LessEqual(Long tcmSampleId) {
         regTcmSampleId(CK_LE, tcmSampleId);

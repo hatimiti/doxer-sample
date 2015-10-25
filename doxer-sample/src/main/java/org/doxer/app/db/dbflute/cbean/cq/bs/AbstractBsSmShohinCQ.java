@@ -46,7 +46,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * SM_SHOHIN_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param smShohinId The value of smShohinId as equal. (NullAllowed: if null, no condition)
+     * @param smShohinId The value of smShohinId as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setSmShohinId_Equal(Long smShohinId) {
         doSetSmShohinId_Equal(smShohinId);
@@ -59,7 +59,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * SM_SHOHIN_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param smShohinId The value of smShohinId as notEqual. (NullAllowed: if null, no condition)
+     * @param smShohinId The value of smShohinId as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setSmShohinId_NotEqual(Long smShohinId) {
         doSetSmShohinId_NotEqual(smShohinId);
@@ -72,7 +72,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * SM_SHOHIN_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param smShohinId The value of smShohinId as greaterThan. (NullAllowed: if null, no condition)
+     * @param smShohinId The value of smShohinId as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setSmShohinId_GreaterThan(Long smShohinId) {
         regSmShohinId(CK_GT, smShohinId);
@@ -81,7 +81,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * SM_SHOHIN_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param smShohinId The value of smShohinId as lessThan. (NullAllowed: if null, no condition)
+     * @param smShohinId The value of smShohinId as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setSmShohinId_LessThan(Long smShohinId) {
         regSmShohinId(CK_LT, smShohinId);
@@ -90,7 +90,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * SM_SHOHIN_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param smShohinId The value of smShohinId as greaterEqual. (NullAllowed: if null, no condition)
+     * @param smShohinId The value of smShohinId as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setSmShohinId_GreaterEqual(Long smShohinId) {
         regSmShohinId(CK_GE, smShohinId);
@@ -99,7 +99,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * SM_SHOHIN_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param smShohinId The value of smShohinId as lessEqual. (NullAllowed: if null, no condition)
+     * @param smShohinId The value of smShohinId as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setSmShohinId_LessEqual(Long smShohinId) {
         regSmShohinId(CK_LE, smShohinId);
@@ -671,7 +671,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * SHOHIN_PRICE: {NotNull, DECIMAL(9)}
-     * @param shohinPrice The value of shohinPrice as equal. (NullAllowed: if null, no condition)
+     * @param shohinPrice The value of shohinPrice as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setShohinPrice_Equal(Integer shohinPrice) {
         doSetShohinPrice_Equal(shohinPrice);
@@ -684,7 +684,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * SHOHIN_PRICE: {NotNull, DECIMAL(9)}
-     * @param shohinPrice The value of shohinPrice as notEqual. (NullAllowed: if null, no condition)
+     * @param shohinPrice The value of shohinPrice as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setShohinPrice_NotEqual(Integer shohinPrice) {
         doSetShohinPrice_NotEqual(shohinPrice);
@@ -697,7 +697,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * SHOHIN_PRICE: {NotNull, DECIMAL(9)}
-     * @param shohinPrice The value of shohinPrice as greaterThan. (NullAllowed: if null, no condition)
+     * @param shohinPrice The value of shohinPrice as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setShohinPrice_GreaterThan(Integer shohinPrice) {
         regShohinPrice(CK_GT, shohinPrice);
@@ -706,7 +706,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * SHOHIN_PRICE: {NotNull, DECIMAL(9)}
-     * @param shohinPrice The value of shohinPrice as lessThan. (NullAllowed: if null, no condition)
+     * @param shohinPrice The value of shohinPrice as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setShohinPrice_LessThan(Integer shohinPrice) {
         regShohinPrice(CK_LT, shohinPrice);
@@ -715,7 +715,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * SHOHIN_PRICE: {NotNull, DECIMAL(9)}
-     * @param shohinPrice The value of shohinPrice as greaterEqual. (NullAllowed: if null, no condition)
+     * @param shohinPrice The value of shohinPrice as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setShohinPrice_GreaterEqual(Integer shohinPrice) {
         regShohinPrice(CK_GE, shohinPrice);
@@ -724,7 +724,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * SHOHIN_PRICE: {NotNull, DECIMAL(9)}
-     * @param shohinPrice The value of shohinPrice as lessEqual. (NullAllowed: if null, no condition)
+     * @param shohinPrice The value of shohinPrice as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setShohinPrice_LessEqual(Integer shohinPrice) {
         regShohinPrice(CK_LE, shohinPrice);
@@ -923,7 +923,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as equal. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_Equal(java.time.LocalDateTime regTm) {
         regRegTm(CK_EQ,  regTm);
@@ -932,7 +932,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as greaterThan. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_GreaterThan(java.time.LocalDateTime regTm) {
         regRegTm(CK_GT,  regTm);
@@ -941,7 +941,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as lessThan. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_LessThan(java.time.LocalDateTime regTm) {
         regRegTm(CK_LT,  regTm);
@@ -950,7 +950,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as greaterEqual. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_GreaterEqual(java.time.LocalDateTime regTm) {
         regRegTm(CK_GE,  regTm);
@@ -959,7 +959,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as lessEqual. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_LessEqual(java.time.LocalDateTime regTm) {
         regRegTm(CK_LE, regTm);
@@ -1268,7 +1268,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as equal. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_Equal(java.time.LocalDateTime updTm) {
         regUpdTm(CK_EQ,  updTm);
@@ -1277,7 +1277,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as greaterThan. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_GreaterThan(java.time.LocalDateTime updTm) {
         regUpdTm(CK_GT,  updTm);
@@ -1286,7 +1286,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as lessThan. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_LessThan(java.time.LocalDateTime updTm) {
         regUpdTm(CK_LT,  updTm);
@@ -1295,7 +1295,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as greaterEqual. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_GreaterEqual(java.time.LocalDateTime updTm) {
         regUpdTm(CK_GE,  updTm);
@@ -1304,7 +1304,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as lessEqual. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_LessEqual(java.time.LocalDateTime updTm) {
         regUpdTm(CK_LE, updTm);
@@ -1478,7 +1478,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as equal. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_Equal(Integer versionNo) {
         doSetVersionNo_Equal(versionNo);
@@ -1491,7 +1491,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as notEqual. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_NotEqual(Integer versionNo) {
         doSetVersionNo_NotEqual(versionNo);
@@ -1504,7 +1504,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as greaterThan. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_GreaterThan(Integer versionNo) {
         regVersionNo(CK_GT, versionNo);
@@ -1513,7 +1513,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as lessThan. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_LessThan(Integer versionNo) {
         regVersionNo(CK_LT, versionNo);
@@ -1522,7 +1522,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as greaterEqual. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_GreaterEqual(Integer versionNo) {
         regVersionNo(CK_GE, versionNo);
@@ -1531,7 +1531,7 @@ public abstract class AbstractBsSmShohinCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as lessEqual. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_LessEqual(Integer versionNo) {
         regVersionNo(CK_LE, versionNo);

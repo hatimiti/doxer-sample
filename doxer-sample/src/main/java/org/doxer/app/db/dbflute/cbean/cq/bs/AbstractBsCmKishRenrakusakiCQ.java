@@ -46,7 +46,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * CM_KISH_RENRAKUSAKI_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param cmKishRenrakusakiId The value of cmKishRenrakusakiId as equal. (NullAllowed: if null, no condition)
+     * @param cmKishRenrakusakiId The value of cmKishRenrakusakiId as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setCmKishRenrakusakiId_Equal(Long cmKishRenrakusakiId) {
         doSetCmKishRenrakusakiId_Equal(cmKishRenrakusakiId);
@@ -59,7 +59,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * CM_KISH_RENRAKUSAKI_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param cmKishRenrakusakiId The value of cmKishRenrakusakiId as notEqual. (NullAllowed: if null, no condition)
+     * @param cmKishRenrakusakiId The value of cmKishRenrakusakiId as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setCmKishRenrakusakiId_NotEqual(Long cmKishRenrakusakiId) {
         doSetCmKishRenrakusakiId_NotEqual(cmKishRenrakusakiId);
@@ -72,7 +72,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * CM_KISH_RENRAKUSAKI_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param cmKishRenrakusakiId The value of cmKishRenrakusakiId as greaterThan. (NullAllowed: if null, no condition)
+     * @param cmKishRenrakusakiId The value of cmKishRenrakusakiId as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setCmKishRenrakusakiId_GreaterThan(Long cmKishRenrakusakiId) {
         regCmKishRenrakusakiId(CK_GT, cmKishRenrakusakiId);
@@ -81,7 +81,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * CM_KISH_RENRAKUSAKI_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param cmKishRenrakusakiId The value of cmKishRenrakusakiId as lessThan. (NullAllowed: if null, no condition)
+     * @param cmKishRenrakusakiId The value of cmKishRenrakusakiId as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setCmKishRenrakusakiId_LessThan(Long cmKishRenrakusakiId) {
         regCmKishRenrakusakiId(CK_LT, cmKishRenrakusakiId);
@@ -90,7 +90,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * CM_KISH_RENRAKUSAKI_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param cmKishRenrakusakiId The value of cmKishRenrakusakiId as greaterEqual. (NullAllowed: if null, no condition)
+     * @param cmKishRenrakusakiId The value of cmKishRenrakusakiId as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setCmKishRenrakusakiId_GreaterEqual(Long cmKishRenrakusakiId) {
         regCmKishRenrakusakiId(CK_GE, cmKishRenrakusakiId);
@@ -99,7 +99,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * CM_KISH_RENRAKUSAKI_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param cmKishRenrakusakiId The value of cmKishRenrakusakiId as lessEqual. (NullAllowed: if null, no condition)
+     * @param cmKishRenrakusakiId The value of cmKishRenrakusakiId as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setCmKishRenrakusakiId_LessEqual(Long cmKishRenrakusakiId) {
         regCmKishRenrakusakiId(CK_LE, cmKishRenrakusakiId);
@@ -175,7 +175,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * CM_KAISHA_ID: {NotNull, BIGINT(19), FK to cm_kaisha}
-     * @param cmKaishaId The value of cmKaishaId as equal. (NullAllowed: if null, no condition)
+     * @param cmKaishaId The value of cmKaishaId as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setCmKaishaId_Equal(Long cmKaishaId) {
         doSetCmKaishaId_Equal(cmKaishaId);
@@ -188,7 +188,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * CM_KAISHA_ID: {NotNull, BIGINT(19), FK to cm_kaisha}
-     * @param cmKaishaId The value of cmKaishaId as notEqual. (NullAllowed: if null, no condition)
+     * @param cmKaishaId The value of cmKaishaId as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setCmKaishaId_NotEqual(Long cmKaishaId) {
         doSetCmKaishaId_NotEqual(cmKaishaId);
@@ -201,7 +201,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * CM_KAISHA_ID: {NotNull, BIGINT(19), FK to cm_kaisha}
-     * @param cmKaishaId The value of cmKaishaId as greaterThan. (NullAllowed: if null, no condition)
+     * @param cmKaishaId The value of cmKaishaId as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setCmKaishaId_GreaterThan(Long cmKaishaId) {
         regCmKaishaId(CK_GT, cmKaishaId);
@@ -210,7 +210,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * CM_KAISHA_ID: {NotNull, BIGINT(19), FK to cm_kaisha}
-     * @param cmKaishaId The value of cmKaishaId as lessThan. (NullAllowed: if null, no condition)
+     * @param cmKaishaId The value of cmKaishaId as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setCmKaishaId_LessThan(Long cmKaishaId) {
         regCmKaishaId(CK_LT, cmKaishaId);
@@ -219,7 +219,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * CM_KAISHA_ID: {NotNull, BIGINT(19), FK to cm_kaisha}
-     * @param cmKaishaId The value of cmKaishaId as greaterEqual. (NullAllowed: if null, no condition)
+     * @param cmKaishaId The value of cmKaishaId as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setCmKaishaId_GreaterEqual(Long cmKaishaId) {
         regCmKaishaId(CK_GE, cmKaishaId);
@@ -228,7 +228,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * CM_KAISHA_ID: {NotNull, BIGINT(19), FK to cm_kaisha}
-     * @param cmKaishaId The value of cmKaishaId as lessEqual. (NullAllowed: if null, no condition)
+     * @param cmKaishaId The value of cmKaishaId as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setCmKaishaId_LessEqual(Long cmKaishaId) {
         regCmKaishaId(CK_LE, cmKaishaId);
@@ -292,7 +292,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * TEL_NO1: {DECIMAL(5)}
-     * @param telNo1 The value of telNo1 as equal. (NullAllowed: if null, no condition)
+     * @param telNo1 The value of telNo1 as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setTelNo1_Equal(Integer telNo1) {
         doSetTelNo1_Equal(telNo1);
@@ -305,7 +305,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * TEL_NO1: {DECIMAL(5)}
-     * @param telNo1 The value of telNo1 as notEqual. (NullAllowed: if null, no condition)
+     * @param telNo1 The value of telNo1 as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setTelNo1_NotEqual(Integer telNo1) {
         doSetTelNo1_NotEqual(telNo1);
@@ -318,7 +318,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * TEL_NO1: {DECIMAL(5)}
-     * @param telNo1 The value of telNo1 as greaterThan. (NullAllowed: if null, no condition)
+     * @param telNo1 The value of telNo1 as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setTelNo1_GreaterThan(Integer telNo1) {
         regTelNo1(CK_GT, telNo1);
@@ -327,7 +327,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * TEL_NO1: {DECIMAL(5)}
-     * @param telNo1 The value of telNo1 as lessThan. (NullAllowed: if null, no condition)
+     * @param telNo1 The value of telNo1 as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setTelNo1_LessThan(Integer telNo1) {
         regTelNo1(CK_LT, telNo1);
@@ -336,7 +336,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * TEL_NO1: {DECIMAL(5)}
-     * @param telNo1 The value of telNo1 as greaterEqual. (NullAllowed: if null, no condition)
+     * @param telNo1 The value of telNo1 as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setTelNo1_GreaterEqual(Integer telNo1) {
         regTelNo1(CK_GE, telNo1);
@@ -345,7 +345,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * TEL_NO1: {DECIMAL(5)}
-     * @param telNo1 The value of telNo1 as lessEqual. (NullAllowed: if null, no condition)
+     * @param telNo1 The value of telNo1 as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setTelNo1_LessEqual(Integer telNo1) {
         regTelNo1(CK_LE, telNo1);
@@ -421,7 +421,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * TEL_NO2: {DECIMAL(5)}
-     * @param telNo2 The value of telNo2 as equal. (NullAllowed: if null, no condition)
+     * @param telNo2 The value of telNo2 as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setTelNo2_Equal(Integer telNo2) {
         doSetTelNo2_Equal(telNo2);
@@ -434,7 +434,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * TEL_NO2: {DECIMAL(5)}
-     * @param telNo2 The value of telNo2 as notEqual. (NullAllowed: if null, no condition)
+     * @param telNo2 The value of telNo2 as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setTelNo2_NotEqual(Integer telNo2) {
         doSetTelNo2_NotEqual(telNo2);
@@ -447,7 +447,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * TEL_NO2: {DECIMAL(5)}
-     * @param telNo2 The value of telNo2 as greaterThan. (NullAllowed: if null, no condition)
+     * @param telNo2 The value of telNo2 as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setTelNo2_GreaterThan(Integer telNo2) {
         regTelNo2(CK_GT, telNo2);
@@ -456,7 +456,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * TEL_NO2: {DECIMAL(5)}
-     * @param telNo2 The value of telNo2 as lessThan. (NullAllowed: if null, no condition)
+     * @param telNo2 The value of telNo2 as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setTelNo2_LessThan(Integer telNo2) {
         regTelNo2(CK_LT, telNo2);
@@ -465,7 +465,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * TEL_NO2: {DECIMAL(5)}
-     * @param telNo2 The value of telNo2 as greaterEqual. (NullAllowed: if null, no condition)
+     * @param telNo2 The value of telNo2 as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setTelNo2_GreaterEqual(Integer telNo2) {
         regTelNo2(CK_GE, telNo2);
@@ -474,7 +474,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * TEL_NO2: {DECIMAL(5)}
-     * @param telNo2 The value of telNo2 as lessEqual. (NullAllowed: if null, no condition)
+     * @param telNo2 The value of telNo2 as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setTelNo2_LessEqual(Integer telNo2) {
         regTelNo2(CK_LE, telNo2);
@@ -550,7 +550,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * TEL_NO3: {DECIMAL(5)}
-     * @param telNo3 The value of telNo3 as equal. (NullAllowed: if null, no condition)
+     * @param telNo3 The value of telNo3 as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setTelNo3_Equal(Integer telNo3) {
         doSetTelNo3_Equal(telNo3);
@@ -563,7 +563,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * TEL_NO3: {DECIMAL(5)}
-     * @param telNo3 The value of telNo3 as notEqual. (NullAllowed: if null, no condition)
+     * @param telNo3 The value of telNo3 as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setTelNo3_NotEqual(Integer telNo3) {
         doSetTelNo3_NotEqual(telNo3);
@@ -576,7 +576,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * TEL_NO3: {DECIMAL(5)}
-     * @param telNo3 The value of telNo3 as greaterThan. (NullAllowed: if null, no condition)
+     * @param telNo3 The value of telNo3 as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setTelNo3_GreaterThan(Integer telNo3) {
         regTelNo3(CK_GT, telNo3);
@@ -585,7 +585,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * TEL_NO3: {DECIMAL(5)}
-     * @param telNo3 The value of telNo3 as lessThan. (NullAllowed: if null, no condition)
+     * @param telNo3 The value of telNo3 as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setTelNo3_LessThan(Integer telNo3) {
         regTelNo3(CK_LT, telNo3);
@@ -594,7 +594,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * TEL_NO3: {DECIMAL(5)}
-     * @param telNo3 The value of telNo3 as greaterEqual. (NullAllowed: if null, no condition)
+     * @param telNo3 The value of telNo3 as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setTelNo3_GreaterEqual(Integer telNo3) {
         regTelNo3(CK_GE, telNo3);
@@ -603,7 +603,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * TEL_NO3: {DECIMAL(5)}
-     * @param telNo3 The value of telNo3 as lessEqual. (NullAllowed: if null, no condition)
+     * @param telNo3 The value of telNo3 as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setTelNo3_LessEqual(Integer telNo3) {
         regTelNo3(CK_LE, telNo3);
@@ -842,7 +842,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
      * Equal(=). As RenrakusakiYotoKb. And NullOrEmptyIgnored, OnlyOnceRegistered. <br>
      * RENRAKUSAKI_YOTO_KB: {NotNull, CHAR(3), classification=RenrakusakiYotoKb} <br>
      * 連絡先用途区分(通常、緊急)
-     * @param cdef The instance of classification definition (as ENUM type). (NullAllowed: if null, no condition)
+     * @param cdef The instance of classification definition (as ENUM type). (basically NotNull: error as default, or no condition as option)
      */
     public void setRenrakusakiYotoKb_Equal_AsRenrakusakiYotoKb(CDef.RenrakusakiYotoKb cdef) {
         doSetRenrakusakiYotoKb_Equal(cdef != null ? cdef.code() : null);
@@ -881,7 +881,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
      * NotEqual(&lt;&gt;). As RenrakusakiYotoKb. And NullOrEmptyIgnored, OnlyOnceRegistered. <br>
      * RENRAKUSAKI_YOTO_KB: {NotNull, CHAR(3), classification=RenrakusakiYotoKb} <br>
      * 連絡先用途区分(通常、緊急)
-     * @param cdef The instance of classification definition (as ENUM type). (NullAllowed: if null, no condition)
+     * @param cdef The instance of classification definition (as ENUM type). (basically NotNull: error as default, or no condition as option)
      */
     public void setRenrakusakiYotoKb_NotEqual_AsRenrakusakiYotoKb(CDef.RenrakusakiYotoKb cdef) {
         doSetRenrakusakiYotoKb_NotEqual(cdef != null ? cdef.code() : null);
@@ -1094,7 +1094,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as equal. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_Equal(java.time.LocalDateTime regTm) {
         regRegTm(CK_EQ,  regTm);
@@ -1103,7 +1103,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as greaterThan. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_GreaterThan(java.time.LocalDateTime regTm) {
         regRegTm(CK_GT,  regTm);
@@ -1112,7 +1112,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as lessThan. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_LessThan(java.time.LocalDateTime regTm) {
         regRegTm(CK_LT,  regTm);
@@ -1121,7 +1121,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as greaterEqual. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_GreaterEqual(java.time.LocalDateTime regTm) {
         regRegTm(CK_GE,  regTm);
@@ -1130,7 +1130,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as lessEqual. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_LessEqual(java.time.LocalDateTime regTm) {
         regRegTm(CK_LE, regTm);
@@ -1439,7 +1439,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as equal. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_Equal(java.time.LocalDateTime updTm) {
         regUpdTm(CK_EQ,  updTm);
@@ -1448,7 +1448,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as greaterThan. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_GreaterThan(java.time.LocalDateTime updTm) {
         regUpdTm(CK_GT,  updTm);
@@ -1457,7 +1457,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as lessThan. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_LessThan(java.time.LocalDateTime updTm) {
         regUpdTm(CK_LT,  updTm);
@@ -1466,7 +1466,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as greaterEqual. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_GreaterEqual(java.time.LocalDateTime updTm) {
         regUpdTm(CK_GE,  updTm);
@@ -1475,7 +1475,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as lessEqual. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_LessEqual(java.time.LocalDateTime updTm) {
         regUpdTm(CK_LE, updTm);
@@ -1649,7 +1649,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as equal. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_Equal(Integer versionNo) {
         doSetVersionNo_Equal(versionNo);
@@ -1662,7 +1662,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as notEqual. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_NotEqual(Integer versionNo) {
         doSetVersionNo_NotEqual(versionNo);
@@ -1675,7 +1675,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as greaterThan. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_GreaterThan(Integer versionNo) {
         regVersionNo(CK_GT, versionNo);
@@ -1684,7 +1684,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as lessThan. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_LessThan(Integer versionNo) {
         regVersionNo(CK_LT, versionNo);
@@ -1693,7 +1693,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as greaterEqual. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_GreaterEqual(Integer versionNo) {
         regVersionNo(CK_GE, versionNo);
@@ -1702,7 +1702,7 @@ public abstract class AbstractBsCmKishRenrakusakiCQ extends AbstractConditionQue
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as lessEqual. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_LessEqual(Integer versionNo) {
         regVersionNo(CK_LE, versionNo);

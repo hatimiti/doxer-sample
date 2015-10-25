@@ -46,7 +46,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * ST_SHHN_KNY_MS_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param stShhnKnyMsId The value of stShhnKnyMsId as equal. (NullAllowed: if null, no condition)
+     * @param stShhnKnyMsId The value of stShhnKnyMsId as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setStShhnKnyMsId_Equal(Long stShhnKnyMsId) {
         doSetStShhnKnyMsId_Equal(stShhnKnyMsId);
@@ -59,7 +59,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * ST_SHHN_KNY_MS_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param stShhnKnyMsId The value of stShhnKnyMsId as notEqual. (NullAllowed: if null, no condition)
+     * @param stShhnKnyMsId The value of stShhnKnyMsId as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setStShhnKnyMsId_NotEqual(Long stShhnKnyMsId) {
         doSetStShhnKnyMsId_NotEqual(stShhnKnyMsId);
@@ -72,7 +72,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * ST_SHHN_KNY_MS_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param stShhnKnyMsId The value of stShhnKnyMsId as greaterThan. (NullAllowed: if null, no condition)
+     * @param stShhnKnyMsId The value of stShhnKnyMsId as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setStShhnKnyMsId_GreaterThan(Long stShhnKnyMsId) {
         regStShhnKnyMsId(CK_GT, stShhnKnyMsId);
@@ -81,7 +81,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * ST_SHHN_KNY_MS_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param stShhnKnyMsId The value of stShhnKnyMsId as lessThan. (NullAllowed: if null, no condition)
+     * @param stShhnKnyMsId The value of stShhnKnyMsId as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setStShhnKnyMsId_LessThan(Long stShhnKnyMsId) {
         regStShhnKnyMsId(CK_LT, stShhnKnyMsId);
@@ -90,7 +90,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * ST_SHHN_KNY_MS_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param stShhnKnyMsId The value of stShhnKnyMsId as greaterEqual. (NullAllowed: if null, no condition)
+     * @param stShhnKnyMsId The value of stShhnKnyMsId as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setStShhnKnyMsId_GreaterEqual(Long stShhnKnyMsId) {
         regStShhnKnyMsId(CK_GE, stShhnKnyMsId);
@@ -99,7 +99,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * ST_SHHN_KNY_MS_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param stShhnKnyMsId The value of stShhnKnyMsId as lessEqual. (NullAllowed: if null, no condition)
+     * @param stShhnKnyMsId The value of stShhnKnyMsId as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setStShhnKnyMsId_LessEqual(Long stShhnKnyMsId) {
         regStShhnKnyMsId(CK_LE, stShhnKnyMsId);
@@ -175,7 +175,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * ST_SHOHIN_KONYU_ID: {UQ+, NotNull, DECIMAL(12), FK to st_shohin_konyu}
-     * @param stShohinKonyuId The value of stShohinKonyuId as equal. (NullAllowed: if null, no condition)
+     * @param stShohinKonyuId The value of stShohinKonyuId as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setStShohinKonyuId_Equal(Long stShohinKonyuId) {
         doSetStShohinKonyuId_Equal(stShohinKonyuId);
@@ -188,7 +188,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * ST_SHOHIN_KONYU_ID: {UQ+, NotNull, DECIMAL(12), FK to st_shohin_konyu}
-     * @param stShohinKonyuId The value of stShohinKonyuId as notEqual. (NullAllowed: if null, no condition)
+     * @param stShohinKonyuId The value of stShohinKonyuId as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setStShohinKonyuId_NotEqual(Long stShohinKonyuId) {
         doSetStShohinKonyuId_NotEqual(stShohinKonyuId);
@@ -201,7 +201,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * ST_SHOHIN_KONYU_ID: {UQ+, NotNull, DECIMAL(12), FK to st_shohin_konyu}
-     * @param stShohinKonyuId The value of stShohinKonyuId as greaterThan. (NullAllowed: if null, no condition)
+     * @param stShohinKonyuId The value of stShohinKonyuId as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setStShohinKonyuId_GreaterThan(Long stShohinKonyuId) {
         regStShohinKonyuId(CK_GT, stShohinKonyuId);
@@ -210,7 +210,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * ST_SHOHIN_KONYU_ID: {UQ+, NotNull, DECIMAL(12), FK to st_shohin_konyu}
-     * @param stShohinKonyuId The value of stShohinKonyuId as lessThan. (NullAllowed: if null, no condition)
+     * @param stShohinKonyuId The value of stShohinKonyuId as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setStShohinKonyuId_LessThan(Long stShohinKonyuId) {
         regStShohinKonyuId(CK_LT, stShohinKonyuId);
@@ -219,7 +219,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * ST_SHOHIN_KONYU_ID: {UQ+, NotNull, DECIMAL(12), FK to st_shohin_konyu}
-     * @param stShohinKonyuId The value of stShohinKonyuId as greaterEqual. (NullAllowed: if null, no condition)
+     * @param stShohinKonyuId The value of stShohinKonyuId as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setStShohinKonyuId_GreaterEqual(Long stShohinKonyuId) {
         regStShohinKonyuId(CK_GE, stShohinKonyuId);
@@ -228,7 +228,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * ST_SHOHIN_KONYU_ID: {UQ+, NotNull, DECIMAL(12), FK to st_shohin_konyu}
-     * @param stShohinKonyuId The value of stShohinKonyuId as lessEqual. (NullAllowed: if null, no condition)
+     * @param stShohinKonyuId The value of stShohinKonyuId as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setStShohinKonyuId_LessEqual(Long stShohinKonyuId) {
         regStShohinKonyuId(CK_LE, stShohinKonyuId);
@@ -292,7 +292,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * SM_SHOHIN_ID: {+UQ, NotNull, DECIMAL(12), FK to sm_shohin}
-     * @param smShohinId The value of smShohinId as equal. (NullAllowed: if null, no condition)
+     * @param smShohinId The value of smShohinId as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setSmShohinId_Equal(Long smShohinId) {
         doSetSmShohinId_Equal(smShohinId);
@@ -305,7 +305,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * SM_SHOHIN_ID: {+UQ, NotNull, DECIMAL(12), FK to sm_shohin}
-     * @param smShohinId The value of smShohinId as notEqual. (NullAllowed: if null, no condition)
+     * @param smShohinId The value of smShohinId as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setSmShohinId_NotEqual(Long smShohinId) {
         doSetSmShohinId_NotEqual(smShohinId);
@@ -318,7 +318,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * SM_SHOHIN_ID: {+UQ, NotNull, DECIMAL(12), FK to sm_shohin}
-     * @param smShohinId The value of smShohinId as greaterThan. (NullAllowed: if null, no condition)
+     * @param smShohinId The value of smShohinId as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setSmShohinId_GreaterThan(Long smShohinId) {
         regSmShohinId(CK_GT, smShohinId);
@@ -327,7 +327,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * SM_SHOHIN_ID: {+UQ, NotNull, DECIMAL(12), FK to sm_shohin}
-     * @param smShohinId The value of smShohinId as lessThan. (NullAllowed: if null, no condition)
+     * @param smShohinId The value of smShohinId as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setSmShohinId_LessThan(Long smShohinId) {
         regSmShohinId(CK_LT, smShohinId);
@@ -336,7 +336,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * SM_SHOHIN_ID: {+UQ, NotNull, DECIMAL(12), FK to sm_shohin}
-     * @param smShohinId The value of smShohinId as greaterEqual. (NullAllowed: if null, no condition)
+     * @param smShohinId The value of smShohinId as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setSmShohinId_GreaterEqual(Long smShohinId) {
         regSmShohinId(CK_GE, smShohinId);
@@ -345,7 +345,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * SM_SHOHIN_ID: {+UQ, NotNull, DECIMAL(12), FK to sm_shohin}
-     * @param smShohinId The value of smShohinId as lessEqual. (NullAllowed: if null, no condition)
+     * @param smShohinId The value of smShohinId as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setSmShohinId_LessEqual(Long smShohinId) {
         regSmShohinId(CK_LE, smShohinId);
@@ -409,7 +409,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * KONYU_SU: {NotNull, DECIMAL(4)}
-     * @param konyuSu The value of konyuSu as equal. (NullAllowed: if null, no condition)
+     * @param konyuSu The value of konyuSu as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setKonyuSu_Equal(Integer konyuSu) {
         doSetKonyuSu_Equal(konyuSu);
@@ -422,7 +422,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * KONYU_SU: {NotNull, DECIMAL(4)}
-     * @param konyuSu The value of konyuSu as notEqual. (NullAllowed: if null, no condition)
+     * @param konyuSu The value of konyuSu as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setKonyuSu_NotEqual(Integer konyuSu) {
         doSetKonyuSu_NotEqual(konyuSu);
@@ -435,7 +435,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * KONYU_SU: {NotNull, DECIMAL(4)}
-     * @param konyuSu The value of konyuSu as greaterThan. (NullAllowed: if null, no condition)
+     * @param konyuSu The value of konyuSu as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setKonyuSu_GreaterThan(Integer konyuSu) {
         regKonyuSu(CK_GT, konyuSu);
@@ -444,7 +444,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * KONYU_SU: {NotNull, DECIMAL(4)}
-     * @param konyuSu The value of konyuSu as lessThan. (NullAllowed: if null, no condition)
+     * @param konyuSu The value of konyuSu as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setKonyuSu_LessThan(Integer konyuSu) {
         regKonyuSu(CK_LT, konyuSu);
@@ -453,7 +453,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * KONYU_SU: {NotNull, DECIMAL(4)}
-     * @param konyuSu The value of konyuSu as greaterEqual. (NullAllowed: if null, no condition)
+     * @param konyuSu The value of konyuSu as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setKonyuSu_GreaterEqual(Integer konyuSu) {
         regKonyuSu(CK_GE, konyuSu);
@@ -462,7 +462,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * KONYU_SU: {NotNull, DECIMAL(4)}
-     * @param konyuSu The value of konyuSu as lessEqual. (NullAllowed: if null, no condition)
+     * @param konyuSu The value of konyuSu as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setKonyuSu_LessEqual(Integer konyuSu) {
         regKonyuSu(CK_LE, konyuSu);
@@ -526,7 +526,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * KONYU_UNIT_PRICE: {NotNull, DECIMAL(9)}
-     * @param konyuUnitPrice The value of konyuUnitPrice as equal. (NullAllowed: if null, no condition)
+     * @param konyuUnitPrice The value of konyuUnitPrice as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setKonyuUnitPrice_Equal(Integer konyuUnitPrice) {
         doSetKonyuUnitPrice_Equal(konyuUnitPrice);
@@ -539,7 +539,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * KONYU_UNIT_PRICE: {NotNull, DECIMAL(9)}
-     * @param konyuUnitPrice The value of konyuUnitPrice as notEqual. (NullAllowed: if null, no condition)
+     * @param konyuUnitPrice The value of konyuUnitPrice as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setKonyuUnitPrice_NotEqual(Integer konyuUnitPrice) {
         doSetKonyuUnitPrice_NotEqual(konyuUnitPrice);
@@ -552,7 +552,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * KONYU_UNIT_PRICE: {NotNull, DECIMAL(9)}
-     * @param konyuUnitPrice The value of konyuUnitPrice as greaterThan. (NullAllowed: if null, no condition)
+     * @param konyuUnitPrice The value of konyuUnitPrice as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setKonyuUnitPrice_GreaterThan(Integer konyuUnitPrice) {
         regKonyuUnitPrice(CK_GT, konyuUnitPrice);
@@ -561,7 +561,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * KONYU_UNIT_PRICE: {NotNull, DECIMAL(9)}
-     * @param konyuUnitPrice The value of konyuUnitPrice as lessThan. (NullAllowed: if null, no condition)
+     * @param konyuUnitPrice The value of konyuUnitPrice as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setKonyuUnitPrice_LessThan(Integer konyuUnitPrice) {
         regKonyuUnitPrice(CK_LT, konyuUnitPrice);
@@ -570,7 +570,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * KONYU_UNIT_PRICE: {NotNull, DECIMAL(9)}
-     * @param konyuUnitPrice The value of konyuUnitPrice as greaterEqual. (NullAllowed: if null, no condition)
+     * @param konyuUnitPrice The value of konyuUnitPrice as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setKonyuUnitPrice_GreaterEqual(Integer konyuUnitPrice) {
         regKonyuUnitPrice(CK_GE, konyuUnitPrice);
@@ -579,7 +579,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * KONYU_UNIT_PRICE: {NotNull, DECIMAL(9)}
-     * @param konyuUnitPrice The value of konyuUnitPrice as lessEqual. (NullAllowed: if null, no condition)
+     * @param konyuUnitPrice The value of konyuUnitPrice as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setKonyuUnitPrice_LessEqual(Integer konyuUnitPrice) {
         regKonyuUnitPrice(CK_LE, konyuUnitPrice);
@@ -643,7 +643,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * KONYU_TAX: {NotNull, DECIMAL(9)}
-     * @param konyuTax The value of konyuTax as equal. (NullAllowed: if null, no condition)
+     * @param konyuTax The value of konyuTax as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setKonyuTax_Equal(Integer konyuTax) {
         doSetKonyuTax_Equal(konyuTax);
@@ -656,7 +656,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * KONYU_TAX: {NotNull, DECIMAL(9)}
-     * @param konyuTax The value of konyuTax as notEqual. (NullAllowed: if null, no condition)
+     * @param konyuTax The value of konyuTax as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setKonyuTax_NotEqual(Integer konyuTax) {
         doSetKonyuTax_NotEqual(konyuTax);
@@ -669,7 +669,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * KONYU_TAX: {NotNull, DECIMAL(9)}
-     * @param konyuTax The value of konyuTax as greaterThan. (NullAllowed: if null, no condition)
+     * @param konyuTax The value of konyuTax as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setKonyuTax_GreaterThan(Integer konyuTax) {
         regKonyuTax(CK_GT, konyuTax);
@@ -678,7 +678,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * KONYU_TAX: {NotNull, DECIMAL(9)}
-     * @param konyuTax The value of konyuTax as lessThan. (NullAllowed: if null, no condition)
+     * @param konyuTax The value of konyuTax as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setKonyuTax_LessThan(Integer konyuTax) {
         regKonyuTax(CK_LT, konyuTax);
@@ -687,7 +687,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * KONYU_TAX: {NotNull, DECIMAL(9)}
-     * @param konyuTax The value of konyuTax as greaterEqual. (NullAllowed: if null, no condition)
+     * @param konyuTax The value of konyuTax as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setKonyuTax_GreaterEqual(Integer konyuTax) {
         regKonyuTax(CK_GE, konyuTax);
@@ -696,7 +696,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * KONYU_TAX: {NotNull, DECIMAL(9)}
-     * @param konyuTax The value of konyuTax as lessEqual. (NullAllowed: if null, no condition)
+     * @param konyuTax The value of konyuTax as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setKonyuTax_LessEqual(Integer konyuTax) {
         regKonyuTax(CK_LE, konyuTax);
@@ -895,7 +895,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as equal. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_Equal(java.time.LocalDateTime regTm) {
         regRegTm(CK_EQ,  regTm);
@@ -904,7 +904,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as greaterThan. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_GreaterThan(java.time.LocalDateTime regTm) {
         regRegTm(CK_GT,  regTm);
@@ -913,7 +913,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as lessThan. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_LessThan(java.time.LocalDateTime regTm) {
         regRegTm(CK_LT,  regTm);
@@ -922,7 +922,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as greaterEqual. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_GreaterEqual(java.time.LocalDateTime regTm) {
         regRegTm(CK_GE,  regTm);
@@ -931,7 +931,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as lessEqual. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_LessEqual(java.time.LocalDateTime regTm) {
         regRegTm(CK_LE, regTm);
@@ -1240,7 +1240,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as equal. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_Equal(java.time.LocalDateTime updTm) {
         regUpdTm(CK_EQ,  updTm);
@@ -1249,7 +1249,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as greaterThan. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_GreaterThan(java.time.LocalDateTime updTm) {
         regUpdTm(CK_GT,  updTm);
@@ -1258,7 +1258,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as lessThan. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_LessThan(java.time.LocalDateTime updTm) {
         regUpdTm(CK_LT,  updTm);
@@ -1267,7 +1267,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as greaterEqual. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_GreaterEqual(java.time.LocalDateTime updTm) {
         regUpdTm(CK_GE,  updTm);
@@ -1276,7 +1276,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as lessEqual. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_LessEqual(java.time.LocalDateTime updTm) {
         regUpdTm(CK_LE, updTm);
@@ -1450,7 +1450,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as equal. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_Equal(Integer versionNo) {
         doSetVersionNo_Equal(versionNo);
@@ -1463,7 +1463,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as notEqual. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_NotEqual(Integer versionNo) {
         doSetVersionNo_NotEqual(versionNo);
@@ -1476,7 +1476,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as greaterThan. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_GreaterThan(Integer versionNo) {
         regVersionNo(CK_GT, versionNo);
@@ -1485,7 +1485,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as lessThan. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_LessThan(Integer versionNo) {
         regVersionNo(CK_LT, versionNo);
@@ -1494,7 +1494,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as greaterEqual. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_GreaterEqual(Integer versionNo) {
         regVersionNo(CK_GE, versionNo);
@@ -1503,7 +1503,7 @@ public abstract class AbstractBsStShhnKnyMsCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as lessEqual. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_LessEqual(Integer versionNo) {
         regVersionNo(CK_LE, versionNo);

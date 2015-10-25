@@ -56,7 +56,7 @@ public abstract class AbstractBsCmRenrakusakiYotoKbCQ extends AbstractConditionQ
      * Equal(=). As RenrakusakiYotoKb. And NullOrEmptyIgnored, OnlyOnceRegistered. <br>
      * KB_VAL: {PK, NotNull, CHAR(3), classification=RenrakusakiYotoKb} <br>
      * 連絡先用途区分(通常、緊急)
-     * @param cdef The instance of classification definition (as ENUM type). (NullAllowed: if null, no condition)
+     * @param cdef The instance of classification definition (as ENUM type). (basically NotNull: error as default, or no condition as option)
      */
     public void setKbVal_Equal_AsRenrakusakiYotoKb(CDef.RenrakusakiYotoKb cdef) {
         doSetKbVal_Equal(cdef != null ? cdef.code() : null);
@@ -95,7 +95,7 @@ public abstract class AbstractBsCmRenrakusakiYotoKbCQ extends AbstractConditionQ
      * NotEqual(&lt;&gt;). As RenrakusakiYotoKb. And NullOrEmptyIgnored, OnlyOnceRegistered. <br>
      * KB_VAL: {PK, NotNull, CHAR(3), classification=RenrakusakiYotoKb} <br>
      * 連絡先用途区分(通常、緊急)
-     * @param cdef The instance of classification definition (as ENUM type). (NullAllowed: if null, no condition)
+     * @param cdef The instance of classification definition (as ENUM type). (basically NotNull: error as default, or no condition as option)
      */
     public void setKbVal_NotEqual_AsRenrakusakiYotoKb(CDef.RenrakusakiYotoKb cdef) {
         doSetKbVal_NotEqual(cdef != null ? cdef.code() : null);
@@ -743,7 +743,7 @@ public abstract class AbstractBsCmRenrakusakiYotoKbCQ extends AbstractConditionQ
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as equal. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_Equal(java.time.LocalDateTime regTm) {
         regRegTm(CK_EQ,  regTm);
@@ -752,7 +752,7 @@ public abstract class AbstractBsCmRenrakusakiYotoKbCQ extends AbstractConditionQ
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as greaterThan. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_GreaterThan(java.time.LocalDateTime regTm) {
         regRegTm(CK_GT,  regTm);
@@ -761,7 +761,7 @@ public abstract class AbstractBsCmRenrakusakiYotoKbCQ extends AbstractConditionQ
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as lessThan. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_LessThan(java.time.LocalDateTime regTm) {
         regRegTm(CK_LT,  regTm);
@@ -770,7 +770,7 @@ public abstract class AbstractBsCmRenrakusakiYotoKbCQ extends AbstractConditionQ
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as greaterEqual. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_GreaterEqual(java.time.LocalDateTime regTm) {
         regRegTm(CK_GE,  regTm);
@@ -779,7 +779,7 @@ public abstract class AbstractBsCmRenrakusakiYotoKbCQ extends AbstractConditionQ
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as lessEqual. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_LessEqual(java.time.LocalDateTime regTm) {
         regRegTm(CK_LE, regTm);
@@ -1088,7 +1088,7 @@ public abstract class AbstractBsCmRenrakusakiYotoKbCQ extends AbstractConditionQ
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as equal. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_Equal(java.time.LocalDateTime updTm) {
         regUpdTm(CK_EQ,  updTm);
@@ -1097,7 +1097,7 @@ public abstract class AbstractBsCmRenrakusakiYotoKbCQ extends AbstractConditionQ
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as greaterThan. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_GreaterThan(java.time.LocalDateTime updTm) {
         regUpdTm(CK_GT,  updTm);
@@ -1106,7 +1106,7 @@ public abstract class AbstractBsCmRenrakusakiYotoKbCQ extends AbstractConditionQ
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as lessThan. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_LessThan(java.time.LocalDateTime updTm) {
         regUpdTm(CK_LT,  updTm);
@@ -1115,7 +1115,7 @@ public abstract class AbstractBsCmRenrakusakiYotoKbCQ extends AbstractConditionQ
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as greaterEqual. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_GreaterEqual(java.time.LocalDateTime updTm) {
         regUpdTm(CK_GE,  updTm);
@@ -1124,7 +1124,7 @@ public abstract class AbstractBsCmRenrakusakiYotoKbCQ extends AbstractConditionQ
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as lessEqual. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_LessEqual(java.time.LocalDateTime updTm) {
         regUpdTm(CK_LE, updTm);
@@ -1298,7 +1298,7 @@ public abstract class AbstractBsCmRenrakusakiYotoKbCQ extends AbstractConditionQ
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as equal. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_Equal(Integer versionNo) {
         doSetVersionNo_Equal(versionNo);
@@ -1311,7 +1311,7 @@ public abstract class AbstractBsCmRenrakusakiYotoKbCQ extends AbstractConditionQ
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as notEqual. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_NotEqual(Integer versionNo) {
         doSetVersionNo_NotEqual(versionNo);
@@ -1324,7 +1324,7 @@ public abstract class AbstractBsCmRenrakusakiYotoKbCQ extends AbstractConditionQ
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as greaterThan. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_GreaterThan(Integer versionNo) {
         regVersionNo(CK_GT, versionNo);
@@ -1333,7 +1333,7 @@ public abstract class AbstractBsCmRenrakusakiYotoKbCQ extends AbstractConditionQ
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as lessThan. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_LessThan(Integer versionNo) {
         regVersionNo(CK_LT, versionNo);
@@ -1342,7 +1342,7 @@ public abstract class AbstractBsCmRenrakusakiYotoKbCQ extends AbstractConditionQ
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as greaterEqual. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_GreaterEqual(Integer versionNo) {
         regVersionNo(CK_GE, versionNo);
@@ -1351,7 +1351,7 @@ public abstract class AbstractBsCmRenrakusakiYotoKbCQ extends AbstractConditionQ
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as lessEqual. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_LessEqual(Integer versionNo) {
         regVersionNo(CK_LE, versionNo);

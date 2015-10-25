@@ -46,7 +46,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * CM_KAISHA_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param cmKaishaId The value of cmKaishaId as equal. (NullAllowed: if null, no condition)
+     * @param cmKaishaId The value of cmKaishaId as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setCmKaishaId_Equal(Long cmKaishaId) {
         doSetCmKaishaId_Equal(cmKaishaId);
@@ -59,7 +59,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * CM_KAISHA_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param cmKaishaId The value of cmKaishaId as notEqual. (NullAllowed: if null, no condition)
+     * @param cmKaishaId The value of cmKaishaId as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setCmKaishaId_NotEqual(Long cmKaishaId) {
         doSetCmKaishaId_NotEqual(cmKaishaId);
@@ -72,7 +72,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * CM_KAISHA_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param cmKaishaId The value of cmKaishaId as greaterThan. (NullAllowed: if null, no condition)
+     * @param cmKaishaId The value of cmKaishaId as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setCmKaishaId_GreaterThan(Long cmKaishaId) {
         regCmKaishaId(CK_GT, cmKaishaId);
@@ -81,7 +81,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * CM_KAISHA_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param cmKaishaId The value of cmKaishaId as lessThan. (NullAllowed: if null, no condition)
+     * @param cmKaishaId The value of cmKaishaId as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setCmKaishaId_LessThan(Long cmKaishaId) {
         regCmKaishaId(CK_LT, cmKaishaId);
@@ -90,7 +90,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * CM_KAISHA_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param cmKaishaId The value of cmKaishaId as greaterEqual. (NullAllowed: if null, no condition)
+     * @param cmKaishaId The value of cmKaishaId as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setCmKaishaId_GreaterEqual(Long cmKaishaId) {
         regCmKaishaId(CK_GE, cmKaishaId);
@@ -99,7 +99,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * CM_KAISHA_ID: {PK, ID, NotNull, BIGINT(19)}
-     * @param cmKaishaId The value of cmKaishaId as lessEqual. (NullAllowed: if null, no condition)
+     * @param cmKaishaId The value of cmKaishaId as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setCmKaishaId_LessEqual(Long cmKaishaId) {
         regCmKaishaId(CK_LE, cmKaishaId);
@@ -817,7 +817,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as equal. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_Equal(java.time.LocalDateTime regTm) {
         regRegTm(CK_EQ,  regTm);
@@ -826,7 +826,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as greaterThan. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_GreaterThan(java.time.LocalDateTime regTm) {
         regRegTm(CK_GT,  regTm);
@@ -835,7 +835,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as lessThan. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_LessThan(java.time.LocalDateTime regTm) {
         regRegTm(CK_LT,  regTm);
@@ -844,7 +844,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as greaterEqual. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_GreaterEqual(java.time.LocalDateTime regTm) {
         regRegTm(CK_GE,  regTm);
@@ -853,7 +853,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * REG_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param regTm The value of regTm as lessEqual. (NullAllowed: if null, no condition)
+     * @param regTm The value of regTm as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setRegTm_LessEqual(java.time.LocalDateTime regTm) {
         regRegTm(CK_LE, regTm);
@@ -1162,7 +1162,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as equal. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_Equal(java.time.LocalDateTime updTm) {
         regUpdTm(CK_EQ,  updTm);
@@ -1171,7 +1171,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as greaterThan. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_GreaterThan(java.time.LocalDateTime updTm) {
         regUpdTm(CK_GT,  updTm);
@@ -1180,7 +1180,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as lessThan. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_LessThan(java.time.LocalDateTime updTm) {
         regUpdTm(CK_LT,  updTm);
@@ -1189,7 +1189,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as greaterEqual. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_GreaterEqual(java.time.LocalDateTime updTm) {
         regUpdTm(CK_GE,  updTm);
@@ -1198,7 +1198,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * UPD_TM: {NotNull, TIMESTAMP(23, 10)}
-     * @param updTm The value of updTm as lessEqual. (NullAllowed: if null, no condition)
+     * @param updTm The value of updTm as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setUpdTm_LessEqual(java.time.LocalDateTime updTm) {
         regUpdTm(CK_LE, updTm);
@@ -1372,7 +1372,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * Equal(=). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as equal. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as equal. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_Equal(Integer versionNo) {
         doSetVersionNo_Equal(versionNo);
@@ -1385,7 +1385,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * NotEqual(&lt;&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as notEqual. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as notEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_NotEqual(Integer versionNo) {
         doSetVersionNo_NotEqual(versionNo);
@@ -1398,7 +1398,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * GreaterThan(&gt;). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as greaterThan. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as greaterThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_GreaterThan(Integer versionNo) {
         regVersionNo(CK_GT, versionNo);
@@ -1407,7 +1407,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * LessThan(&lt;). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as lessThan. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as lessThan. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_LessThan(Integer versionNo) {
         regVersionNo(CK_LT, versionNo);
@@ -1416,7 +1416,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * GreaterEqual(&gt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as greaterEqual. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as greaterEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_GreaterEqual(Integer versionNo) {
         regVersionNo(CK_GE, versionNo);
@@ -1425,7 +1425,7 @@ public abstract class AbstractBsCmKaishaCQ extends AbstractConditionQuery {
     /**
      * LessEqual(&lt;=). And NullIgnored, OnlyOnceRegistered. <br>
      * VERSION_NO: {NotNull, DECIMAL(9)}
-     * @param versionNo The value of versionNo as lessEqual. (NullAllowed: if null, no condition)
+     * @param versionNo The value of versionNo as lessEqual. (basically NotNull: error as default, or no condition as option)
      */
     public void setVersionNo_LessEqual(Integer versionNo) {
         regVersionNo(CK_LE, versionNo);
