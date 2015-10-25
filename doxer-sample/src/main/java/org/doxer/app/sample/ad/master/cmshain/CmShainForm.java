@@ -36,7 +36,7 @@ public class CmShainForm extends BaseEntityForm<CmShain> {
 	@Condition(session = true) Mei shainMeiEn = new ShainMeiEn(ARBITRARY);
 
 	@Condition(session = true) LoginCd loginCd = new LoginCd(REQUIRED);
-	@Condition(session = true) Password password = new Password(ARBITRARY);
+	@Condition(session = true) Password password = new Password(CONDITION);
 
 	@Session Mode mode;
 
