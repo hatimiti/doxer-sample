@@ -89,4 +89,8 @@ public class CmShainForm extends BaseEntityForm<CmShain> {
 		this.versionNo = entity.getVersionNo();
 	}
 
+	String getEncryptedPassword() {
+		return this.password.encrypted();
+	}
+
 }

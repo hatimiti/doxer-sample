@@ -37,7 +37,7 @@ public class Password extends SingleFormType {
 		return obj;
 	}
 
-	public String encrypt() {
+	public String encrypted() {
 		return Encrypter.SHA256.encrypt(getVal());
 	}
 

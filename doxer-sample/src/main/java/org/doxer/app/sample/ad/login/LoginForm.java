@@ -29,4 +29,8 @@ public class LoginForm extends DoxForm {
 		}
 	}
 
+	String getEncryptedPassword() {
+		return this.password.encrypted();
+	}
+
 }

@@ -29,8 +29,8 @@ public class LoginService extends DoxService {
 			LoginForm form) {
 
 		OptionalEntity<CmShain> shain = this.cmShainBhv.selectEntity(cb -> {
-			cb.query().setLoginCd_Equal(form.getLoginCd().getVal());
-			cb.query().setPassword_Equal(form.getPassword().encrypt());
+			cb.query().setLoginCd_Equal(form.loginCd.getVal());
+			cb.query().setPassword_Equal(form.getEncryptedPassword());
 		});
 
 		shain.ifPresent(this::setAccessUserDto).orElse(() -> {

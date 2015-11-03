@@ -106,7 +106,7 @@ public class CmShainService extends DoxService {
 		val shain = new CmShain();
 
 		shain.copyFrom(form);
-		shain.setPassword(form.getPassword().encrypt());
+		shain.setPassword(form.getEncryptedPassword());
 
 		this.cmShainBhv.insert(shain);
 
@@ -126,12 +126,14 @@ public class CmShainService extends DoxService {
 
 		val shain = this.cmShainBhv.selectByPk4Update(form.cmShainId);
 
+		// Stores the current password temporary.
 		String nowPassword = shain.getPassword();
 		shain.copyFrom(form);
 
+		// If the new password is inputed, sets it encrypted.
 		shain.setPassword(form.getPassword().isEmpty()
 				? nowPassword
-				: form.getPassword().encrypt());
+				: form.getEncryptedPassword());
 
 		this.cmShainBhv.update(shain);
 
